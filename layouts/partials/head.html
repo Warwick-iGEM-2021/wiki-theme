@@ -1,62 +1,108 @@
-<head>
-  <meta charset="utf-8">
-  <title>{{ with .Title }}{{ . }}{{ else }}{{ site.Title }}{{ end }}</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> {{ .Title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--     <meta name="description" content="Free HTML5 Template by FREEHTML5.CO - Hugo port by Pieter Saey" />
+    <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive, hugo, static site" />
+    <meta name="author" content="FREEHTML5.CO / Hugo port " />
+ -->
+    {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+    {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+    {{ with .Site.LanguageCode }}<meta http-equiv="content-language" content="{{ . }}" />{{ end }}
 
-  {{ "<!-- Mobile responsive metadata -->" | safeHTML }}
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
-  {{ with site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
-  {{ hugo.Generator }}
+  <!-- 
+    //////////////////////////////////////////////////////
 
-  {{ "<!-- Open Graph image and Twitter Card metadata -->" | safeHTML }}
-  {{ $image_path := .Params.image | default site.Params.image -}}
-  {{ $image_path_local :=  printf "static/%s" $image_path -}}
-  {{ $image_ext := trim (path.Ext $image_path | lower) "." -}}
-  {{ if fileExists $image_path_local -}}
-    <meta property="og:image" content="{{ $image_path | absURL }}" />
-    {{/* If not SVG, read image aspect ratio and define Twitter Card and Open Graph width and height  */ -}}
-    {{ if ne $image_ext "svg" -}}
-      {{ with (imageConfig $image_path_local) -}}
-      {{ if (and (gt .Width 144) (gt .Height 144)) -}}
-        <meta name="twitter:image" content="{{ $image_path | absURL }}"/>
-        <meta name="twitter:card" content="summary{{ if (and (gt .Width 300) (gt .Height 157) (not (eq .Width .Height))) }}_large_image{{ end }}">
-      {{ end -}}
-      <meta property="og:image:width" content="{{ .Width }}">
-      <meta property="og:image:height" content="{{ .Height }}">
-      {{ end -}}
-    {{ end -}}
-    <meta property="og:image:type" content="image/{{ if eq $image_ext "svg" }}svg+xml{{ else }}{{ replaceRE "^jpg$" "jpeg" $image_ext }}{{ end }}">
-  {{ end -}}
-  <meta name="twitter:title" content="{{ with .Title }}{{ . }}{{ else }}{{ site.Title }}{{ end }}"/>
-  <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}"/>
-  {{ with site.Social.twitter -}}<meta name="twitter:site" content="@{{ . }}"/>{{ end -}}
-  {{ range site.Authors }}
-    {{ with .twitter -}}<meta name="twitter:creator" content="@{{ . }}"/>{{ end -}}
-  {{ end -}}
+    FREE HTML5 TEMPLATE 
+    DESIGNED & DEVELOPED by FREEHTML5.CO
+        
+    Website:        http://freehtml5.co/
+    Email:          info@freehtml5.co
+    Twitter:        http://twitter.com/fh5co
+    Facebook:       https://www.facebook.com/fh5co
 
-  {{ template "_internal/opengraph.html" . }}
-  {{ template "_internal/google_analytics.html" . }}
+    HUGO TEMPLATE PORTED BY Pieter Saey
 
-  {{- with site.Params.counter -}}
-  {{ if .enable -}}
-  {{ with .username -}}
-  {{ "<!-- counter.dev analytics -->" | safeHTML }}
-  {{ $counterjs := resources.Get "js/counter.min.js" | resources.ExecuteAsTemplate "js/counter.min.js" . -}}
-  <script src="{{ $counterjs.RelPermalink }}"></script>
-  {{- end }}
-  {{- end }}
-  {{- end }}
+    Website:        http://saey55.gitlab.io/pietercv
+    Email:          saeypieter@gmail.com
+    Twitter:        http://twitter.com/saey55
+    
 
-  {{ "<!-- Plugins -->" | safeHTML }}
-  {{ range site.Params.plugins.css -}}
-  <link rel="stylesheet" href="{{ .link | relURL }}" {{ .attributes | safeHTMLAttr }}>
-  {{ end }}
+    //////////////////////////////////////////////////////
+     -->
 
-  {{ "<!-- Main stylesheet -->" | safeHTML }}
-  {{ $styles := slice (resources.Get "scss/style.scss") (resources.Get "scss/custom.scss") | resources.Concat "scss/bundled.scss" | toCSS | minify -}}
-  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen">
+    <!-- Facebook and Twitter integration -->
+    {{ if not .Site.Params.OpenGraph.hide }}
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="{{ .Site.Title }}">
+    <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:image" content="{{ .Site.BaseURL }}images/{{ .Site.Params.sidebar.avatar }}">
+    <meta name="twitter:title" content="{{ .Site.Title }}" />
+    <meta name="twitter:url" content="{{ .Permalink }}" />
+    <meta name="twitter:image" content="{{ .Site.BaseURL }}images/{{ .Site.Params.sidebar.avatar }}" />
+    <meta name="twitter:card" content="" />
+    {{ end }}
+<!-- 
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content=""/>
+    <meta property="og:image" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:site_name" content=""/>
+    <meta property="og:description" content=""/>
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:card" content="" />
+ -->    
+    <!-- canonical link tag -->
+    <link rel="canonical" href="{{ .Permalink }}"/>
 
-  {{ "<!-- Favicon -->" | safeHTML }}
-  {{ partial "favicon.html" . }}
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="favicon.ico">
 
-</head>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="css/leaflet.css" />
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="css/icomoon.css">
+    <!-- Simple Line Icons -->
+    <link rel="stylesheet" href="css/simple-line-icons.css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <!-- 
+    Default Theme Style 
+    You can change the style.css (default color purple) to one of these styles
+    
+    1. pink.css
+    2. blue.css
+    3. turquoise.css
+    4. orange.css
+    5. lightblue.css
+    6. brown.css
+    7. green.css
+
+    -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--
+       custom css files can be configured in config.toml:
+       [params]
+          custom_css = ["css/foo.css", "css/bar.css"]
+     -->
+    {{ range .Site.Params.custom_css }}
+    <link rel="stylesheet" href="{{ . }}">
+    {{ end }}
+
+    <!-- Modernizr JS -->
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->

@@ -18,10 +18,17 @@
 			</div>
 			{{ if .Site.Params.intro.video.enable }}
 			<div class="row watch-video text-center to-animate">
-				<!-- <span>{{ with .Site.Params.intro.video }}{{ . }}{{ end }}</span> -->
+
 				<span>{{.Site.Params.intro.video.title | markdownify }}</span>
 
-				<a href="{{ .Site.Params.intro.video.url }}" class="popup-vimeo btn-video"><i class="{{ .Site.Params.intro.video.icon | markdownify }}"></i></a>
+                <iframe
+                    width="100%" height="100%"
+                    src="{{ .Site.Params.intro.video.url }}"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+
 			</div>
 			{{ end }}
 		</div>

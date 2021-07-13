@@ -1173,7 +1173,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #footer {
-  padding-top: 45px;
+  padding-top: 30px;
   color: rgba(255, 255, 255, 0.7);
   position: relative;
 
@@ -1189,7 +1189,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #footer .gotop {
   position: absolute;
-  top: -75px;
+  top: -70px;
   left: 50%;
   margin-left: -40px;
 
@@ -1235,8 +1235,9 @@ h1, h2, h3, h4, h5, h6 {
   -o-transition: 0.2s;
   transition: 0.2s;
 }
+
 #footer .gotop:hover, #footer .gotop:focus {
-  top: -80px;
+  top: -75px;
   text-decoration: none !important;
 }
 #footer .copyright {

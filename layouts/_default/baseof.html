@@ -5,7 +5,7 @@
     </head>
     <body>
         {{ partial "nav.html" .}}
-
+        {{ .Scratch.Set "height" "short" }}
 		{{ partial "hero.html" .}}
 
         <div class="content">
@@ -15,6 +15,6 @@
         {{ if .Site.Params.footer.enable }}
         	{{ partial "footer.html" .}}
         {{ end }}
-        
+
     </body>
 </html>

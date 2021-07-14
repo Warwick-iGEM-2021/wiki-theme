@@ -5,8 +5,21 @@
     </head>
     <body>
         {{ partial "nav.html" .}}
+        {{ .Scratch.Set "height" "tall" }}
+		{{ partial "hero.html" . }}
 
-		{{ partial "hero.html" .}}
+        <!--
+        <div>
+            Short Description of {{.Site.Data.home.Name}}:
+            <p>{{ index .Site.Data.home "Short Description" | markdownify }}</p>
+        </div>
+        -->
+
+        {{ partial "intro.html" .}}
+        {{ partial "services.html" .}}
+        {{ partial "about.html" .}}
+        {{ partial "counters.html" .}}
+        {{ partial "contact.html" .}}
 
         {{ if .Site.Params.footer.enable }}
         	{{ partial "footer.html" .}}

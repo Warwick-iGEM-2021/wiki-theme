@@ -1,19 +1,18 @@
 # theme.toml template for a Hugo theme
 # See https://github.com/spf13/hugoThemes#themetoml for an example
 
-name = "Elate"
+name = "Warwick iGEM wiki theme"
 license = "MIT"
-licenselink = "https://github.com/saey55/hugo-elate-theme/blob/master/LICENSE.md"
-description = "Elate theme ported to Hugo by Pieter Saey"
-homepage = "https://github.com/saey55/hugo-elate-theme/"
+licenselink = "https://raw.githubusercontent.com/Warwick-iGEM-2021/wiki-theme/main/LICENSE"
+description = "Adaptation of the Elate theme ported to Hugo by Pieter Saey"
+homepage = "https://github.com/Warwick-iGEM-2021/wiki-theme"
 tags = ["Elate", "Hugo", "parallax"]
-features = ["", "", ""]
 min_version = 0.17
 
 [author]
-  name = "Pieter Saey"
-  homepage = "http://saey55.gitlab.io/pietercv"
+  name = "Edmund Goodman"
+  homepage = "https://edmundgoodman.github.io"
 
 [original]
-  name = "Elate"
-  homepage = "https://freehtml5.co/elate-free-html5-bootstrap-template/"
+  name = "Pieter Saey"
+  homepage = "http://saey55.gitlab.io/pietercv"

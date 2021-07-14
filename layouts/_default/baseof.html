@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {{ partial "head.html" .}}
+    </head>
+    <body>
+        {{ partial "nav.html" .}}
+
+		{{ partial "hero.html" .}}
+
+        <div class="content">
+            {{ block "main" . }}{{ end }}
+        </div>
+
+        {{ if .Site.Params.footer.enable }}
+        	{{ partial "footer.html" .}}
+        {{ end }}
+
+        {{ partial "js.html" .}}
+    </body>
+</html>

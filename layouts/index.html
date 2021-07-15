@@ -6,6 +6,7 @@
     <body>
         {{ partial "nav.html" .}}
         {{ .Scratch.Set "height" "tall" }}
+        {{ .Scratch.Set "internal-menu" true }}
 		{{ partial "hero.html" . }}
 
         <!--
@@ -21,7 +22,7 @@
         {{ partial "counters.html" .}}
         {{ partial "contact.html" .}}
 
-        {{ if .Site.Params.footer.enable }}
+        {{ if .Site.Params.footer.enable }}z
         	{{ partial "footer.html" .}}
         {{ end }}
 

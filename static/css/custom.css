@@ -3,7 +3,11 @@ iframe {
     max-width: 90%;
   }
 
-  .contact-title {
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-  }
+.contact-title {
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.col-md-4 {
+    margin-bottom: 75px;
+}

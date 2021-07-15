@@ -4,27 +4,18 @@
         {{ partial "head.html" .}}
     </head>
     <body>
+        {{ .Scratch.Set "page-context" .Site.Data.home }}
+
         {{ partial "nav.html" .}}
-        {{ .Scratch.Set "height" "tall" }}
-        {{ .Scratch.Set "internal-menu" true }}
-		{{ partial "hero.html" . }}
 
-        <!--
-        <div>
-            Short Description of {{.Site.Data.home.Name}}:
-            <p>{{ index .Site.Data.home "Short Description" | markdownify }}</p>
+        <div class="container">
+            <div class="content">
+                <p>This is some content</p>
+            </div>
         </div>
-        -->
 
-        {{ partial "intro.html" .}}
-        {{ partial "services.html" .}}
-        {{ partial "about.html" .}}
-        {{ partial "counters.html" .}}
-        {{ partial "contact.html" .}}
 
-        {{ if .Site.Params.footer.enable }}z
-        	{{ partial "footer.html" .}}
-        {{ end }}
+        {{ partial "footer.html" .}}
 
     </body>
 </html>

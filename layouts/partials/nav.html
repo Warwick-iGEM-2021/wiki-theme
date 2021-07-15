@@ -1,49 +1,42 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <!-- Brand of the website -->
+    <a class="navbar-brand" href="#">
+        {{ with .Site.Params.navigation.brand }}
+            {{ . | markdownify }}
+        {{ end }}
+    </a>
 
+    <!-- Hamburger dropdown for mobile -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-<header role="banner" id="fh5co-header">
-    <div class="container">
-       <nav class="navbar navbar-default">
-
-           <!-- Mobile Toggle Menu Button -->
-          <div class="navbar-header">
-             <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
-             <a class="navbar-brand" href="index.html">{{ with .Site.Params.navigation.brand }}{{ . | markdownify }}{{ end }}</a>
-          </div>
-
-          <div id="navbar" class="navbar-collapse collapse">
-             <ul class="nav navbar-nav navbar-right">
-
-                {{ range .Site.Menus.prepend }}
-                    <li><a class="external" href="{{ .URL }}"><span>{{ .Name | markdownify }}</span></a></li>
+    <!-- Main navbar -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        {{ range .Site.Menus.main }}
+          {{ if .HasChildren }}
+            <!-- If the cell has children, make a dropdown menu-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="{{ .URL }}" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {{ .Name }}
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" for="{{ .Name }}">
+                {{ range .Children }}
+                  <a class="dropdown-item" href="{{ .URL }}">{{ .Name }}</a>
                 {{ end }}
-
-                <li class="active"><a href="#" data-nav-section="home"><span>{{ with .Site.Params.navigation.home }}{{ . | markdownify }}{{ end }}</span></a></li>
-
-
-                {{ if .Scratch.Get "internal-menu" }}
-                    {{ range $.Site.Menus.internal }}
-                        <li><a href="#" data-nav-section="{{ .URL }}"><span>{{ .Name | markdownify }}</span></a></li>
-                    {{ end }}
-                {{ end }}
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Dropdown
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
-
-                {{ range .Site.Menus.postpend }}
-                    <li><a class="external" href="{{ .URL }}"><span>{{ .Name | markdownify }}</span></a></li>
-                {{ end }}
-
-             </ul>
-          </div>
-       </nav>
+              </div>
+            </li>
+          {{ else }}
+            <!-- Otherwise, make a normal menu item -->
+            <li class="nav-item">
+              <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
+            </li>
+          {{ end }}
+        {{ end }}
+      </ul>
     </div>
- </header>
+
+  </div>
+</nav>

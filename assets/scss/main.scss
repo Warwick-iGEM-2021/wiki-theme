@@ -1,8 +1,10 @@
 /* Setup */
 @import "variables";
 @import "fonts";
+@import "animations";
 
 /* Modules */
+@import "general";
 @import "nav";
 @import "hero";
 @import "footer";

@@ -19,8 +19,8 @@
     <link rel="stylesheet" type="text/css" href="css/animate.min.css">
 
     {{ $options := (dict "targetPath" "css/styles.css") }}
-    {{ $scssTemplate := resources.Get "scss/main.scss" }}
-    {{ $style := $scssTemplate | resources.ToCSS $options | resources.Minify }}
+    {{ $scss := resources.Get "scss/main.scss" }}
+    {{ $style := $scss | resources.ToCSS $options | resources.Minify }}
     <link rel="stylesheet" type="text/css" href="{{ $style.Permalink }}">
     {{ range .Site.Params.custom_css }}
         <link rel="stylesheet" type="text/css" href="{{ . }}">
@@ -39,7 +39,6 @@
 	<script src="js/popper.min.js" defer></script>
 	<script src="js/bootstrap.min.js" defer></script>
 	<script src="js/respond.min.js" defer></script>
-	<script src="js/jquery.stellar.min.js" defer></script>
 
     <script src="js/main.js" defer></script>
     {{ range .Site.Params.custom_js }}

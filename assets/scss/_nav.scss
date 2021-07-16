@@ -1,0 +1,18 @@
+nav {
+    position: fixed;
+}
+
+
+.dropdown-menu {
+    /* Align it with the bottom of the navbar*/
+    margin-top: 10px;
+}
+
+
+#scroll-line{
+    position: fixed;
+    height: 2px;
+    margin-bottom: -2px;
+    background-color: blue;
+    width: 0%;
+}

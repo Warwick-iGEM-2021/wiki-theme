@@ -1,0 +1,46 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.5;
+    color: $text-color-dark;
+    background: $background-color;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: $link-color;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+
+a:hover, a:active, a:focus {
+    color: $link-color-focus;
+    outline: none;
+}
+
+::-webkit-selection {
+    background: $selection-color;
+}
+
+::-moz-selection {
+    background: $selection-color;
+}
+
+::selection {
+    background: $selection-color;
+}
+
+
+.slanted-bottom {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 56%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+}

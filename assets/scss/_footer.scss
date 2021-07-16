@@ -1,6 +1,6 @@
 footer {
-    color: $text-color-light;
-    
+    color: $text-color-mid-light;
+
     background-color: $background-color-tertiary;
     background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0, $background-color-tertiary), color-stop(1, $background-color-tertiary-contrast));
     background-image: -webkit-linear-gradient(top left, $background-color-tertiary 0%, $background-color-tertiary-contrast 100%);

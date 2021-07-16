@@ -22,13 +22,21 @@ a {
     transition: 0.5s;
 }
 
-a:hover, a:active, a:focus {
+a:hover, a:active {
     color: $link-color-focus;
     outline: none;
 }
 
 ::-webkit-selection, ::-moz-selection, ::selection {
     background: $selection-color;
+}
+
+.embedded-video {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 90%;
+    min-height: 70vh;
 }
 
 

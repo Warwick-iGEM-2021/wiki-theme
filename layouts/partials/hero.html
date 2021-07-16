@@ -1,18 +1,8 @@
-<section id="hero" style="background-image:url({{ .Site.Data.home.hero.background }});">
-    <div class="gradient"></div>
-        <div class="container">
-            <div class="text-wrap">
-                <div class="text-inner">
-                    <div class="row">
-                        <div class="col-md-8 col-md-offset-2">
-                            <h1 class="to-animate">{{ with .Site.Params.hero.title }}{{ . | markdownify }}{{ end }}</h1>
-                            <br><br><br><br><br><br><br><br>
-                            <br><br><br><br><br><br><br><br>
-                            <h2 class="to-animate">{{ with .Site.Params.hero.subtitle }}{{ . | markdownify }}{{ end }}</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <div class="slant"></div>
+<section id="hero">
+    <div class="container">
+        <h1 class="to-animate">{{ with .Site.Params.hero.title }}{{ . | markdownify }}{{ end }}</h1>
+        <br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br>
+        <h2 class="to-animate">{{ with .Site.Params.hero.subtitle }}{{ . | markdownify }}{{ end }}</h2>
+    </div>
 </section>

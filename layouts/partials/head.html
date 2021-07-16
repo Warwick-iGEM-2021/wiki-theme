@@ -15,13 +15,16 @@
     <link href='https://fonts.googleapis.comcss?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='textcss'>
 
     <!-- Load stylesheets -->
-    <link rel="stylesheet" href="css/styles.css">
-    {{ range .Site.Params.custom_css }}
-        <link rel="stylesheet" href="{{ . }}">
-    {{ end }}
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
 
+    {{ $options := (dict "targetPath" "css/styles.css") }}
+    {{ $scssTemplate := resources.Get "scss/main.scss" }}
+    {{ $style := $scssTemplate | resources.ToCSS $options | resources.Minify }}
+    <link rel="stylesheet" type="text/css" href="{{ $style.Permalink }}">
+    {{ range .Site.Params.custom_css }}
+        <link rel="stylesheet" type="text/css" href="{{ . }}">
+    {{ end }}
 
 
     <!--
@@ -37,6 +40,7 @@
 	<script src="js/bootstrap.min.js" defer></script>
 	<script src="js/respond.min.js" defer></script>
 	<script src="js/jquery.stellar.min.js" defer></script>
+
     <script src="js/main.js" defer></script>
     {{ range .Site.Params.custom_js }}
         <script src="{{ . }}" defer></script>

@@ -1,7 +1,8 @@
 @charset "UTF-8";
 
 $text-color-dark: #222;
-$text-color-light: #eee;
+$text-color-mid: #555;
+$text-color-light: #fff;
 $link-color: #329998;
 $link-color-focus:#329998;
 $selection-color: #a9a9a9;
@@ -11,3 +12,5 @@ $background-color-secondary: #329998;
 $background-color-secondary-contrast: #6cc99c;
 $background-color-tertiary: #535353;
 $background-color-tertiary-contrast: #171717;
+
+$shadow-color: rgba(0, 0, 0, 0.1);

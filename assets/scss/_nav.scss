@@ -1,7 +1,19 @@
 nav {
-    position: fixed;
+    -webkit-box-shadow: 0 0 10px 0 $shadow-color;
+    -moz-box-shadow: 0 0 10px 0 $shadow-color;
+    -ms-box-shadow: 0 0 10px 0 $shadow-color;
+    box-shadow: 0 0 10px 0 $shadow-color;
 }
 
+
+.navbar-brand {
+    color: $link-color;
+    font-weight: 1000;
+}
+
+.nav-link {
+    color: $text-color-mid;
+}
 
 .dropdown-menu {
     /* Align it with the bottom of the navbar*/
@@ -11,8 +23,10 @@ nav {
 
 #scroll-line{
     position: fixed;
-    height: 2px;
+    /* This is a bit hacky, but it works */
+    z-index: 1;
+    height: 3.4em;
     margin-bottom: -2px;
-    background-color: blue;
+    background-color: $background-color-secondary;
     width: 0%;
 }

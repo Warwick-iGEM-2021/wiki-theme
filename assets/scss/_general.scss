@@ -27,15 +27,7 @@ a:hover, a:active, a:focus {
     outline: none;
 }
 
-::-webkit-selection {
-    background: $selection-color;
-}
-
-::-moz-selection {
-    background: $selection-color;
-}
-
-::selection {
+::-webkit-selection, ::-moz-selection, ::selection {
     background: $selection-color;
 }
 

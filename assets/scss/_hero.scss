@@ -1,22 +1,9 @@
 #hero {
     padding-top: 75px;
     padding-bottom: 75px;
-
     margin-bottom: 50px;
-
-    /*background-image: url(https://picsum.photos/id/773/1920/1080);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;*/
-
     color: $text-color-light;
 
-    background-color: $background-color-secondary;
-    background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0, $background-color-secondary), color-stop(1, $background-color-secondary-contrast));
-    background-image: -webkit-linear-gradient(top left, $background-color-secondary 0%, $background-color-secondary-contrast 100%);
-    background-image: linear-gradient(to bottom right, $background-color-secondary 0%, $background-color-secondary-contrast 100%);
-    background-image: -ms-linear-gradient(top left, $background-color-secondary 0%, $background-color-secondary-contrast 100%);
 }
 
 
@@ -26,5 +13,6 @@
 }
 
 .hero-logo {
-    width: 60%;
+    max-width: 60%;
+    max-height: 40vh;
 }

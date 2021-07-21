@@ -1,9 +1,9 @@
-<section id="intro">
+<section id="intro" class="slanted-bottom">
     <div class="container">
         {{ if .Site.Data.home.intro.video.enable }}
-        <div class="text-center">
+        <div class="watch-video text-center">
 
-            <h3>{{.Site.Data.home.intro.video.title | markdownify }}</h3>
+            <h2 class="subtitle">{{.Site.Data.home.intro.video.title | markdownify }}</h2>
 
             <iframe
                 width="100%" height="100%"

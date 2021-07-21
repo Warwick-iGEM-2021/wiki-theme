@@ -11,6 +11,10 @@ nav {
     font-weight: 1000;
 }
 
+.navbar-toggler {
+    float: right;
+}
+
 .nav-link {
     color: $text-color-mid-dark;
 }

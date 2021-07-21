@@ -17,3 +17,19 @@ $background-color-tertiary: #535353;
 $background-color-tertiary-contrast: #171717;
 
 $shadow-color: rgba(0, 0, 0, 0.1);
+
+.secondary-background-gradient {
+    background-color: $background-color-secondary;
+    background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0, $background-color-secondary), color-stop(1, $background-color-secondary-contrast));
+    background-image: -webkit-linear-gradient(top left, $background-color-secondary 0%, $background-color-secondary-contrast 100%);
+    background-image: linear-gradient(to bottom right, $background-color-secondary 0%, $background-color-secondary-contrast 100%);
+    background-image: -ms-linear-gradient(top left, $background-color-secondary 0%, $background-color-secondary-contrast 100%);
+}
+
+.tertiary-background-gradient {
+    background-color: $background-color-tertiary;
+    background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0, $background-color-tertiary), color-stop(1, $background-color-tertiary-contrast));
+    background-image: -webkit-linear-gradient(top left, $background-color-tertiary 0%, $background-color-tertiary-contrast 100%);
+    background-image: linear-gradient(to bottom right, $background-color-tertiary 0%, $background-color-tertiary-contrast 100%);
+    background-image: -ms-linear-gradient(top left, $background-color-tertiary 0%, $background-color-tertiary-contrast 100%);
+}

@@ -1,7 +1,8 @@
-<footer id="footer" role="contentinfo">
+<footer id="footer" class="tertiary-background-gradient" role="contentinfo">
     <div class="container">
       <div class="col-md-12 text-center">
           <p>{{ with .Site.Params.footer.copyright }}{{ . | safeHTML }}{{ end }}</p>
+          <p>{{ with .Site.Params.footer.license }}{{ . | safeHTML }}{{ end }}</p>
       </div>
     </div>
 </footer>

@@ -1,0 +1,22 @@
+/* Contact section */
+
+#contact {
+    margin-top: 50px;
+    text-align: right;
+}
+#contact .contact-info {
+    padding: 0;
+    margin: 0 0 1.5em 0;
+}
+#contact .contact-info li {
+    position: relative;
+    padding: 0;
+    margin: 0 0 1.5em 0;
+    padding-left: 50px;
+    list-style: none;
+}
+#contact .contact-info li i {
+    position: absolute;
+    top: .2em;
+    left: 0;
+}

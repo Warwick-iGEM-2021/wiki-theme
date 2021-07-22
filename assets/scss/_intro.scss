@@ -1,100 +1,116 @@
+/* Intro section */
+
 #intro {
-    margin: -100px 0px 50px 0px;
-    padding-bottom: 200px;
+	margin: -100px 0px 50px 0px;
+	padding-bottom: 200px;
 }
 
 .watch-video {
-    text-align: center;
-    width: 100%;
-    display: block;
-    float: left;
-    height: 500px;
+	text-align: center;
+	width: 100%;
+	display: block;
+	float: left;
+	height: 500px;
 }
 
-
-
-
-
 .intro-background {
-    width: 30%;
-    float: left;
-    text-align: center;
-    font-size: 16px;
-    min-height: 300px;
-    vertical-align: middle;
-    padding: 40px;
-    margin-left:3px;
-    margin-right:3px;
-    background: #fff;
-    box-shadow: 7px 14px 42px 3px $shadow-color;
-    z-index: 7;
-    flex-grow: 1;
-    background-size: cover;
-    position: relative;
-    background-repeat: no-repeat;
-  }
-  @media screen and (max-width: 768px) {
-    .intro-background {
-      width: 100%;
-    }
-  }
-  .intro-background > .overlay-darker {
-    z-index: 8;
-    opacity: .5;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-  }
-  .intro-background > .overlay {
-    background: #fff;
-    opacity: 1;
-    z-index: 9;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s;
-  }
-  .intro-background > .intro-text {
-    position: relative;
-    z-index: 10;
-  }
-  .intro-background h2 {
-    font-size: 24px;
-    font-weight: 400;
-  }
-  .intro-background:hover > .overlay, .intro-background:focus > .overlay {
-    opacity: 0;
-    z-index: 9;
-  }
-  .intro-background:hover > .intro-text, .intro-background:focus > .intro-text {
-    color: #fff;
-  }
-  .intro-background:hover > .intro-text .fh5co-intro-icon, .intro-background:focus > .intro-text .fh5co-intro-icon {
-    color: #fff;
-  }
-  .intro-background:hover h2, .intro-background:focus h2 {
-    color: #fff;
-  }
-  .intro-background:hover .btn, .intro-background:focus .btn {
-    border: 2px solid #fff !important;
-    background: transparent;
-  }
-  .intro-background:hover .btn:hover, .intro-background:focus .btn:hover {
-    background: $selection-color !important;
-    border: 2px solid $selection-color !important;
-  }
+	width: 30%;
+	float: left;
+	text-align: center;
+	font-size: 16px;
+	min-height: 300px;
+	vertical-align: middle;
+	padding: 40px;
+	margin-left: 3px;
+	margin-right: 3px;
+	background: #fff;
+	box-shadow: 7px 14px 42px 3px $shadow-color;
+	z-index: 7;
+	flex-grow: 1;
+	background-size: cover;
+	position: relative;
+	background-repeat: no-repeat;
+}
 
-  .row-bottom-padded-lg {
-    padding-bottom: 7em;
-  }
-  @media screen and (max-width: 768px) {
-    .row-bottom-padded-lg {
-      padding-bottom: 2em;
-    }
-  }
+@media screen and (max-width: 768px) {
+	.intro-background {
+		width: 100%;
+	}
+}
+
+.intro-background>.overlay-darker {
+	z-index: 8;
+	opacity: .5;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.intro-background>.overlay {
+	background: #fff;
+	opacity: 1;
+	z-index: 9;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+}
+
+.intro-background>.intro-text {
+	position: relative;
+	z-index: 10;
+}
+
+.intro-background h2 {
+	font-size: 24px;
+	font-weight: 400;
+}
+
+.intro-background:hover>.overlay,
+.intro-background:focus>.overlay {
+	opacity: 0;
+	z-index: 9;
+}
+
+.intro-background:hover>.intro-text,
+.intro-background:focus>.intro-text {
+	color: #fff;
+}
+
+.intro-background:hover>.intro-text .fh5co-intro-icon,
+.intro-background:focus>.intro-text .fh5co-intro-icon {
+	color: #fff;
+}
+
+.intro-background:hover h2,
+.intro-background:focus h2 {
+	color: #fff;
+}
+
+.intro-background:hover .btn,
+.intro-background:focus .btn {
+	border: 2px solid #fff !important;
+	background: transparent;
+}
+
+.intro-background:hover .btn:hover,
+.intro-background:focus .btn:hover {
+	background: $selection-color !important;
+	border: 2px solid $selection-color !important;
+}
+
+.row-bottom-padded-lg {
+	padding-bottom: 7em;
+}
+
+@media screen and (max-width: 768px) {
+	.row-bottom-padded-lg {
+		padding-bottom: 2em;
+	}
+}

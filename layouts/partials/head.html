@@ -15,8 +15,8 @@
     <link href='https://fonts.googleapis.comcss?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='textcss'>
 
     <!-- Load stylesheets -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/animate.min.css">
 
     {{ $options := (dict "targetPath" "css/styles.css") }}
     {{ $scss := resources.Get "scss/main.scss" }}
@@ -35,12 +35,12 @@
 
 
     <!-- Load javascript -->
-    <script src="js/jquery.min.js" defer></script>
-	<script src="js/popper.min.js" defer></script>
-	<script src="js/bootstrap.min.js" defer></script>
-	<script src="js/respond.min.js" defer></script>
+    <script src="/js/jquery.min.js" defer></script>
+	<script src="/js/popper.min.js" defer></script>
+	<script src="/js/bootstrap.min.js" defer></script>
+	<script src="/js/respond.min.js" defer></script>
 
-    <script src="js/main.js" defer></script>
+    <script src="/js/main.js" defer></script>
     {{ range .Site.Params.custom_js }}
         <script src="{{ . }}" defer></script>
     {{ end }}

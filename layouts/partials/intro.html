@@ -1,6 +1,23 @@
 <section id="intro" class="slanted-bottom">
     <div class="container">
-        {{ if .Site.Data.home.intro.video.enable }}
+
+        <div class="row row-bottom-padded-lg">
+            {{ range .Site.Data.home.intro.item }}
+            <div class="intro-background to-animate">
+                <div class="overlay-darker tertiary-background-gradient"></div>
+                <div class="overlay"></div>
+                <div class="intro-text">
+                    <h2>{{ .title }}</h2>
+                    <p>{{ .description }}</p>
+                    {{ if .button}}
+                    <p><a href="{{ .url }}" class="btn btn-primary">{{ .button}}</a></p>
+                    {{ end }}
+                </div>
+            </div>
+            {{ end }}
+        </div>
+
+
         <div class="watch-video text-center">
 
             <h2 class="subtitle">{{.Site.Data.home.intro.video.title | markdownify }}</h2>
@@ -16,6 +33,5 @@
             </iframe>
 
         </div>
-        {{ end }}
     </div>
 </section>

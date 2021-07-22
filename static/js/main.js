@@ -1,12 +1,4 @@
 
-$('.dropdown').on('show.bs.dropdown', function() {
-    $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
-});
-$('.dropdown').on('hide.bs.dropdown', function() {
-    $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
-});
-
-
 // Capture scroll any percentage
 const $scrollLine = $('#scroll-line');
 $(window).scroll(function(){

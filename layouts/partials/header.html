@@ -1,11 +1,11 @@
-<section id="hero" class="secondary-background-gradient slanted-bottom">
+<section id="header" class="secondary-background-gradient slanted-bottom">
     <div class="container text-center">
         <h1 class="enter-up">
             {{ with .Title }}{{ . | markdownify }}{{ end }}
         </h1>
         <div class="col-lg-9 mx-auto">
-            <hr class="hero-divider">
-            <h2>{{ with .Params.subtitle }}{{ . | markdownify }}{{ end }}</h2>
+            <hr class="header-divider">
+            <h3>{{ with .Params.subtitle }}{{ . | markdownify }}{{ end }}</h3>
         </div>
     </div>
 </section>

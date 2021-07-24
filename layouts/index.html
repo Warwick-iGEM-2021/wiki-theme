@@ -4,6 +4,9 @@
         {{ partial "head.html" .}}
     </head>
     <body>
+        {{ partial "loader.html" .}}
+
+
         {{ .Scratch.Set "page-context" .Site.Data.home }}
         {{ partial "nav.html" .}}
 

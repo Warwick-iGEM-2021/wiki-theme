@@ -7,3 +7,10 @@ $(window).scroll(function(){
         var scrolled = (wintop/(docheight-winheight))*100;
         $scrollLine.css('width', (scrolled + '%'));
 });
+
+
+$(document).ready(function() {
+	setTimeout(function(){
+		$('body').addClass('loaded');
+	}, 200);
+});

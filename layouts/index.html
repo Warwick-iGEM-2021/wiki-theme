@@ -6,13 +6,11 @@
     <body>
         {{ partial "loader.html" .}}
 
-
-        {{ .Scratch.Set "page-context" .Site.Data.home }}
+        <!-- {{ .Scratch.Set "page-context" .Site.Data.home }} -->
         {{ partial "nav.html" .}}
 
         {{ partial "hero.html" .}}
         {{ partial "intro.html" .}}
-        {{ partial "about.html" .}}
 
 
         {{ partial "carousel.html" .}}

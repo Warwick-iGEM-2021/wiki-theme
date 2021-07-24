@@ -6,18 +6,19 @@
     <body>
         {{ partial "nav.html" .}}
 
-        <section id="header" class="secondary-background-gradient slanted-bottom">
-            <div class="container text-center">
-                <h1>404: Page not found</h1>
-                <div class="col-lg-9 mx-auto">
-                    <hr class="header-divider">
-                    <h3>
-                        Try going back home, or to a different url
-                    </h3>
+        <div class="content-wrapper">
+            <section id="header" class="secondary-background-gradient slanted-bottom">
+                <div class="container text-center">
+                    <h1>404: Page not found</h1>
+                    <div class="col-lg-9 mx-auto">
+                        <hr class="header-divider">
+                        <h3>
+                            Try going back home, or to a different url
+                        </h3>
+                    </div>
                 </div>
-            </div>
-        </section>
-
+            </section>
+        </div>
 
         {{ partial "footer.html" .}}
 

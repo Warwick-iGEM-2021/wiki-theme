@@ -6,12 +6,13 @@
     <body>
         {{ partial "loader.html" .}}
 
-        {{ partial "nav.html" .}}
-        {{ partial "header.html" . }}
-
-        <div class="content">
-            {{ block "main" . }}{{ end }}
-        </div>
+        <div class="content-wrapper">
+            {{ partial "nav.html" .}}
+            {{ partial "header.html" . }}
+            <div class="content">
+                {{ block "main" . }}{{ end }}
+            </div>
+        <div class="content-wrapper">
 
         {{ partial "footer.html" .}}
 

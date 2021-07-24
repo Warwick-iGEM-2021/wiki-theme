@@ -2,7 +2,9 @@
 
 html,
 body {
-	height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 body {
@@ -62,12 +64,6 @@ a:active {
 	min-height: 70vh;
 }
 
-.slanted-bottom {
-	padding-bottom: 100px;
-	-webkit-clip-path: polygon(0 0, 100% 0, 100% 56%, 0 100%);
-	clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
-}
-
 .btn {
 	-webkit-transition: 0.5s;
 	-o-transition: 0.5s;
@@ -114,4 +110,17 @@ a:active {
 .btn.btn-default:focus,
 .btn.btn-default:active {
 	border-color: transparent;
+}
+
+
+.content-wrapper {
+    flex: 1;
+}
+
+
+
+.slanted-bottom {
+	padding-bottom: 100px;
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 56%, 0 100%);
+	clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
 }

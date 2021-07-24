@@ -7,10 +7,11 @@
                 <div class="overlay-darker tertiary-background-gradient"></div>
                 <div class="overlay"></div>
                 <div class="intro-text">
+                    <i class="intro-icon {{ .icon }}"></i>
                     <h2>{{ .title }}</h2>
                     <p>{{ .description }}</p>
                     {{ if .button}}
-                    <p><a href="{{ .url }}" class="btn btn-primary">{{ .button}}</a></p>
+                        <p><a href="{{ .url }}" class="btn btn-primary">{{ .button}}</a></p>
                     {{ end }}
                 </div>
             </div>

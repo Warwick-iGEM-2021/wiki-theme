@@ -38,7 +38,14 @@
 	}
 }
 
-.intro-background>.overlay-darker {
+.intro-icon {
+    font-size: 50px;
+    color: #329998;
+    margin-bottom: 30px;
+    display: block;
+  }
+
+.intro-background > .overlay-darker {
 	z-index: 8;
 	opacity: .5;
 	position: absolute;
@@ -48,7 +55,7 @@
 	bottom: 0;
 }
 
-.intro-background>.overlay {
+.intro-background > .overlay {
 	background: #fff;
 	opacity: 1;
 	z-index: 9;
@@ -62,7 +69,7 @@
 	transition: 0.5s;
 }
 
-.intro-background>.intro-text {
+.intro-background > .intro-text {
 	position: relative;
 	z-index: 10;
 }
@@ -72,19 +79,19 @@
 	font-weight: 400;
 }
 
-.intro-background:hover>.overlay,
-.intro-background:focus>.overlay {
+.intro-background:hover > .overlay,
+.intro-background:focus > .overlay {
 	opacity: 0;
 	z-index: 9;
 }
 
-.intro-background:hover>.intro-text,
-.intro-background:focus>.intro-text {
+.intro-background:hover > .intro-text,
+.intro-background:focus > .intro-text {
 	color: #fff;
 }
 
-.intro-background:hover>.intro-text .fh5co-intro-icon,
-.intro-background:focus>.intro-text .fh5co-intro-icon {
+.intro-background:hover > .intro-text .fh5co-intro-icon,
+.intro-background:focus > .intro-text .fh5co-intro-icon {
 	color: #fff;
 }
 

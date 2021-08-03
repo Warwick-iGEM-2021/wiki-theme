@@ -1,5 +1,5 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
+title: "{{ replace .Name "-" " " | humanize | title }}"
 subtitle: "Inspirational quote -- person"
 date: {{ .Date }}
 draft: false

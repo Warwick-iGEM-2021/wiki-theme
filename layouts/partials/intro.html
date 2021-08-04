@@ -23,15 +23,9 @@
 
             <h2 class="subtitle">{{.Site.Data.home.intro.video.title | markdownify }}</h2>
 
-            <!-- TODO: Change this to be a local video -->
-            <iframe
-                width="100%" height="100%"
-                class="embedded-video"
-                src="{{ .Site.Data.home.intro.video.url }}"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-            </iframe>
+            <video width="100%" height="100%" controls>
+                <source src="{{ .Site.Data.home.intro.video.url }}" type="video/mp4">
+            </video>
 
         </div>
     </div>

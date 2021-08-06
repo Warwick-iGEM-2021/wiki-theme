@@ -14,7 +14,7 @@
     width: 100%;
     height: 100%;
     z-index: 10000;
-    
+
     background: $background-color-tertiary-contrast;
 }
 #loader {
@@ -67,7 +67,7 @@
 }
 
 @-webkit-keyframes spin {
-    0%   { 
+    0%   {
         -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
         -ms-transform: rotate(0deg);  /* IE 9 */
         transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
@@ -79,7 +79,7 @@
     }
 }
 @keyframes spin {
-    0%   { 
+    0%   {
         -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
         -ms-transform: rotate(0deg);  /* IE 9 */
         transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
@@ -94,7 +94,7 @@
 
 .loaded #loader {
     opacity: 0;
-    -webkit-transition: all 0.3s ease-out;  
+    -webkit-transition: all 0.3s ease-out;
             transition: all 0.3s ease-out;
 }
 .loaded #loader-wrapper {
@@ -104,7 +104,7 @@
         -ms-transform: translateY(-100%);  /* IE 9 */
             transform: translateY(-100%);  /* Firefox 16+, IE 10+, Opera */
 
-    -webkit-transition: all 0.3s 0.3s ease-out;  
+    -webkit-transition: all 0.3s 0.3s ease-out;
             transition: all 0.3s 0.3s ease-out;
 }
 

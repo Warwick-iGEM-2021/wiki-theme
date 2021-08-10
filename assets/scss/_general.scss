@@ -2,125 +2,158 @@
 
 html,
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 body {
-	font-family: "Source Sans Pro", Arial, sans-serif;
-	font-weight: 300;
-	font-size: 18px;
-	line-height: 1.5;
-	color: $text-color-dark;
-	background: $background-color;
-	position: relative;
-	display: flex;
-	flex-direction: column;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  /*
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    */
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.5;
+  color: $text-color-dark;
+  background: $background-color;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+body:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+}
+body.offcanvas-menu:before {
+  opacity: 1;
+  visibility: visible;
+}
+
+p {
+  color: #b3b3b3;
+  font-weight: 300;
 }
 
 a {
-	color: $link-color;
-	-webkit-transition: 0.5s;
-	-o-transition: 0.5s;
-	transition: 0.5s;
+  color: $link-color;
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
 }
-
+a,
 a:hover,
 a:active {
-	color: $link-color-focus;
-	outline: none;
-}
-
-::-webkit-selection,
- ::-moz-selection,
- ::selection {
-	background: $selection-color;
+  color: $link-color-focus;
+  outline: none;
+  text-decoration: none !important;
 }
 
 .subtitle {
-	display: block;
-	margin-bottom: 20px;
-	letter-spacing: 2px;
-	text-transform: uppercase;
-	font-weight: bold;
-	color: $text-color-mid-dark;
-	padding-left: 10%;
-	padding-right: 10%;
+  display: block;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: $text-color-mid-dark;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .subtitle-text {
-	display: block;
-	margin-bottom: 20px;
-	padding-left: 10%;
-	padding-right: 10%;
+  display: block;
+  margin-bottom: 20px;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .embedded-video {
-	margin-top: 20px;
-	margin-bottom: 20px;
-	text-align: center;
-	max-width: 90%;
-	min-height: 70vh;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  max-width: 90%;
+  min-height: 70vh;
+}
+
+.hero {
+  height: 75vh;
+  width: 100%;
+  background: #5d5b6a;
+}
+
+::-webkit-selection,
+::-moz-selection,
+::selection {
+  background: $selection-color;
 }
 
 .btn {
-	-webkit-transition: 0.5s;
-	-o-transition: 0.5s;
-	transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .btn:hover,
 .btn:active,
 .btn:focus {
-	outline: none;
+  outline: none;
 }
 
 .btn {
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	-webkit-transition: 0.3s;
-	-o-transition: 0.3s;
-	transition: 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .btn.btn-primary {
-	background: $link-color;
-	color: $text-color-light;
-	border: none !important;
-	border: 2px solid transparent !important;
+  background: $link-color;
+  color: $text-color-light;
+  border: none !important;
+  border: 2px solid transparent !important;
 }
 
 .btn.btn-primary:hover,
 .btn.btn-primary:active,
 .btn.btn-primary:focus {
-	box-shadow: none;
-	background: $link-color;
+  box-shadow: none;
+  background: $link-color;
 }
 
 .btn:hover,
 .btn:active,
 .btn:focus {
-	background: $background-color-tertiary !important;
-	color: $text-color-light;
-	outline: none !important;
+  background: $background-color-tertiary !important;
+  color: $text-color-light;
+  outline: none !important;
 }
 
 .btn.btn-default:hover,
 .btn.btn-default:focus,
 .btn.btn-default:active {
-	border-color: transparent;
+  border-color: transparent;
 }
-
-
-.content-wrapper {
-    flex: 1;
-}
-
-
 
 .slanted-bottom {
-	padding-bottom: 100px;
-	-webkit-clip-path: polygon(0 0, 100% 0, 100% 56%, 0 100%);
-	clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+  padding-bottom: 100px;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 56%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+}
+
+.content-wrapper {
+  flex: 1;
 }

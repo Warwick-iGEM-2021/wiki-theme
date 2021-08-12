@@ -57,14 +57,14 @@ https://codepen.io/albizan/pen/mMWdWZ
   }
   .site-navbar .site-navigation .site-menu .has-children > a:before {
     position: absolute;
-    content: "\e313";
+    content: "\e604";
     font-size: 16px;
     top: 50%;
     right: 0;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    font-family: "icomoon";
+    font-family: 'simple-line-icons';
   }
   .site-navbar .site-navigation .site-menu .has-children .dropdown {
     visibility: hidden;
@@ -148,7 +148,7 @@ https://codepen.io/albizan/pen/mMWdWZ
     .dropdown
     > li.has-children
     > a:before {
-    content: "\e315";
+    content: "\e606";
     right: 20px;
   }
   .site-navbar
@@ -297,8 +297,8 @@ https://codepen.io/albizan/pen/mMWdWZ
   .site-mobile-menu .site-nav-wrap .arrow-collapse:before {
     font-size: 12px;
     z-index: 20;
-    font-family: "icomoon";
-    content: "\f078";
+    font-family: 'simple-line-icons';
+    content: "\e604";
     position: absolute;
     top: 50%;
     left: 50%;

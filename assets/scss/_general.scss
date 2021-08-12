@@ -91,7 +91,11 @@ a:active {
 .hero {
   height: 75vh;
   width: 100%;
-  background: #5d5b6a;
+  background-color: $background-color-secondary;
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0, $background-color-secondary), color-stop(1, $background-color-secondary-contrast));
+  background-image: -webkit-linear-gradient(top left, $background-color-secondary 0%, $background-color-secondary-contrast 100%);
+  background-image: linear-gradient(to bottom right, $background-color-secondary 0%, $background-color-secondary-contrast 100%);
+  background-image: -ms-linear-gradient(top left, $background-color-secondary 0%, $background-color-secondary-contrast 100%);
 }
 
 ::-webkit-selection,

@@ -1,17 +1,21 @@
 /* Setup */
 @import "variables";
 @import "fonts";
-@import "animations";
 
-/* Modules */
+/* General stylings */
 @import "general";
-@import "loader";
-@import "nav";
-@import "hero";
-@import "header";
-@import "intro";
-@import "about";
-@import "carousel";
-@import "contact";
-@import "timeline";
-@import "footer";
+
+/* Unique page's stylings */
+@import "single_pages/homepage";
+
+
+/* Partials' stylings */
+@import "partials/loader";
+@import "partials/nav";
+@import "partials/header";
+@import "partials/about";
+@import "partials/footer";
+
+/* Shortcodes' stylings */
+@import "shortcodes/carousel";
+@import "shortcodes/timeline";

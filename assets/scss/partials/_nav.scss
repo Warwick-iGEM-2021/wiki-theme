@@ -384,7 +384,8 @@ https://codepen.io/albizan/pen/mMWdWZ
   color: $background-color;
 }
 .sticky-wrapper .site-navbar .site-menu > li > a {
-  color: $shadow-light-color !important;
+  color: $text-color-light !important;
+  font-weight: 600;
 }
 .sticky-wrapper .site-navbar .site-menu > li > a:hover,
 .sticky-wrapper .site-navbar .site-menu > li > a.active {

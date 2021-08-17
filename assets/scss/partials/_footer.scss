@@ -1,8 +1,6 @@
 /* Footer section */
 
 footer {
-    color: $text-color-mid-light;
-
     flex-shrink: 0;
     padding-top: 1em;
     padding-bottom: 1em;
@@ -10,5 +8,6 @@ footer {
 }
 
 footer p {
+    color: $text-color-mid-light !important;
     margin-bottom: 0;
 }

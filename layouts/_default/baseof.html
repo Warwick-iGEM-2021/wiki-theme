@@ -6,8 +6,8 @@
     <body>
         {{ partial "loader.html" .}}
 
+        {{ partial "nav.html" .}}
         <div class="content-wrapper">
-            {{ partial "nav.html" .}}
             {{ partial "header.html" . }}
             <div class="content">
                 {{ block "main" . }}{{ end }}

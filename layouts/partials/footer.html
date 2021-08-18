@@ -1,8 +1,92 @@
 <footer id="footer" class="tertiary-background-gradient" role="contentinfo">
     <div class="container">
-      <div class="col-md-12 text-center">
-          <p>{{ with .Site.Params.footer.copyright }}{{ . | safeHTML }}{{ end }}</p>
-          <p>{{ with .Site.Params.footer.license }}{{ . | safeHTML }}{{ end }}</p>
-      </div>
+
+        <span id="footer-top-separator"></span>
+
+        <!-- Contact information and sponsors -->
+        <div id="footer-info">
+            <div class="row">
+                <!-- Contact information-->
+                <div id="contact-info" class="col-3 align-middle">
+                    <ul class="social-media">
+                        <li>
+                            <a href="https://twitter.com/warwickigem" class="icon-button twitter">
+                                <i class="icon-social-twitter"></i><span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://facebook.com/WarwickIGEM" class="icon-button facebook">
+                                <i class="icon-social-facebook"></i><span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/igem_warwick" class="icon-button instagram">
+                                <i class="icon-social-instagram"></i><span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:igem@warwick.ac.uk" class="icon-button email">
+                                <i class="icon-envelope"></i><span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://warwick.ac.uk/" class="icon-button home">
+                                <i class="icon-home"></i><span></span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Sponsors -->
+                <div id="sponsors" class="col-9">
+                    <img src="./assets/images/placeholder.jpg" alt="Sponsors">
+                </div>
+
+
+            </div>
+        </div>
+
+        <!-- Navigation links across the website -->
+        <div id="footer-navigation">
+            <div class="row">
+
+                {{ range .Site.Menus.main }}
+                <div class="col">
+                    <h3 class=""><a href="{{ .URL }}"></a>{{ .Name | upper }}</a></h3>
+                    {{ if .HasChildren }}
+                    <!-- If the cell has make a list of them below it -->
+                    <ul>
+                        {{ range .Children }}
+                        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                        {{ end }}
+                    </ul>
+                    {{ end }}
+                </div>
+                {{ end }}
+
+            </div>
+        </div>
+
+        <!-- Licensing information for the website-->
+        <div id="licensing">
+            <div class="row">
+                <div class="col-sm">
+                    &copy; 2021 - Warwick iGEM, all rights reserved
+                </div>
+                <div class="col-sm">
+                    Website content under
+                    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                        <img alt="Creative Commons License" class="license-image"
+                            src="./assets/images/CC_BY_License.png" />
+                    </a>
+                </div>
+                <div class="col-sm">
+                    Website theme under
+                    <a rel="license" href="https://opensource.org/licenses/MIT">
+                        <img alt="MIT License" class="license-image" src="./assets/images/MIT_logo.svg" />
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </footer>

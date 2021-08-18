@@ -1,13 +1,217 @@
 /* Footer section */
 
-footer {
-    flex-shrink: 0;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    margin-top: 50px;
+
+#footer-info {
+    padding: 25px;
 }
 
-footer p {
-    color: $text-color-mid-light !important;
-    margin-bottom: 0;
+/* Social media icons
+    - https://codepen.io/minimalmonkey/pen/Ecpla
+    */
+
+.social-media {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.social-media li {
+  list-style: none;
+  text-align: center;
+  text-decoration: none;
+}
+
+.icon-button {
+  background-color: white;
+  border-radius: 3.6rem;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 2rem;
+  height: 3.6rem;
+  line-height: 3.6rem;
+  margin: 0 5px;
+  position: relative;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 3.6rem;
+}
+
+.icon-button span {
+  border-radius: 0;
+  display: block;
+  height: 0;
+  left: 50%;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 0;
+}
+.icon-button:hover span {
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 3.6rem;
+  margin: -1.8rem;
+}
+.twitter span {
+  background-color: #4099ff;
+}
+.facebook span {
+  background-color: #3b5998;
+}
+.instagram span {
+  background: radial-gradient(
+      circle farthest-corner at 35% 90%,
+      #fec564,
+      transparent 50%
+    ),
+    radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%),
+    radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%),
+    radial-gradient(
+      ellipse farthest-corner at 20% -50%,
+      #5258cf,
+      transparent 50%
+    ),
+    radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%),
+    radial-gradient(
+      ellipse farthest-corner at 60% -20%,
+      #893dc2,
+      transparent 50%
+    ),
+    radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent),
+    linear-gradient(
+      #6559ca,
+      #bc318f 30%,
+      #e33f5f 50%,
+      #f77638 70%,
+      #fec66d 100%
+    );
+}
+.email span {
+  background-color: #3b5998;
+}
+.home span {
+	background-color: #552d62;
+}
+
+.icon-button i {
+  background: none;
+  color: white;
+  height: 3.6rem;
+  left: 0;
+  line-height: 3.6rem;
+  position: absolute;
+  top: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 3.6rem;
+  z-index: 10;
+}
+.icon-button .icon-social-twitter {
+  color: #4099ff;
+}
+.icon-button .icon-social-facebook {
+  color: #3b5998;
+}
+.icon-button .icon-social-instagram {
+  background: radial-gradient(
+      circle farthest-corner at 35% 90%,
+      #fec564,
+      transparent 50%
+    ),
+    radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%),
+    radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%),
+    radial-gradient(
+      ellipse farthest-corner at 20% -50%,
+      #5258cf,
+      transparent 50%
+    ),
+    radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%),
+    radial-gradient(
+      ellipse farthest-corner at 60% -20%,
+      #893dc2,
+      transparent 50%
+    ),
+    radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent),
+    linear-gradient(
+      #6559ca,
+      #bc318f 30%,
+      #e33f5f 50%,
+      #f77638 70%,
+      #fec66d 100%
+    );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.icon-button .icon-envelope {
+  color: #3b5998;
+}
+.icon-button .icon-home {
+	color: #552d62;
+}
+
+.icon-button:hover .icon-social-twitter,
+.icon-button:hover .icon-social-facebook,
+.icon-button:hover .icon-social-instagram,
+.icon-button:hover .icon-envelope,
+.icon-button:hover .icon-home {
+  color: white;
+  background: initial;
+  -webkit-text-fill-color: white;
+}
+
+
+
+/* Sponsors */
+#sponsors img {
+    max-width:100%;
+    max-height:100%;
+}
+
+
+/* Footer navigation */
+
+#footer-navigation h3 {
+    color: $text-color-light;
+    font-size: 1.15em;
+    padding-bottom: 0.25em;
+}
+
+#footer-navigation li {
+    list-style: none;
+    text-decoration: none;
+}
+
+#footer-navigation a {
+    color: $text-color-mid-light;
+    font-size: 0.75em;
+}
+
+
+/* Licensing */
+#licensing {
+  margin-top: -10px;
+  font-size: 0.8em;
+  flex-shrink: 0;
+  padding-top: 2em;
+  padding-bottom: 1em;
+  color: $text-color-mid-light !important;
+  /* TODO: Fix centering*/
+  text-align: center;
+}
+
+.license-image {
+  border-width: 0;
+  max-height: 1.2em;
+  vertical-align: middle;
 }

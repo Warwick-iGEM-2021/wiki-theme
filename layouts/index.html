@@ -55,33 +55,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- Contact us section -->
-        <section id="contact">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 section-heading text-center">
-                        <h2 class="subtitle">{{ with .Site.Data.home.contact.title }}{{ . | markdownify }}{{ end }}</h2>
-                        <h3 class="subtitle-text">{{ with .Site.Data.home.contact.description }}{{ . | markdownify }}{{ end }}</h3>
-                    </div>
-                </div>
-                <div class="row row-bottom-padded-md">
-                    <div class="col-md-12 to-animate">
-                        <h3>{{ with .Site.Data.home.contact.info }}{{ . | markdownify }}{{ end }}</h3>
-                        <ul class="contact-info">
-                            {{ range .Site.Data.home.contact.details }}
-                                <li class="contact-address ">
-                                    <i class="{{ with index . 0}}{{ . }}{{ end }}"></i>
-                                    {{ with index . 1}}{{ . | safeHTML }}{{ end }}
-                                </li>
-                            {{ end }}
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
     </div>
 
     {{ partial "footer.html" .}}

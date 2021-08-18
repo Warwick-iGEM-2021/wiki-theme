@@ -139,28 +139,3 @@
     padding-bottom: 2em;
   }
 }
-
-
-/* Contact section */
-
-#contact {
-  margin: 50px 0px 25px 0px;
-  padding: 50px 0px 25px 0px;
-  text-align: right;
-}
-#contact .contact-info {
-  padding: 0;
-  margin: 0 0 1.5em 0;
-}
-#contact .contact-info li {
-  position: relative;
-  padding: 0;
-  margin: 0 0 1.5em 0;
-  padding-left: 50px;
-  list-style: none;
-}
-#contact .contact-info li i {
-  position: absolute;
-  top: 0.2em;
-  left: 0;
-}

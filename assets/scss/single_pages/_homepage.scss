@@ -23,14 +23,6 @@
   display: flex;
 }
 
-.watch-video {
-  text-align: center;
-  width: 100%;
-  display: block;
-  float: left;
-  height: 500px;
-}
-
 .intro-background {
   width: 30%;
   float: left;
@@ -39,8 +31,9 @@
   min-height: 300px;
   vertical-align: middle;
   padding: 40px;
-  margin-left: 3px;
-  margin-right: 3px;
+  margin-left: 6px;
+  margin-right: 6px;
+  margin-bottom: 6px;
   background: #fff;
   box-shadow: 7px 14px 42px 3px $shadow-color;
   z-index: 7;
@@ -130,12 +123,12 @@
   border: 2px solid $selection-color !important;
 }
 
-.row-bottom-padded-lg {
+#intro-cards {
   padding-bottom: 7em;
 }
 
 @media screen and (max-width: 768px) {
-  .row-bottom-padded-lg {
+  #intro-cards {
     padding-bottom: 2em;
   }
 }

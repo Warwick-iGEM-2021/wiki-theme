@@ -6,6 +6,13 @@
         <!-- Contact information and sponsors -->
         <div id="footer-info">
             <div class="row">
+
+                <!-- Sponsors -->
+                <div id="sponsors" class="col-9">
+                    <img src="/assets/images/placeholder.jpg" alt="Sponsors">
+                </div>
+
+
                 <!-- Contact information-->
                 <div id="contact-info" class="col-3 align-middle">
                     <ul class="social-media">
@@ -37,39 +44,8 @@
                     </ul>
 
                 </div>
-                <!-- Sponsors -->
-                <div id="sponsors" class="col-9">
-                    <img src="/assets/images/placeholder.jpg" alt="Sponsors">
-                </div>
-
-
             </div>
         </div>
-
-        <!-- Navigation links across the website
-        <div id="footer-navigation">
-            <div class="row">
-                {{ range .Site.Menus.main }}
-                    <div class="col">
-                        <h3 class=""><a href="{{ .URL }}"></a>{{ .Name | upper }}</a></h3>
-                    </div>
-                {{ end }}
-            </div>
-            <div class="row">
-                {{ range .Site.Menus.main }}
-                <div class="col">
-                    <ul>
-                        {{ if .HasChildren }}
-                            {{ range .Children }}
-                                <li><a href="{{ .URL }}">{{ .Name }}</a></li>
-                            {{ end }}
-                        {{ end }}
-                    </ul>
-                </div>
-                {{ end }}
-            </div>
-        </div> -->
-
 
         <div id="footer-navigation">
             <div class="row">
@@ -95,7 +71,7 @@
         <div id="licensing">
             <div class="row">
                 <div class="col-sm">
-                     {{ .Site.Params.footer.copyright | safeHTML }}
+                    {{ .Site.Params.footer.copyright | safeHTML }}
                 </div>
                 <div class="col-sm">
                     {{ .Site.Params.footer.content_license | safeHTML }}

@@ -88,11 +88,24 @@ a:active {
   min-height: 70vh;
 }
 
+.watch-video {
+    text-align: center;
+    width: 100%;
+    display: block;
+    float: left;
+    height: 500px;
+  }
+  
+
 ::-webkit-selection,
 ::-moz-selection,
 ::selection {
   background: $selection-color;
 }
+
+
+
+
 
 .btn {
   -webkit-transition: 0.5s;
@@ -141,6 +154,9 @@ a:active {
 .btn.btn-default:active {
   border-color: transparent;
 }
+
+
+
 
 .slanted-bottom {
   padding-bottom: 100px;

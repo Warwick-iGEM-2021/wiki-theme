@@ -1,27 +1,31 @@
 /* Footer section */
 
-
 #footer-info {
-    padding: 25px;
+  padding: 25px;
+}
+
+/* Sponsors */
+
+#sponsor-logos {
+  padding-bottom: 25px;
+  text-align: center;
+}
+
+#sponsor-logos img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
 /* Social media icons
     - https://codepen.io/minimalmonkey/pen/Ecpla
-    */
+*/
 
-.social-media {
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-
-.social-media li {
-  list-style: none;
-  text-align: center;
-  text-decoration: none;
-}
+@media only screen and (max-width: 600px) {
+    #contact-info {
+      text-align: center;
+    }
+  }
 
 .icon-button {
   background-color: white;
@@ -31,7 +35,7 @@
   font-size: 2rem;
   height: 3.6rem;
   line-height: 3.6rem;
-  margin: 0 5px;
+  margin: 5px 5px;
   position: relative;
   text-align: center;
   -webkit-user-select: none;
@@ -99,7 +103,7 @@
   background-color: #3b5998;
 }
 .home span {
-	background-color: #552d62;
+  background-color: #552d62;
 }
 
 .icon-button i {
@@ -157,7 +161,7 @@
   color: #3b5998;
 }
 .icon-button .icon-home {
-	color: #552d62;
+  color: #552d62;
 }
 
 .icon-button:hover .icon-social-twitter,
@@ -170,37 +174,31 @@
   -webkit-text-fill-color: white;
 }
 
-
-
-/* Sponsors */
-#sponsors img {
-    max-width:100%;
-    max-height:100%;
-}
-
-
 /* Footer navigation */
 
 #footer-navigation h3 {
-    color: $text-color-light;
-    font-size: 1.15em;
-    padding-bottom: 0.25em;
+  color: $text-color-light;
+  font-size: 1.15em;
+  padding-bottom: 0.25em;
 }
 
 #footer-navigation li {
-    list-style: none;
-    text-decoration: none;
+  list-style: none;
+  text-decoration: none;
 }
 
 #footer-navigation a {
-    color: $text-color-mid-light;
-    font-size: 0.75em;
+  color: $text-color-mid-light;
+  font-size: 0.75em;
 }
 
+#footer-navigation .col {
+  margin-bottom: 20px;
+}
 
 /* Licensing */
 #licensing {
-  margin-top: -10px;
+  margin-top: -15px;
   font-size: 0.8em;
   flex-shrink: 0;
   padding-top: 2em;

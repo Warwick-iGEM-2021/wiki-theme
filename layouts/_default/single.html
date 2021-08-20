@@ -3,17 +3,20 @@
 
     <div class="row">
 
-        <section id="sidebar" class="col-3">
+        <section id="sidebar" class="col-auto">
             <!--
                 https://disaev.me/p/blog-engines-and-static-site-generators/#table-of-contents
                 https://ma.ttias.be/adding-a-sticky-table-of-contents-in-hugo-to-posts/
                 https://www.bram.us/2020/01/10/smooth-scrolling-sticky-scrollspy-navigation/
                 https://github.com/gohugoio/hugo/issues/1778#issuecomment-313895910
             -->
-            {{ .TableOfContents }}
+
+            {{ if (or (not (isset .Params "toc")) (eq .Params.toc true)) }}
+                {{ .TableOfContents }}
+            {{ end }}
         </section>
 
-        <div id="hugo-content" class="col-9 container" data-spy="scroll" data-target="#TableOfContents">
+        <div id="hugo-content" class="col">
             {{ .Content }}
         </div>
     </div>

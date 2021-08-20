@@ -6,6 +6,7 @@ html {
   min-height: 100vh;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 body {
@@ -43,6 +44,21 @@ body:before {
 body.offcanvas-menu:before {
   opacity: 1;
   visibility: visible;
+}
+
+/* https://css-tricks.com/hash-tag-links-padding/ */
+h2::before,
+h3::before,
+h4::before,
+h5::before,
+h6::before {
+  display: block;
+  content: " ";
+  /* TODO: Make this match with the heading height*/
+  margin-top: -80px;
+  height: 80px;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 p {
@@ -91,23 +107,18 @@ a:active {
 }
 
 .watch-video {
-    text-align: center;
-    width: 100%;
-    display: block;
-    float: left;
-    height: 500px;
-  }
-  
+  text-align: center;
+  width: 100%;
+  display: block;
+  float: left;
+  height: 500px;
+}
 
 ::-webkit-selection,
 ::-moz-selection,
 ::selection {
   background: $selection-color;
 }
-
-
-
-
 
 .btn {
   -webkit-transition: 0.5s;
@@ -157,9 +168,6 @@ a:active {
   border-color: transparent;
 }
 
-
-
-
 .slanted-bottom {
   padding-bottom: 100px;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 56%, 0 100%);
@@ -170,15 +178,13 @@ a:active {
   flex: 1;
 }
 
-
-
 #hugo-content-wrapper {
-    padding-bottom: 2em;
+  padding-bottom: 2em;
 }
 
 #hugo-content {
-    @media only screen and (min-width: 800px) {
-        padding-left: 75px;
-        padding-right: 75px;
-      }
+  @media only screen and (min-width: 800px) {
+    padding-left: 75px;
+    padding-right: 75px;
+  }
 }

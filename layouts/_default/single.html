@@ -1,24 +1,30 @@
 {{ define "main" }}
 <section id="hugo-content-wrapper">
 
-    <div class="row">
-
-        <section id="sidebar" class="col-auto">
-            <!--
-                https://disaev.me/p/blog-engines-and-static-site-generators/#table-of-contents
-                https://ma.ttias.be/adding-a-sticky-table-of-contents-in-hugo-to-posts/
-                https://www.bram.us/2020/01/10/smooth-scrolling-sticky-scrollspy-navigation/
-                https://github.com/gohugoio/hugo/issues/1778#issuecomment-313895910
-            -->
-
-            {{ if (or (not (isset .Params "toc")) (eq .Params.toc true)) }}
+    <!--
+        - https://disaev.me/p/blog-engines-and-static-site-generators/#table-of-contents
+        - https://ma.ttias.be/adding-a-sticky-table-of-contents-in-hugo-to-posts/
+        - https://www.bram.us/2020/01/10/smooth-scrolling-sticky-scrollspy-navigation/
+        - https://github.com/gohugoio/hugo/issues/1778#issuecomment-313895910
+    -->
+    {{ $has_headers := ge (findRE "<h[1-6].*?>(.|\n])+?</h[1-6]>" .Content | len) 2 }}
+    {{ $toc_toggled := or (not (isset .Params "toc")) (eq .Params.toc true) }}
+    {{ if and $has_headers $toc_toggled }}
+        <!-- Make a sidebar with the table of contents in-->
+        <div class="row">
+            <section id="sidebar" class="col-auto">
                 {{ .TableOfContents }}
-            {{ end }}
-        </section>
-
-        <div id="hugo-content" class="col">
+            </section>
+            <div id="hugo-content" class="col">
+                {{ .Content }}
+            </div>
+        </div>
+    {{ else }}
+        <!-- Don't add a table of contents - just do the normal container-->
+        <div id="hugo-content" class="container w-80">
             {{ .Content }}
         </div>
-    </div>
+    {{ end }}
+
 </section>
 {{ end }}

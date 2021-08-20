@@ -1,10 +1,11 @@
 /* General section*/
 
-html,
-body {
+html {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -21,6 +22,7 @@ body {
   background: $background-color;
   position: relative;
   display: flex;
+  min-height: 100vh;
   flex-direction: column;
 }
 body:before {

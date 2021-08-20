@@ -1,21 +1,41 @@
+/* https://www.bram.us/2020/01/10/smooth-scrolling-sticky-scrollspy-navigation/ */
+
 #sidebar {
-
-    @media only screen and (max-width: 800px) {
-        display: none;
-      }
+  @media only screen and (max-width: 800px) {
+    display: none;
+  }
 }
 
-#table-of-contents {
-
-    padding: 20px 0px 20px 40px;
+#TableOfContents {
+  position: sticky;
+  top: 4rem;
+  align-self: start;
+  padding-left: 0;
+  border-left: 1px solid #efefef;
+  padding-top: 20px;
 }
 
-#table-of-contents li {
-
-    text-decoration: none;
-    list-style-type: none;
+/* 3. ScrollSpy active styles (see JS tab for activation) */
+#TableOfContents li.active > a {
+  color: #333;
+  font-weight: 500;
 }
 
-#table-of-contents a {
-    color: black !important;    
+#TableOfContents a {
+  text-decoration: none;
+  display: block;
+  padding: 0.125rem 0;
+  color: #ccc;
+  transition: all 100ms ease-in-out; /* ?? This small transition makes setting of the active state smooth */
+}
+
+#TableOfContents a:hover,
+#TableOfContents a:focus {
+  color: #666;
+}
+
+#TableOfContents ul {
+  padding-left: 30px;
+  text-decoration: none;
+  list-style-type: none;
 }

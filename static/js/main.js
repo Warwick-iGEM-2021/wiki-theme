@@ -6,8 +6,6 @@ $(document).ready(function () {
 
 
 
-
-
 $(function () {
     var siteSticky = function () {
         $(".js-sticky-header").sticky({ topSpacing: 0 });

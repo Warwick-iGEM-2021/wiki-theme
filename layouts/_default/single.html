@@ -2,16 +2,20 @@
 <section id="hugo-content-wrapper">
 
     <div class="row">
-        
-        {{ partial "sidebar.html" . }}
 
-        <div id="hugo-content" class="col-8 container">
+        <section id="sidebar" class="col-3">
+            <!--
+                https://disaev.me/p/blog-engines-and-static-site-generators/#table-of-contents
+                https://ma.ttias.be/adding-a-sticky-table-of-contents-in-hugo-to-posts/
+                https://www.bram.us/2020/01/10/smooth-scrolling-sticky-scrollspy-navigation/
+                https://github.com/gohugoio/hugo/issues/1778#issuecomment-313895910
+            -->
+            {{ .TableOfContents }}
+        </section>
+
+        <div id="hugo-content" class="col-9 container" data-spy="scroll" data-target="#TableOfContents">
             {{ .Content }}
         </div>
     </div>
-
-    <!--<div class="container w-80">
-        {{ .Content }}
-    </div>-->
 </section>
 {{ end }}

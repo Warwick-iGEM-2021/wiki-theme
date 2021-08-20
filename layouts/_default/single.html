@@ -1,7 +1,17 @@
 {{ define "main" }}
-<section id="hugo-content">
-    <div class="container w-80">
-        {{ .Content }}
+<section id="hugo-content-wrapper">
+
+    <div class="row">
+        
+        {{ partial "sidebar.html" . }}
+
+        <div id="hugo-content" class="col-8 container">
+            {{ .Content }}
+        </div>
     </div>
+
+    <!--<div class="container w-80">
+        {{ .Content }}
+    </div>-->
 </section>
 {{ end }}

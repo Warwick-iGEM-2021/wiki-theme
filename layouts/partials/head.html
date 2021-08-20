@@ -19,6 +19,12 @@
     <link rel="stylesheet" type="text/css" href="/css/simple-line-icons.css">
     <link rel="stylesheet" type="text/css" href="/css/igem-reset.css">
 
+
+    <link
+  rel="stylesheet"
+  href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
+/>
+
     {{ $options := (dict "targetPath" "css/styles.css") }}
     {{ $scss := resources.Get "scss/main.scss" }}
     {{ $style := $scss | resources.ToCSS $options }} <!--| resources.Minify }}-->
@@ -41,6 +47,8 @@
 	<script src="/js/popper.min.js" defer></script>
 	<script src="/js/bootstrap.min.js" defer></script>
 	<script src="/js/respond.min.js" defer></script>
+
+    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
 
     <script src="/js/main.js" defer></script>
     {{ range .Site.Params.custom_js }}

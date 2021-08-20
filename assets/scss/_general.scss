@@ -167,3 +167,16 @@ a:active {
 .content-wrapper {
   flex: 1;
 }
+
+
+
+#hugo-content-wrapper {
+    padding-bottom: 2em;
+}
+
+#hugo-content {
+    @media only screen and (min-width: 800px) {
+        padding-left: 75px;
+        padding-right: 75px;
+      }
+}

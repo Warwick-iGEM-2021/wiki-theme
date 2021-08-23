@@ -1,6 +1,6 @@
 ---
 title: "{{ replace .Name "-" " " | humanize | title }}"
-subtitle: "Inspirational quote -- person"
+hero-img: "https://picsum.photos/1920/360"
 date: {{ .Date }}
 draft: false
 ---

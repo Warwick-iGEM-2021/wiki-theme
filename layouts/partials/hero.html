@@ -1,0 +1,13 @@
+{{ if isset .Params "Hero_img"}}
+    <section id="hero" class="secondary-background-gradient slanted-bottom">
+{{ else }}
+    <section id="hero" style="background-image: url('{{ .Params.Hero_img | safeURL }}')" class="slanted-bottom">
+{{ end }}
+    <div class="container text-center">
+            <!-- TODO: Animate, and add a nicer font -->
+            <h1>
+                {{ with .Title }}{{ . | markdownify }}{{ end }}
+            </h1>
+        </h1>
+    </div>
+</section>

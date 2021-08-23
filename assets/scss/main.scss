@@ -1,6 +1,7 @@
 /* Setup */
 @import "variables";
 @import "fonts";
+@import "mixins";
 
 /* General stylings */
 @import "general";
@@ -13,7 +14,7 @@
 @import "partials/loader";
 @import "partials/nav";
 @import "partials/sidebar";
-@import "partials/header";
+@import "partials/hero";
 @import "partials/footer";
 
 /* Shortcodes' stylings */

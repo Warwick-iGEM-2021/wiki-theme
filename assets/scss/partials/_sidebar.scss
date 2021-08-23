@@ -1,23 +1,26 @@
 /* https://www.bram.us/2020/01/10/smooth-scrolling-sticky-scrollspy-navigation/ */
 
-#sidebar {
-  @media only screen and (max-width: 800px) {
+@media only screen and (max-width: 800px) {
+  #sidebar {
     display: none;
+  }
+  .sidebar-removed {
+    margin: 0px 20px 0px 20px;
   }
 }
 
-#TableOfContents {
+.toc-wrapper {
   position: sticky;
   top: 4rem;
   align-self: start;
-  padding-left: 0;
-  border-left: 2px solid #efefef;
+  margin-left: 30px;
   padding-top: 20px;
   font-size: larger !important;
+
 }
 
 #TableOfContents li.active > a {
-  color: #333;
+  color: $link-color;
   font-weight: 500;
 }
 
@@ -25,17 +28,15 @@
   text-decoration: none;
   display: block;
   padding: 0.125rem 0;
-  color: #ccc;
+  color: $text-color-dark;
   transition: all 100ms ease-in-out;
 }
 
-#TableOfContents a:hover,
-#TableOfContents a:focus {
-  color: #666;
-}
-
 #TableOfContents ul {
-  padding-left: 30px;
   text-decoration: none;
   list-style-type: none;
+}
+
+#TableOfContents ul ul {
+  padding-left: 30px;
 }

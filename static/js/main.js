@@ -5,7 +5,7 @@ $(document).ready(function () {
 });
 
 
-/* https://www.bram.us/2020/01/10/smooth-scrolling-sticky-scrollspy-navigation/ */
+/* https://www.bram.us/2020/01/10/smooth-scrolling-sticky-scrollspy-navigation/
 window.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
@@ -20,7 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('h2[id], h3[id], h4[id], h5[id], h6[id]').forEach((heading) => {
         observer.observe(heading);
     });
-});
+}); */
 
 
 

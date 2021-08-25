@@ -4,7 +4,7 @@
  * https://github.com/brenonovelli/Accessibility-Settings-Bar
  */
 
-$(function () {
+(function () {
 
     // Key that will be used to complement the keyboard shortcut.
     const accessKey = 4;

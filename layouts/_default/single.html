@@ -12,28 +12,32 @@
 
         - https://github.com/hakimel/css/tree/master/progress-nav
     -->
+
+    
     {{ $has_headers := ge (findRE "<h[1-6].*?>(.|\n])+?</h[1-6]>" .Content | len) 2 }}
     {{ $toc_toggled := or (not (isset .Params "toc")) (eq .Params.toc true) }}
     {{ if and $has_headers $toc_toggled }}
-        <!-- Make a sidebar with the table of contents in-->
+    <!-- Make a sidebar with the table of contents in-->
         <div class="row">
-            <div id="sidebar" class="col-auto">
+            <section id="sidebar" class="col-auto">
                 <div class="toc-wrapper">
-                    <u><h3>Table of contents</h3></u>
+                    <u>
+                        <h3>Table of contents</h3>
+                    </u>
                     {{ .TableOfContents }}
                 </div>
-            </div>
-            <div id="hugo-content" class="col">
+            </section>
+            <section id="hugo-content" class="col">
                 <div class="sidebar-removed">
                     {{ .Content }}
                 </div>
-            </div>
+            </section>
         </div>
     {{ else }}
         <!-- Don't add a table of contents - just do the normal container-->
-        <div id="hugo-content" class="container w-80">
+        <section id="hugo-content" class="container-md">
             {{ .Content }}
-        </div>
+        </section>
     {{ end }}
 
 </section>

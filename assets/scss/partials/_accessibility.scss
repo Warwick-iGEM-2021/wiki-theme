@@ -1,1 +1,239 @@
-/* Accessibility section */
+/*
+ * Accessibility section
+ * https://github.com/brenonovelli/Accessibility-Settings-Bar
+ */
+
+$accessibility-eye-catch: #ed1c24;
+$accessibility-eye-catch-text: #fff;
+$accessibility-contrast-link: #ff0;
+$accessibility-contrast-text: #fff;
+$accessibility-contrast-background: #000;
+
+#accessibilityBar {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    z-index: 9999;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translate(100%, -50%);
+    background-color: $shadow-strong-color;
+    border-radius: 0.5rem 0 0 0.5rem;
+  }
+  #accessibilityBar * {
+    box-sizing: border-box;
+  }
+  #accessibilityBar.active {
+    transform: translate(0, -50%);
+    box-shadow: 0 5px 30px $shadow-strong-color;
+  }
+  #accessibilityBar button {
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-appearance: none;
+    cursor: pointer;
+  }
+  #accessibilityBar button#universalAccessBtn {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: $accessibility-eye-catch-text;
+    background-color: $accessibility-eye-catch;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    border-radius: 50%;
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translate(-110%, -50%);
+    cursor: pointer;
+  }
+  #accessibilityBar button#universalAccessBtn span {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1;
+    text-align: right;
+    font-weight: bold;
+    color: $accessibility-eye-catch-text;
+    background-color: $accessibility-eye-catch;
+    box-shadow: 0 10px 30px $shadow-color;
+    height: 100%;
+    padding: 0 1rem;
+    border-radius: 0.25rem;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    right: 120%;
+    transform: translateY(-50%);
+  }
+  #accessibilityBar button#universalAccessBtn.collapsed span {
+    opacity: 0;
+    right: 50%;
+  }
+  #accessibilityBar button#universalAccessBtn:hover span {
+    opacity: 1;
+    right: 120%;
+  }
+  #accessibilityBar button.setAccessibility {
+    font-size: 12px;
+    font-size: 0.75rem;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    color: $text-color-dark;
+    font-weight: 700;
+    background-color: $accessibility-eye-catch-text;
+    width: 100%;
+    padding: 0.1rem 0.2rem;
+    border-radius: 0.25rem;
+    border: none;
+    display: flex;
+    align-items: center;
+    margin: 0.25rem;
+  }
+  #accessibilityBar button.setAccessibility:hover {
+    background-color: $accessibility-eye-catch-text;
+  }
+  #accessibilityBar button.setAccessibility strong {
+    color: $accessibility-eye-catch-text;
+    background-color: $accessibility-eye-catch;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.25rem;
+  }
+  @media (max-width: 576px) {
+    #accessibilityBar {
+      position: fixed;
+      top: initial;
+      bottom: 0;
+      transform: translateX(100%);
+    }
+    #accessibilityBar.active {
+      transform: translateX(0);
+    }
+    #accessibilityBar #universalAccessBtn {
+      top: initial;
+      transform: translateX(-120%);
+      bottom: 16px;
+      border-radius: 50%;
+    }
+  }
+  body.contrast #accessibilityBar button[data-accessibility="contrast"] {
+    background-color: $accessibility-eye-catch;
+  }
+  body.accessibility_readingLine
+    #accessibilityBar
+    button[data-accessibility="readingLine"] {
+    background-color: $accessibility-eye-catch;
+    color: $accessibility-contrast-text !important;
+  }
+  body.accessibility_readingLine #readingLine {
+    background-color: $accessibility-eye-catch !important;
+    opacity: 1;
+    width: 100vw;
+    height: 0.5rem;
+    position: absolute;
+    left: 0;
+    z-index: 9999;
+    transform: translateY(0.5rem);
+  }
+  body.contrast {
+    background: $accessibility-contrast-background !important;
+    color: $accessibility-contrast-text !important;
+  }
+  body.contrast nav,
+  body.contrast li,
+  body.contrast ol,
+  body.contrast header,
+  body.contrast footer,
+  body.contrast section,
+  body.contrast main,
+  body.contrast aside,
+  body.contrast article {
+    background: $accessibility-contrast-background !important;
+    color: $accessibility-contrast-text !important;
+  }
+  body.contrast h1,
+  body.contrast h2,
+  body.contrast h3,
+  body.contrast h4,
+  body.contrast h5,
+  body.contrast h6,
+  body.contrast p,
+  body.contrast label,
+  body.contrast strong,
+  body.contrast em,
+  body.contrast cite,
+  body.contrast q,
+  body.contrast i,
+  body.contrast b,
+  body.contrast u,
+  body.contrast span {
+    color: $accessibility-contrast-text !important;
+  }
+  body.contrast a {
+    color: $accessibility-contrast-link !important;
+  }
+  body.contrast a * {
+    color: $accessibility-contrast-link !important;
+  }
+  body.contrast button,
+  body.contrast input[type="button"],
+  body.contrast input[type="reset"],
+  body.contrast input[type="submit"] {
+    background: $accessibility-contrast-link !important;
+    color: $accessibility-contrast-background !important;
+    font-weight: bold;
+    border: none !important;
+  }
+  body.contrast img {
+    filter: grayscale(100%) contrast(120%);
+  }
+  body.contrast input[type="text"],
+  body.contrast input[type="password"],
+  body.contrast input[type="url"],
+  body.contrast input[type="search"],
+  body.contrast input[type="email"],
+  body.contrast input[type="tel"],
+  body.contrast input[type="date"],
+  body.contrast input[type="month"],
+  body.contrast input[type="week"],
+  body.contrast input[type="datetime"],
+  body.contrast input[type="datetime-local"],
+  body.contrast textarea,
+  body.contrast input[type="number"] {
+    background: $accessibility-contrast-background !important;
+    border: 1px solid $accessibility-contrast-text !important;
+    color: $accessibility-contrast-text !important;
+  }
+  body.contrast #accessibilityBar * {
+    background-color: $accessibility-contrast-background !important;
+    color: $accessibility-contrast-link !important;
+  }
+  body.contrast #accessibilityBar .setAccessibility {
+    border: 1px solid !important;
+  }
+  body.contrast
+    #accessibilityBar
+    .setAccessibility[data-accessibility="contrast"] {
+    background-color: $accessibility-contrast-link !important;
+    color: $accessibility-contrast-background !important;
+  }
+  

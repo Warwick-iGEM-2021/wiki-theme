@@ -121,13 +121,13 @@
   width: 3.6rem;
   z-index: 10;
 }
-.icon-button .icon-social-twitter {
+.icon-button .fa-twitter {
   color: #4099ff;
 }
-.icon-button .icon-social-facebook {
+.icon-button .fa-facebook {
   color: #3b5998;
 }
-.icon-button .icon-social-instagram {
+.icon-button .fa-instagram {
   background: radial-gradient(
       circle farthest-corner at 35% 90%,
       #fec564,
@@ -157,18 +157,18 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.icon-button .icon-envelope {
+.icon-button .fa-envelope {
   color: #3b5998;
 }
-.icon-button .icon-home {
+.icon-button .fa-home {
   color: #552d62;
 }
 
-.icon-button:hover .icon-social-twitter,
-.icon-button:hover .icon-social-facebook,
-.icon-button:hover .icon-social-instagram,
-.icon-button:hover .icon-envelope,
-.icon-button:hover .icon-home {
+.icon-button:hover .fa-twitter,
+.icon-button:hover .fa-facebook,
+.icon-button:hover .fa-instagram,
+.icon-button:hover .fa-envelope,
+.icon-button:hover .fa-home {
   color: white;
   background: initial;
   -webkit-text-fill-color: white;

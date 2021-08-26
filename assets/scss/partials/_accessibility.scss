@@ -3,7 +3,7 @@
  * https://github.com/brenonovelli/Accessibility-Settings-Bar
  */
 
-$accessibility-eye-catch: #329998;
+$accessibility-eye-catch: #b3b3b3; //#329998;
 $accessibility-eye-catch-text: #fff;
 $accessibility-contrast-link: #ff0;
 $accessibility-contrast-text: #fff;
@@ -16,7 +16,7 @@ $accessibility-contrast-background: #000;
     transition: all 0.5s ease-in-out;
     z-index: 9999;
     position: fixed;
-    top: 50%;
+    top: calc(100% - 2rem);
     right: 0;
     transform: translate(100%, -50%);
     background-color: $shadow-strong-color;
@@ -26,7 +26,7 @@ $accessibility-contrast-background: #000;
     box-sizing: border-box;
   }
   #accessibilityBar.active {
-    transform: translate(0, -50%);
+    transform: translate(0, -90%);
     box-shadow: 0 5px 30px $shadow-strong-color;
   }
   #accessibilityBar button {
@@ -52,7 +52,7 @@ $accessibility-contrast-background: #000;
     border: none;
     position: absolute;
     top: 50%;
-    transform: translate(-110%, -50%);
+    transform: translate(-128%, -50%);
     cursor: pointer;
   }
   #accessibilityBar button#universalAccessBtn span {

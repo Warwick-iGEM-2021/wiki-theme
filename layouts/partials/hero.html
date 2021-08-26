@@ -1,7 +1,7 @@
 {{ if isset .Params "Hero_img"}}
-    <section id="hero" class="secondary-background-gradient slanted-bottom">
+    <section id="hero" class="secondary-background-gradient"> <!-- slanted-bottom -->
 {{ else }}
-    <section id="hero" style="background-image: url('{{ .Params.Hero_img | safeURL }}')" class="slanted-bottom">
+    <section id="hero" style="background-image: url('{{ .Params.Hero_img | safeURL }}')"> <!-- slanted-bottom -->
 {{ end }}
     <div class="container text-center">
             <!-- TODO: Animate, and add a nicer font -->

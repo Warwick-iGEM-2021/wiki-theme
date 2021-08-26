@@ -12,7 +12,8 @@
     <div class="content-wrapper">
 
         <!-- Hero section for main page introduction -->
-        <section id="homepage-hero" class="secondary-background-gradient slanted-bottom">
+        <section id="homepage-hero" class="secondary-background-gradient">
+            <!-- slanted-bottom -->
             <div class="container text-center">
                 <img class="homepage-hero-logo" src="{{ .Site.Params.hero.img }}" alt="The site logo">
                 <div class="col-lg-9 mx-auto">
@@ -21,38 +22,30 @@
                         {{ with .Site.Params.hero.subtitle }}{{ . | markdownify }}{{ end }}
                     </h2>
                 </div>
+
+                <!-- Animation to indicate start scrolling -->
             </div>
         </section>
 
-        <!-- Introduction section for the project -->
-        <section id="intro">
-            <div class="container">
-                <!-- Introduction to the proof on concept -->
-                <div id="intro-cards" class="row">
-                    {{ range .Site.Data.home.intro.item }}
-                    <div class="intro-background">
-                        <div class="overlay-darker tertiary-background-gradient"></div>
-                        <div class="overlay"></div>
-                        <div class="intro-text">
-                            <i class="intro-icon {{ .icon }}"></i>
-                            <h2>{{ .title }}</h2>
-                            <p>{{ .description }}</p>
-                            {{ if .button}}
-                            <p><a href="{{ .url }}" class="btn btn-primary">{{ .button}}</a></p>
-                            {{ end }}
-                        </div>
-                    </div>
-                    {{ end }}
-                </div>
-                <!-- TODO: Abstract -->
+        <!-- All of the homepage stuff about the project -->
+        <section id="homepage-content-wrapper">
+            <div class="container torn-page">
+                <h1>This is some text</h1>
+                <p>Lorem ipsum</p>
+            </div>
 
-                <!-- Promotional video -->
-                <div id="promotional-video" class="watch-video text-center">
-                    <h2 class="subtitle">{{.Site.Data.home.intro.video.title | markdownify }}</h2>
-                    <video width="100%" height="100%" controls>
-                        <source src="{{ .Site.Data.home.intro.video.url }}" type="video/mp4">
-                    </video>
-                </div>
+            <div class="container torn-page">
+                <h2 class="subtitle">{{.Site.Data.home.intro.video.title | markdownify }}</h2>
+                <video width="100%" height="100%" controls>
+                    <source src="{{ .Site.Data.home.intro.video.url }}" type="video/mp4">
+                </video>
+            </div>
+
+
+
+            <div class="container torn-page">
+                <h1>This is some text</h1>
+                <p>Lorem ipsum</p>
             </div>
         </section>
     </div>

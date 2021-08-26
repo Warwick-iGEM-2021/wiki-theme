@@ -10,17 +10,11 @@ html {
 }
 
 body {
-  font-family: "Source Sans Pro", Arial, sans-serif;
-  /*
-    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    */
+  font-family: "Bahnschrift", sans-serif !important;
   font-weight: 300;
   font-size: 18px;
   line-height: 1.5;
   color: $text-color-dark;
-  // background: $background-color;
   background-image: url('/assets/images/paper-background-brown.jpg');
   background-size: cover;
   position: relative;
@@ -54,6 +48,7 @@ h3::before,
 h4::before,
 h5::before,
 h6::before {
+  font-family: "Helvetica Neue", sans-serif !important;
   display: block;
   content: " ";
   /* TODO: Make this match with the heading height*/

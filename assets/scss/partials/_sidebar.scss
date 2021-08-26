@@ -1,19 +1,29 @@
 /* https://www.bram.us/2020/01/10/smooth-scrolling-sticky-scrollspy-navigation/ */
 
-@media only screen and (max-width: 800px) {
-  #sidebar {
+#sidebar {
+  @media only screen and (max-width: 1000px) {
     display: none;
   }
+  margin-right: -20px;
 }
 
 .toc-wrapper {
   position: sticky;
-  top: 4rem;
+  top: 6rem;
   align-self: start;
   margin-left: 30px;
-  padding-top: 20px;
+  padding-top: 30px;
   font-size: larger !important;
+}
 
+#hugo-content {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#sidebar-logo {
+  text-align: center;
+  padding-bottom: 30px;
 }
 
 #TableOfContents li.active > a {

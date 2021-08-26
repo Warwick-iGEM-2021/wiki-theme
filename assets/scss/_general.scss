@@ -160,12 +160,9 @@ a:active {
 
 .slanted-top {
   padding-top: 100px;
-
   /* https://www.cssportal.com/css-clip-path-generator/ */
   -webkit-clip-path: polygon(0 1.5%, 100% 0, 100% 100%, 0% 100%);
   clip-path: polygon(0 1.5%, 100% 0, 100% 100%, 0% 100%);
-
-
 }
 
 
@@ -173,16 +170,6 @@ a:active {
   flex: 1;
   padding-bottom: 2em;
 }
-
-#hugo-content {
-  @media only screen and (min-width: 800px) {
-    // TODO: Fix this maybe?
-    margin: 0px 20px 0px 20px;
-    padding-left: 75px;
-    padding-right: 75px;
-  }
-}
-
 
 .torn-page {
     background-image: url('/assets/images/paper-background-minimal.jpg');

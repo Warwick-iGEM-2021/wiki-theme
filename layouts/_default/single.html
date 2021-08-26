@@ -13,33 +13,43 @@
         - https://github.com/hakimel/css/tree/master/progress-nav
     -->
 
-    
+
+    <!-- Make a sidebar with the table of contents in-->
     {{ $has_headers := ge (findRE "<h[1-6].*?>(.|\n])+?</h[1-6]>" .Content | len) 2 }}
     {{ $toc_toggled := or (not (isset .Params "toc")) (eq .Params.toc true) }}
     {{ if and $has_headers $toc_toggled }}
-    <!-- Make a sidebar with the table of contents in-->
         <div class="row">
+            <!-- Add the sidebar as a column -->
             <section id="sidebar" class="col-auto">
-                <div class="toc-wrapper">
-                    <div style="text-align: center; padding-bottom: 20px;">
+                <div class="toc-wrapper torn-page">
+                    <div id="sidebar-logo">
                         <img src="/assets/images/logo_new.png" alt="Our logo" style="width: 20vh;">
                     </div>
-                    <u>
-                        <h3>Table of contents</h3>
-                    </u>
                     {{ .TableOfContents }}
                 </div>
             </section>
+            <!-- Add the content as a column -->
             <section id="hugo-content" class="col">
-                <div class="sidebar-removed">
+                <!-- Write the summary section -->
+                {{ with .Params.Summary }}
+                    <div class="torn-page">
+                        <h1 class="subtitle">Summary</h1>
+                        {{ . | markdownify }}
+                    </div>
+                {{ end }}
+
+                <!-- Write the content from the markdown file -->
+                <div class="torn-page">
                     {{ .Content }}
                 </div>
             </section>
         </div>
     {{ else }}
         <!-- Don't add a table of contents - just do the normal container-->
-        <section id="hugo-content" class="container-md torn-page">
-            {{ .Content }}
+        <section id="hugo-content" class="container-md">
+            <div class="torn-page">
+                {{ .Content }}
+            </div>
         </section>
     {{ end }}
 

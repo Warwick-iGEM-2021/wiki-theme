@@ -16,7 +16,8 @@
   font-size: larger !important;
 }
 
-#hugo-content {
+// If there is a sidebar, we make a custom container-y thing
+.row > #hugo-content {
   margin-left: 20px;
   margin-right: 20px;
 }

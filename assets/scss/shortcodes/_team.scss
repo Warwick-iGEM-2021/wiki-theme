@@ -1,7 +1,7 @@
 /* About section */
 
 .about-person {
-    outline: 2px solid $background-color-light-border;
+    outline: 2px solid $text-color-mid-light;
     outline-offset: -10px;
 
 	padding: 80px 30px 30px 30px;
@@ -23,7 +23,7 @@
 
 .about-person figure img {
 	width: 120px;
-	border: inset 2px solid $background-color-light-border;
+	border: inset 2px solid $text-color-mid-light;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
 	-ms-border-radius: 50%;

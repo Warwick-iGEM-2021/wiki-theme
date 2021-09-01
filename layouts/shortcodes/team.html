@@ -1,6 +1,7 @@
 <section id="about">
-    <h2>{{ .Site.Data.team.team_members.heading }}</h2>
-    <p>{{ .Site.Data.team.team_members.subtext }}</p>
+    <h2 class="subtitle">{{ .Site.Data.team.team_members.heading }}</h2>
+    <p class="text-center">{{ .Site.Data.team.team_members.subtext }}</p>
+
     <div class="row" style="padding: 0px 10px 10px 0px;">
         {{ range .Site.Data.team.team_members.item }}
             <div class="col-md-4 about-person text-center">
@@ -12,19 +13,22 @@
         {{ end }}
     </div>
 
-    <!-- <br>
-    <h2>{{ .Site.Data.team.supervisors.heading }}</h2>
-    <p>{{ .Site.Data.team.supervisors.subtext }}</p>
+    <br>
+
+    <h2 class="subtitle">{{ .Site.Data.team.supervisors.heading }}</h2>
+    <p class="text-center">{{ .Site.Data.team.supervisors.subtext }}</p>
+
     <div class="row" style="padding: 0px 10px 10px 0px;">
         {{ range .Site.Data.team.supervisors.item }}
             <div class="col-md-4 about-person text-center">
+
                 <figure><img src="{{ .img }}" alt="{{ .alt }}"></figure>
                 <h3>{{ .name | markdownify }}</h3>
                 <span class="person-position">{{ .position | markdownify }}</span>
                 <p>{{ .description | markdownify }}</p>
             </div>
         {{ end }}
-    </div> -->
+    </div>
 
 
 </section>

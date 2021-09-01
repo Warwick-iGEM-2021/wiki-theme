@@ -21,16 +21,16 @@
                             </a>
                         </div>
                         <div class="col">
+                            <a href="{{ .Site.Params.footer.instagram_url }}" class="icon-button instagram">
+                                <i class="fab fa-instagram"></i><span></span>
+                            </a>
+                        </div>
+                        <div class="col">
                             <a href="{{ .Site.Params.footer.facebook_url }}" class="icon-button facebook">
                                 <i class="fab fa-facebook"></i><span></span>
                             </a>
                         </div>
 
-                        <div class="col">
-                            <a href="{{ .Site.Params.footer.instagram_url }}" class="icon-button instagram">
-                                <i class="fab fa-instagram"></i><span></span>
-                            </a>
-                        </div>
                         <div class="col">
                             <a href="{{ .Site.Params.footer.email_address }}" class="icon-button email">
                                 <i class="fa fa-envelope"></i><span></span>
@@ -54,12 +54,12 @@
                 <div class="col">
                     <h3><a href="{{ .URL }}"></a>{{ .Name | upper }}</a></h3>
                     {{ if .HasChildren }}
-                    <!-- If the cell has make a list of them below it -->
-                    <ul>
-                        {{ range .Children }}
-                        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
-                        {{ end }}
-                    </ul>
+                        <!-- If the cell has make a list of them below it -->
+                        <ul>
+                            {{ range .Children }}
+                                <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                            {{ end }}
+                        </ul>
                     {{ end }}
                 </div>
                 {{ end }}

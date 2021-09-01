@@ -1,7 +1,6 @@
 /* Hero section */
 
 #homepage-hero {
-  margin: 0 0 4em 0;
   color: $text-color-light;
   height: 100vh;
 }
@@ -26,4 +25,12 @@
 .homepage-hero-logo {
   max-width: 100%;
   max-height: 50vh;
+}
+
+
+
+
+.parallax-window {
+    min-height: 70vh;
+    background: transparent;
 }

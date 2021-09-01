@@ -9,7 +9,7 @@
     {{ partial "loader.html" .}}
     {{ partial "nav.html" .}}
 
-    <div class="content-wrapper">
+    <section id="homepage" class="content-wrapper" style="padding-bottom: 0 !important;">
 
         <!-- Main splash page -->
         <section id="homepage-hero" class="secondary-background-gradient">
@@ -32,9 +32,17 @@
         <!-- Content on the homepage -->
         <section id="homepage-content-wrapper">
 
+
+            <!-- https://pixelcog.github.io/parallax.js/ -->
+            <div class="parallax-window" data-parallax="scroll" data-image-src="https://picsum.photos/seed/9000/1920/720"></div>
+            <div class="parallax-window" data-parallax="scroll" data-image-src="https://picsum.photos/seed/9001/1920/720"></div>
+            <div class="parallax-window" data-parallax="scroll" data-image-src="https://picsum.photos/seed/9002/1920/720"></div>
+            <div class="parallax-window" data-parallax="scroll" data-image-src="https://picsum.photos/seed/9003/1920/720"></div>
+
+
         </section>
 
-    </div>
+    </section>
 
     {{ partial "footer.html" .}}
 

@@ -1,6 +1,7 @@
 /*
  * Accessibility section
  * https://github.com/brenonovelli/Accessibility-Settings-Bar
+ * https://www.smashingmagazine.com/2015/12/making-accessibility-simpler/
  */
 
 /*
@@ -20,6 +21,7 @@ $accessibility-eye-catch-text: #fff;
 $accessibility-contrast-link: #ff0;
 $accessibility-contrast-text: #fff;
 $accessibility-contrast-background: #000;
+$accessibility-reading-line: #f20;
 
 #accessibilityBar {
   -webkit-transition: all 0.5s ease-in-out;
@@ -130,23 +132,6 @@ $accessibility-contrast-background: #000;
   justify-content: center;
   margin-right: 0.25rem;
 }
-@media (max-width: 576px) {
-  #accessibilityBar {
-    position: fixed;
-    top: initial;
-    bottom: 0;
-    transform: translateX(100%);
-  }
-  #accessibilityBar.active {
-    transform: translateX(0);
-  }
-  #accessibilityBar #universalAccessBtn {
-    top: initial;
-    transform: translateX(-120%);
-    bottom: 16px;
-    border-radius: 50%;
-  }
-}
 body.contrast #accessibilityBar button[data-accessibility="contrast"] {
   background-color: $accessibility-eye-catch;
 }
@@ -157,7 +142,7 @@ body.accessibility_readingLine
   color: $accessibility-contrast-text !important;
 }
 body.accessibility_readingLine #readingLine {
-  background-color: $accessibility-eye-catch !important;
+  background-color: $accessibility-reading-line !important;
   opacity: 1;
   width: 100vw;
   height: 0.5rem;
@@ -219,6 +204,7 @@ body.contrast input[type="submit"] {
   border: none !important;
 }
 body.contrast img {
+  // TODO: Is this helpful ???
   filter: grayscale(100%) contrast(120%);
 }
 body.contrast input[type="text"],

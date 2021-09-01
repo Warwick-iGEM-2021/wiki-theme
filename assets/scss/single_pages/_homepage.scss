@@ -6,14 +6,21 @@
   height: 100vh;
 }
 
-#homepage-hero > .container {
+#homepage-hero > .row {
   position: relative;
-  top: 20%;
+  top: 30%;
 }
 
-.homepage-hero-divider {
-  width: 40%;
-  border-top: 3px solid $text-color-light;
+#homepage-hero-text {
+  padding-left: 15vw;
+  @media screen and (max-width: 800px),
+         screen and (max-height: 90vh) {
+    display: none;
+  }
+}
+
+#homepage-hero-text h1 {
+    font-size: 6vw;
 }
 
 .homepage-hero-logo {

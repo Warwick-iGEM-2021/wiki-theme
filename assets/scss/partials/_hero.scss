@@ -1,13 +1,16 @@
 /* Hero section */
 
 #hero {
-    padding: 250px 0px 50px 0px;
+    min-height: 70vh;
+    padding: 50px 0px 50px 0px;
     margin: 0px 0px 50px 0px;
     color: $text-color-light;
+    background: transparent;
     background-size: cover;
     background-attachment: fixed;
 }
 
 #hero h1 {
-    margin-top: 50px;
+    margin-top: 250px;
+    font-size: 6vw;
 }

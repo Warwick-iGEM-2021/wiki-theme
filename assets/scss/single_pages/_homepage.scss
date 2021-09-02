@@ -26,3 +26,14 @@
   max-width: 100%;
   max-height: 50vh;
 }
+
+
+.content-parallax-window {
+    height: calc(100vh - 2.5em);
+    background: transparent;
+    padding: 50px 0px;
+}
+
+.homepage-video {
+    max-height: 70vh;
+}

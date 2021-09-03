@@ -28,6 +28,10 @@
   padding-bottom: 30px;
 }
 
+#sidebar-logo img {
+  width: 20vh;
+}
+
 #TableOfContents li.active > a {
   color: $link-color;
   font-weight: 500;

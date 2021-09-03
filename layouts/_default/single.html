@@ -23,7 +23,7 @@
             <section id="sidebar" class="col-auto">
                 <div class="toc-wrapper torn-page">
                     <div id="sidebar-logo">
-                        <img src="/assets/images/logo_new.png" alt="Our logo" style="width: 20vh;">
+                        <img src="{{ .Site.Params.sidebar.logo_img | safeURL }}" alt="Sidebar logo">
                     </div>
                     {{ .TableOfContents }}
                 </div>

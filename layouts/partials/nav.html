@@ -1,9 +1,9 @@
 <!-- Mobile sidebar for small screens -->
 <div class="site-mobile-menu site-navbar-target">
     <div class="site-mobile-menu-header">
-        <!--<div class="site-mobile-menu-close mt-3">
-            <span class="fa fa-times js-menu-toggle" style="font-size: 18px;"></span>
-        </div>-->
+        <div class="site-mobile-menu-close mt-3">
+            <span class="fa fa-times js-menu-toggle"></span>
+        </div>
     </div>
     <div class="site-mobile-menu-body"></div>
 </div>
@@ -17,6 +17,11 @@
                 <h1 class="mb-0 site-logo"><a href="/">
                     {{ with .Site.Params.navigation.brand }}
                         {{ . | markdownify }}
+                    {{ end }}
+
+                    {{ with .Site.Params.navigation.brand_img }}
+                        <!-- TODO: Try to add a white logo when unscrolled -->
+                        <img src="{{ . | safeURL }}" alt="Brand logo">
                     {{ end }}
                 </a></h1>
             </div>

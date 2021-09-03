@@ -1,8 +1,23 @@
 /* Hero section */
 
+// Make it so the text disappears leaving just the logo if the screen is too thin,
+// or the text overflows beyond the screen
+$splash_no_overflow: 90vh;
+$switch_splash_contents: 1000px;
+
 #homepage-hero {
-  color: $text-color-light;
   height: 100vh;
+  background-image: url("/assets/images/homepage_splash_background.gif");
+  // Make sure the logo stays on screen when scaled
+  background-position: center left;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media screen and (max-width: $switch_splash_contents),
+    screen and (max-height: $splash_no_overflow) {
+    background-image: url("/assets/images/homepage_splash_background_cropped.gif");
+    background-position: center center;
+  }
 }
 
 #homepage-hero > .row {
@@ -11,29 +26,31 @@
 }
 
 #homepage-hero-text {
-  padding-left: 15vw;
-  @media screen and (max-width: 800px),
-         screen and (max-height: 90vh) {
+  padding-left: 10vw;
+  color: $text-color-light;
+  animation: fadeInLeft;
+  animation-duration: 2s;
+  @media screen and (max-width: $switch_splash_contents),
+    screen and (max-height: $splash_no_overflow) {
     display: none;
   }
 }
 
 #homepage-hero-text h1 {
-    font-size: 6vw;
+  font-size: 6vw;
 }
 
-.homepage-hero-logo {
-  max-width: 100%;
-  max-height: 50vh;
+#homepage-hero-text p {
+  color: $text-color-light !important;
 }
 
 
 .content-parallax-window {
-    height: calc(100vh - 2.5em);
-    background: transparent;
-    padding: 50px 0px;
+  height: calc(100vh - 2.5em);
+  background: transparent;
+  padding: 50px 0px;
 }
 
 .homepage-video {
-    max-height: 70vh;
+  max-height: 70vh;
 }

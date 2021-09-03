@@ -11,21 +11,10 @@
 
     <section id="homepage" class="content-wrapper" style="padding-bottom: 0 !important;">
 
-
-        <!--
-        <img class="homepage-hero-logo" src="{{ .Site.Params.hero.img }}" alt="The site logo">
-        <div class="col-lg-9 mx-auto">
-            <hr class="homepage-hero-divider">
-            <h2>
-                {{ with .Site.Params.hero.subtitle }}{{ . | markdownify }}{{ end }}
-            </h2>
-        </div>
-        -->
-
         <!-- Main splash page -->
-        <section id="homepage-hero" class="secondary-background-gradient">
+        <section id="homepage-hero">
             <div class="row">
-                <div id="homepage-hero-text" class="col-6">
+                <div id="homepage-hero-text" class="col-5">
                     {{ with .Site.Params.hero.subtitle }}
                     <h3>{{ . | markdownify }}</h3>
                     {{ end }}
@@ -36,9 +25,7 @@
                     <p>{{ . | markdownify }}</p>
                     {{ end }}
                 </div>
-                <div class="col-6 text-center" style="margin: auto; top: 50%;">
-                    <img class="homepage-hero-logo" src="{{ .Site.Params.hero.img }}" alt="The site logo">
-                </div>
+                <span class="col-7 text-center"></span>
             </div>
         </section>
 

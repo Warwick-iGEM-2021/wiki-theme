@@ -6,22 +6,21 @@ $(document).ready(function () {
 
 
 
+
 /*
-
-var max = 5;
-
+var max = 4;
 function goToNext() {
     var hash = String(document.location.hash);
     if (hash && hash.indexOf(/box/)) {
-        var newh = Number(hash.replace("#box",""));
-        (newh > max-1) ? newh = 0 : void(null);
-        document.location.hash = "#box" + String(newh+1);
+        var newh = Number(hash.replace("#box", ""));
+        (newh > max - 1) ? newh = 0 : void (null);
+        document.location.hash = "#box" + String(newh + 1);
     } else {
         document.location.hash = "box1";
     }
 }
-
 */
+
 
 
 $(function () {

@@ -9,3 +9,11 @@
   font-family: "Bahnschrift";
   src: url("/assets/fonts/bahnschrift/Bahnschrift.ttf");
 }
+
+@font-face {
+  font-family: "Geomanist";
+  src: url("/assets/fonts/geomanist/geomanist.eot") format("embedded-opentype"),
+    url("/assets/fonts/geomanist/geomanist.woff") format("woff"),
+    url("/assets/fonts/geomanist/geomanist.ttf") format("truetype"),
+    url("/assets/fonts/geomanist/geomanist.svg") format("svg");
+}

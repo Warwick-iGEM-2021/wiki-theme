@@ -15,20 +15,17 @@
     <link href='https://fonts.googleapis.comcss?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='textcss'>
 
     <!-- Load stylesheets -->
-    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="/css/simple-line-icons.css">
-    <link rel="stylesheet" type="text/css" href="/css/fontawesome.css">
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/igem-reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/simple-line-icons.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/fontawesome.min.css">
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/igem-reset.css">
 
     {{ $options := (dict "targetPath" "css/styles.css") }}
     {{ $scss := resources.Get "scss/main.scss" }}
-    {{ $style := $scss | resources.ToCSS $options }} <!--| resources.Minify }}-->
+    {{ $style := $scss | resources.ToCSS $options | resources.Minify }}
     <link rel="stylesheet" type="text/css" href="{{ $style.Permalink }}">
-    {{ range .Site.Params.custom_css }}
-        <link rel="stylesheet" type="text/css" href="{{ . }}">
-    {{ end }}
 
 
     <!--
@@ -40,14 +37,11 @@
 
     <!-- Load javascript -->
     <script src="/js/jquery.min.js" defer></script>
-	<script src="/js/jquery.sticky.js" defer></script>
+	<script src="/js/jquery.sticky.min.js" defer></script>
 	<script src="/js/popper.min.js" defer></script>
 	<script src="/js/bootstrap.min.js" defer></script>
 	<script src="/js/respond.min.js" defer></script>
-	<script src="/js/asb.js" defer></script>
+	<script src="/js/asb.min.js" defer></script>
 	<script src="/js/parallax.min.js" defer></script>
 
     <script src="/js/main.js" defer></script>
-    {{ range .Site.Params.custom_js }}
-        <script src="{{ . }}" defer></script>
-    {{ end }}

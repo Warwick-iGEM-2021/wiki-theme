@@ -1,43 +1,33 @@
 @charset "UTF-8";
 
-// https://id7.warwick.ac.uk/components/colour-palette/
+/* Colours */
 
 $text-color-dark: #222;
-$text-color-mid-dark: #555;
-$text-color-mid-light: #b3b3b3;
 $text-color-light: #fff;
+$text-color-mid-dark: #555;
+$text-color-mid-light: #b3b3b3; // Remove this from team outline
+$text-color-contrast: #42ea67;
 
-$new-color: #42ea67;
-
-$link-color: #329998;
-$link-color-focus:#329998;
+$link-color: #42ea67;
 $selection-color: #a9a9a9;
+$shadow-color: rgba(0, 0, 0, 0.1);
 
 $background-color: #fff;
-$background-color-contrast: #eaeaea;
-$background-color-light-border: #f2f2f2;
-
-$background-color-secondary: #329998;
-$background-color-secondary-contrast: #6cc99c;
-$background-color-tertiary: #535353;
-$background-color-tertiary-contrast: #171717;
-
-$shadow-color: rgba(0, 0, 0, 0.1);
-$shadow-strong-color: rgba(34, 34, 34, 0.75);
-$shadow-light-color: rgba(255, 255, 255, 0.7);
-
-.secondary-background-gradient {
-    background-color: $background-color-secondary;
-    background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0, $background-color-secondary), color-stop(1, $background-color-secondary-contrast));
-    background-image: -webkit-linear-gradient(top left, $background-color-secondary 0%, $background-color-secondary-contrast 100%);
-    background-image: linear-gradient(to bottom right, $background-color-secondary 0%, $background-color-secondary-contrast 100%);
-    background-image: -ms-linear-gradient(top left, $background-color-secondary 0%, $background-color-secondary-contrast 100%);
-}
+$background-color-contrast: #eaeaea; // Remove this from timeline
+$background-color-dark: #535353;
+$background-color-dark-contrast: #171717;
 
 .tertiary-background-gradient {
-    background-color: $background-color-tertiary;
-    background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0, $background-color-tertiary), color-stop(1, $background-color-tertiary-contrast));
-    background-image: -webkit-linear-gradient(top left, $background-color-tertiary 0%, $background-color-tertiary-contrast 100%);
-    background-image: linear-gradient(to bottom right, $background-color-tertiary 0%, $background-color-tertiary-contrast 100%);
-    background-image: -ms-linear-gradient(top left, $background-color-tertiary 0%, $background-color-tertiary-contrast 100%);
+    background-color: $background-color-dark;
+    background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0, $background-color-dark), color-stop(1, $background-color-dark-contrast));
+    background-image: -webkit-linear-gradient(top left, $background-color-dark 0%, $background-color-dark-contrast 100%);
+    background-image: linear-gradient(to bottom right, $background-color-dark 0%, $background-color-dark-contrast 100%);
+    background-image: -ms-linear-gradient(top left, $background-color-dark 0%, $background-color-dark-contrast 100%);
 }
+
+
+
+/* Heights */
+
+$homepage-splash-overflow-height: 90vh;
+$homepage-splash-overflow-width: 1000px;

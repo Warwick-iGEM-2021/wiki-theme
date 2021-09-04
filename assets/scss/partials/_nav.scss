@@ -121,7 +121,7 @@ https://codepen.io/albizan/pen/mMWdWZ
   -webkit-transition: 0s all;
   -o-transition: 0s all;
   transition: 0s all;
-  color: $background-color-tertiary-contrast;
+  color: $background-color-dark-contrast;
 }
 .site-navbar .site-navigation .site-menu .has-children .dropdown .active {
   color: $link-color !important;
@@ -301,7 +301,7 @@ https://codepen.io/albizan/pen/mMWdWZ
   border-radius: 50%;
 }
 .site-mobile-menu .site-nav-wrap .arrow-collapse:hover {
-  background: $background-color-light-border;
+  background: $background-color-contrast;
 }
 .site-mobile-menu .site-nav-wrap .arrow-collapse:before {
   font-size: 0.75em;
@@ -410,7 +410,7 @@ https://codepen.io/albizan/pen/mMWdWZ
   color: $text-color-dark;
 }
 .sticky-wrapper.is-sticky .site-navbar .site-logo a {
-  color: $link-color;
+  color: $text-color-dark;
 }
 .sticky-wrapper.is-sticky .site-navbar .site-menu > li > a {
   color: $text-color-dark !important;

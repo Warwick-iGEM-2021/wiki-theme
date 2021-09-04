@@ -42,16 +42,16 @@ body.offcanvas-menu:before {
   visibility: visible;
 }
 
-/* https://css-tricks.com/hash-tag-links-padding/ */
 h2::before,
 h3::before,
 h4::before,
 h5::before,
 h6::before {
+  // https://css-tricks.com/hash-tag-links-padding/
   font-family: "Helvetica Neue", sans-serif !important;
   display: block;
   content: " ";
-  /* TODO: Make this match with the heading height*/
+  // TODO: Make this match with the heading height
   margin-top: -80px;
   height: 80px;
   visibility: hidden;
@@ -64,21 +64,17 @@ p {
   font-size: 18px;
 }
 
-a {
+// TODO: https://css-irl.info/animating-underlines/ (in specific cases)
+a,
+a:hover,
+a:active {
   color: $link-color;
   -webkit-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;
   transition: 0.3s all ease;
-}
-a,
-a:hover,
-a:active {
-  color: $link-color-focus;
   outline: none;
   text-decoration: none !important;
 }
-
-
 
 .subtitle {
   display: block;
@@ -92,99 +88,36 @@ a:active {
   text-align: center;
 }
 
-
 ::-webkit-selection,
 ::-moz-selection,
 ::selection {
   background: $selection-color;
 }
 
-.btn {
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-}
-
-.btn:hover,
-.btn:active,
-.btn:focus {
-  outline: none;
-}
-
-.btn {
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.btn.btn-primary {
-  background: $link-color;
-  color: $text-color-light;
-  border: none !important;
-  border: 2px solid transparent !important;
-}
-
-.btn.btn-primary:hover,
-.btn.btn-primary:active,
-.btn.btn-primary:focus {
-  box-shadow: none;
-  background: $link-color;
-}
-
-.btn:hover,
-.btn:active,
-.btn:focus {
-  background: $background-color-tertiary !important;
-  color: $text-color-light;
-  outline: none !important;
-}
-
-.btn.btn-default:hover,
-.btn.btn-default:focus,
-.btn.btn-default:active {
-  border-color: transparent;
-}
-
-
-
-.slanted-bottom {
-  padding-bottom: 100px;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 56%, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
-}
-
-.slanted-top {
-  padding-top: 100px;
-  /* https://www.cssportal.com/css-clip-path-generator/ */
-  -webkit-clip-path: polygon(0 1.5%, 100% 0, 100% 100%, 0% 100%);
-  clip-path: polygon(0 1.5%, 100% 0, 100% 100%, 0% 100%);
-}
 
 
 
 .content-wrapper {
-  flex: 1;
-  padding-bottom: 2em;
-}
-
-.torn-page {
-    background-image: url('/assets/images/paper-background-minimal.jpg');
-    background-size: cover;
-    box-shadow: 5px 5px 5px $shadow-color;
-    border-radius: 3px;
-    padding: 20px;
-    margin-bottom: 2em;
-}
-
-
-
-
-
+    flex: 1;
+    padding-bottom: 2em;
+  }
 
 .parallax-window {
-    min-height: 70vh;
-    background: transparent;
-    padding: 30px;
+  min-height: 70vh;
+  background: transparent;
+  padding: 30px;
+}
+
+
+
+
+
+
+.torn-page {
+  background-image: url("/assets/images/paper-background-minimal.jpg");
+  background-size: cover;
+  box-shadow: 5px 5px 5px $shadow-color;
+  border-radius: 3px;
+  padding: 20px;
+  margin-bottom: 2em;
 }

@@ -25,7 +25,7 @@
 
     {{ $options := (dict "targetPath" "css/styles.css") }}
     {{ $scss := resources.Get "scss/main.scss" }}
-    {{ $style := $scss | resources.ToCSS $options | resources.Minify }}
+    {{ $style := $scss | resources.ToCSS $options }} <!-- | resources.Minify }} -->
     <link rel="stylesheet" type="text/css" href="{{ $style.Permalink }}">
 
 

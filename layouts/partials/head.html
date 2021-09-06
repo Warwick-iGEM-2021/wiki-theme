@@ -18,10 +18,7 @@
     <link href='https://fonts.googleapis.comcss?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='textcss'>
 
     <!-- Load stylesheets -->
-
-    <!-- <link rel="stylesheet" type="text/css" href="/css/igem-default-styles.css"> -->
     <!-- <link rel="stylesheet" type="text/css" href="/css/normalize.min.css"> -->
-
     <link rel="stylesheet" type="text/css" href="/css/reseter.min.css">
     <link rel="stylesheet" type="text/css" href="/css/simple-line-icons.min.css">
     <link rel="stylesheet" type="text/css" href="/css/fontawesome.min.css">
@@ -33,11 +30,7 @@
     {{ $scss := resources.Get "scss/main.scss" }}
     {{ $style := $scss | resources.ToCSS $options }}
     <!-- <link rel="stylesheet" type="text/css" href="{{/* $style.Permalink */}}"> -->
-    <link rel="stylesheet" type="text/css" href="https://2021.igem.org/Template:Warwick/css/stylesCSS?action=raw&amp;ctype=text/css">
-
-    <!-- {{/* with resources.Get "scss/main.scss" | toCSS | minify */}}
-        <style>{{/* .Content | safeCSS */}}</style>
-    {{/* end */}} -->
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
 
 
     <!--

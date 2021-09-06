@@ -26,8 +26,7 @@ https://codepen.io/albizan/pen/mMWdWZ
   font-size: 2em;
 }
 .site-navbar .site-logo img {
-  //height: 1.75em;
-  //padding: 5px 0;
+  // TODO: Padding here seems broken
   height: 1.5em !important;
   padding: 5px 0 0 0 !important;
   margin-top: -6px !important;
@@ -396,6 +395,7 @@ https://codepen.io/albizan/pen/mMWdWZ
 }
 .sticky-wrapper .site-navbar .site-menu-toggle {
   color: $background-color;
+  margin-bottom: -20px;
 }
 .sticky-wrapper .site-navbar .site-logo a {
   color: $background-color;

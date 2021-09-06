@@ -59,9 +59,10 @@ h6::before {
 }
 
 p {
-  color: $text-color-dark;
-  font-weight: 300;
-  font-size: 18px;
+  font-family: "Bahnschrift", sans-serif !important;
+  color: $text-color-dark !important;
+  font-weight: 300 !important;
+  font-size: 18px !important;
 }
 
 // TODO: https://css-irl.info/animating-underlines/ (in specific cases)

@@ -1,11 +1,14 @@
+
+    <!--
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <!-- Description of author from config.toml -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
     {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
     {{ with .Site.LanguageCode }}<meta http-equiv="content-language" content="{{ . }}" />{{ end }}
+    -->
+
     <title>
         {{ .Title }}
     </title>
@@ -15,18 +18,25 @@
     <link href='https://fonts.googleapis.comcss?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='textcss'>
 
     <!-- Load stylesheets -->
+
+    <!-- <link rel="stylesheet" type="text/css" href="/css/igem-default-styles.css"> -->
     <!-- <link rel="stylesheet" type="text/css" href="/css/normalize.min.css"> -->
+
     <link rel="stylesheet" type="text/css" href="/css/reseter.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/igem-reset.css">
     <link rel="stylesheet" type="text/css" href="/css/simple-line-icons.min.css">
     <link rel="stylesheet" type="text/css" href="/css/fontawesome.min.css">
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/igem-reset.css">
 
     {{ $options := (dict "targetPath" "css/styles.css") }}
     {{ $scss := resources.Get "scss/main.scss" }}
-    {{ $style := $scss | resources.ToCSS $options }} <!-- | resources.Minify }} -->
+    {{ $style := $scss | resources.ToCSS $options }}
     <link rel="stylesheet" type="text/css" href="{{ $style.Permalink }}">
+
+    <!-- {{/* with resources.Get "scss/main.scss" | toCSS | minify */}}
+        <style>{{/* .Content | safeCSS */}}</style>
+    {{/* end */}} -->
 
 
     <!--

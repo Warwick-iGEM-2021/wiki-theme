@@ -32,7 +32,8 @@
     {{ $options := (dict "targetPath" "css/styles.css") }}
     {{ $scss := resources.Get "scss/main.scss" }}
     {{ $style := $scss | resources.ToCSS $options }}
-    <link rel="stylesheet" type="text/css" href="{{ $style.Permalink }}">
+    <!-- <link rel="stylesheet" type="text/css" href="{{/* $style.Permalink */}}"> -->
+    <link rel="stylesheet" type="text/css" href="https://2021.igem.org/Template:Warwick/css/stylesCSS?action=raw&amp;ctype=text/css">
 
     <!-- {{/* with resources.Get "scss/main.scss" | toCSS | minify */}}
         <style>{{/* .Content | safeCSS */}}</style>

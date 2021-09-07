@@ -7,11 +7,10 @@ https://preview.colorlib.com/theme/bootstrap/website-menu-01/#about-section
 https://codepen.io/albizan/pen/mMWdWZ
 */
 
-#navbar-main-wrapper .col-12 .col-md-10 .d-none .d-xl-block {
+#navbar-main-wrapper {
   padding-top: 10px !important;
   margin-bottom: -3px !important;
 }
-
 .site-navbar {
   margin-bottom: 0px;
   z-index: 1999;
@@ -26,7 +25,6 @@ https://codepen.io/albizan/pen/mMWdWZ
   font-size: 2em;
 }
 .site-navbar .site-logo img {
-  // TODO: Padding here seems broken
   height: 1.5em !important;
   padding: 5px 0 0 0 !important;
   margin-top: -6px !important;

@@ -2,13 +2,16 @@
 
     <div class="container">
 
-        <div class="row">
-            <div class="col-md-12 section-heading">
-                <h2 class="subtitle">
-                    {{ with $.Params.title }}{{ . | markdownify }}{{ end }}
-                </h2>
+        {{ $title := .Get "title" }}
+        {{ with $title }}
+            <div class="row">
+                <div class="col-md-12 section-heading">
+                    <h2 class="subtitle">
+                        {{ . | markdownify }}
+                    </h2>
+                </div>
             </div>
-        </div>
+        {{ end }}
 
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             {{ $data := split .Inner " - " }}
@@ -48,7 +51,13 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
+        </div>
 
+        <div class="text-center">
+            {{ $caption := .Get "caption" }}
+            {{ with $caption }}
+            <p class="hugo-figure-caption">{{ . | markdownify }}</p>
+            {{ end }}
         </div>
 
     </div>

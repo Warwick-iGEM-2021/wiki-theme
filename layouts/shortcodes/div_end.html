@@ -1,0 +1,9 @@
+<!-- End the (or a specified number of) section(s) -->
+{{ $num := .Get "num" }}
+{{ with $num }}
+    {{ range seq $num }}
+        <div class="{{ . | safeHTML }}">
+    {{ end }}
+{{ else }}
+    </div>
+{{ end }}

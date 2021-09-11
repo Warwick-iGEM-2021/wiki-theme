@@ -1,0 +1,5 @@
+<!-- Start the timeline -->
+{{ $id := .Get "id" }}
+{{ with $id }}
+     <div class="{{ . | safeHTML }}">
+{{ end }}

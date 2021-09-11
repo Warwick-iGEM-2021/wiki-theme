@@ -21,7 +21,7 @@
         <div class="row">
             <!-- Add the sidebar as a column -->
             <section id="sidebar" class="col-auto">
-                <div class="toc-wrapper torn-page">
+                <div class="toc-wrapper content-page">
                     <div id="sidebar-logo">
                         <img src="{{ .Site.Params.sidebar.logo_img | safeURL }}" alt="Sidebar logo">
                     </div>
@@ -32,14 +32,14 @@
             <section id="hugo-content" class="col">
                 <!-- Write the summary section -->
                 {{ with .Params.Summary }}
-                    <div class="torn-page">
+                    <div class="content-page">
                         <h1 class="subtitle">Summary</h1>
                         {{ . | markdownify }}
                     </div>
                 {{ end }}
 
                 <!-- Write the content from the markdown file -->
-                <div class="torn-page">
+                <div class="content-page">
                     {{ .Content }}
                 </div>
             </section>
@@ -47,7 +47,7 @@
     {{ else }}
         <!-- Don't add a table of contents - just do the normal container-->
         <section id="hugo-content" class="container">
-            <div class="torn-page">
+            <div class="content-page">
                 {{ .Content }}
             </div>
         </section>

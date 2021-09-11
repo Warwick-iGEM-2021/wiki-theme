@@ -1,0 +1,23 @@
+{{ if isset .Params "Hero_img"}}
+    <style>
+        .hero-background {
+            background-color: #329998;
+            background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0, #329998), color-stop(1, #6cc99c));
+            background-image: -webkit-linear-gradient(top left, #329998 0%, #6cc99c 100%);
+            background-image: linear-gradient(to bottom right, #329998 0%, #6cc99c 100%);
+            background-image: -ms-linear-gradient(top left, #329998 0%, #6cc99c 100%);
+        }
+    </style>
+    <section id="hero" class="hero-background">
+{{ else }}
+    <section id="hero" data-parallax="scroll" data-image-src="{{ .Params.Hero_img | safeURL }}" data-speed=0.7>
+{{ end }}
+    <div class="container text-center">
+            <!-- TODO: Animate, and add a nicer font -->
+            <h1>
+                {{ with .Title }}{{ . | markdownify }}{{ end }}
+            </h1>
+
+        </h1>
+    </div>
+</section>

@@ -16,6 +16,7 @@ body {
   line-height: 1.5;
   color: $text-color-dark;
   // background-image: url('/assets/images/paper-background-brown.jpg');
+  background-color: $background-colour-black;
   background-size: cover;
   position: relative;
   display: flex;
@@ -121,9 +122,8 @@ a:active {
 
 
 
-.torn-page {
-  background-image: url("/assets/images/paper-background-minimal.jpg");
-  background-size: cover;
+.content-page {
+  background-color: $background-color;
   box-shadow: 5px 5px 5px $shadow-color;
   border-radius: 3px;
   padding: 20px;

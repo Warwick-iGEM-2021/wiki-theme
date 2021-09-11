@@ -9,12 +9,41 @@
   content: '';
   position: absolute;
   width: 6px;
-  background-color: $background-color-contrast;
+  background-color: $text-color-contrast;
   border-radius: 2px;
   top: 0;
   bottom: 0;
   left: 30px;
   margin-left: -6px;
+}
+
+.timeline-bookend-top::after {
+  // The circles on the timeline
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  //right: -12.5px;
+  background-color: $background-color-green-contrast;
+  border: 4px solid $text-color-contrast;
+  border-radius: 50%;
+  z-index: 1;
+  left: 19px;
+}
+
+.timeline-bookend-bottom::after {
+  // The circles on the timeline
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  //right: -12.5px;
+  background-color: $background-color-green-contrast;
+  border: 4px solid $text-color-contrast;
+  border-radius: 50%;
+  z-index: 1;
+  left: 19px;
+  transform: translate(0%,-120%);
 }
 
 .timeline-container {
@@ -29,26 +58,32 @@
   // The circles on the timeline
   content: '';
   position: absolute;
-  width: 25px;
-  height: 25px;
-  right: -12.5px;
-  background-color: $background-color-contrast;
-  border: 4px solid $background-color-dark;
-  top: 15px;
+  width: 30px;
+  height: 30px;
+  right: -15px;
+  background-color: $background-color-green-contrast;
+  border: 4px solid $text-color-contrast;
+  top: 22px;
   border-radius: 50%;
   z-index: 1;
-  left: 15px;
+  left: 12.5px;
 }
 
 .timeline-title {
   padding: 20px 30px;
   position: relative;
   margin-left: 70px;
-  background-color: $background-color-contrast;
+  background-color: $background-color-green-contrast;
   border-radius: 6px;
 }
 
+
+.timeline-title > h2 {
+    margin-bottom: -1rem;
+}
+
 .timeline-title > p {
+  margin-top: .5rem;
   margin-bottom: 0;
 }
 

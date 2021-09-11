@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  font-family: "Bahnschrift", sans-serif !important;
+  font-family: "Helvetica Neue", sans-serif !important;
   font-weight: 300;
   font-size: 18px;
   line-height: 1.5;
@@ -42,13 +42,23 @@ body.offcanvas-menu:before {
   visibility: visible;
 }
 
+
+// TODO: Fix this on the iGEM site
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Bahnschrift", sans-serif !important;
+}
+
 h2::before,
 h3::before,
 h4::before,
 h5::before,
 h6::before {
   // https://css-tricks.com/hash-tag-links-padding/
-  font-family: "Helvetica Neue", sans-serif !important;
   display: block;
   content: " ";
   // TODO: Make this match with the heading height
@@ -59,7 +69,7 @@ h6::before {
 }
 
 p {
-  font-family: "Bahnschrift", sans-serif !important;
+  font-family: "Helvetica Neue", sans-serif !important;
   color: $text-color-dark !important;
   font-weight: 300 !important;
   font-size: 18px !important;

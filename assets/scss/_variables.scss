@@ -6,9 +6,10 @@ $text-color-dark: #222;
 $text-color-light: #fff;
 $text-color-mid-dark: #555;
 $text-color-mid-light: #b3b3b3; // Remove this from team outline
-$text-color-contrast: #42ea67;
+$text-color-contrast: #005700;
+$text-color-neon: #42ea67;
 
-$link-color: #42ea67;
+$link-color: #005700;
 $selection-color: #a9a9a9;
 $shadow-color: rgba(0, 0, 0, 0.1);
 
@@ -16,6 +17,8 @@ $background-color: #fff;
 $background-color-contrast: #eaeaea; // Remove this from timeline
 $background-color-dark: #535353;
 $background-color-dark-contrast: #171717;
+$background-color-green: #ebffdd;
+$background-color-green-contrast: #c1ff9b; //For timeline
 
 .tertiary-background-gradient {
     background-color: $background-color-dark;
@@ -31,3 +34,15 @@ $background-color-dark-contrast: #171717;
 
 $homepage-splash-overflow-height: 90vh;
 $homepage-splash-overflow-width: 1000px;
+
+
+/*
+Jerry's colours
+
+Side bar color - #ebffdd    (same loading bar)
+Green circle color - #005700 (SAME FOR LINKS)
+Timeline circle color (middle bit) #c1ff9b // outer is dark
+
+Old, don't use: #42ea67
+
+*/

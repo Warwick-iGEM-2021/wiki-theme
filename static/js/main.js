@@ -1,12 +1,11 @@
-// Require all js to load
-$(document).ready(function () {
+// Show a loading screen until all assets are loaded
+$(document).ready(function () { // Require all js to load
     // Require all images to load
     // (this should be the big one for most page loading tbh)
     Promise.all(Array.from(document.images).filter(img => !img.complete).map(img => new Promise(resolve => { img.onload = img.onerror = resolve; }))).then(() => {
         $('body').addClass('loaded');
     });
 });
-
 
 
 
@@ -23,6 +22,25 @@ function goToNext() {
     }
 }
 */
+
+
+
+/*
+// Autopause video when scrolled out of view
+
+let video = document.querySelector('video');
+let isPaused = false; // Flag for auto-paused video
+let observer = new IntersectionObserver((entries, observer) => { 
+  entries.forEach(entry => {
+    if(entry.intersectionRatio!=1  && !video.paused){
+      video.pause(); isPaused = true;
+    }
+    else if(isPaused) {video.play(); isPaused=false}
+  });
+}, {threshold: 1});
+observer.observe(video);
+*/
+
 
 
 

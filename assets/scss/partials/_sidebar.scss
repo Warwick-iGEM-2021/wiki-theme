@@ -15,21 +15,14 @@
   padding-top: 30px;
   font-size: larger !important;
   overflow-y: auto;
+  background-color: $background-color; // $background-color-green;
+  box-shadow: 0 0 10px $shadow-color-light;
 }
 
 // If there is a sidebar, we make a custom container-y thing
 .row > #hugo-content {
   margin-left: 20px;
   margin-right: 20px;
-}
-
-#sidebar-logo {
-  text-align: center;
-  padding-bottom: 30px;
-}
-
-#sidebar-logo img {
-  width: 20vh;
 }
 
 #TableOfContents li.active > a {
@@ -48,8 +41,23 @@
 #TableOfContents ul {
   text-decoration: none;
   list-style-type: none;
+  padding-left: 10px;
 }
 
 #TableOfContents ul ul {
-  padding-left: 30px;
+    padding-left: 30px;
 }
+
+
+.toc-marker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    path {
+      transition: all 0.3s ease;
+    }
+  }

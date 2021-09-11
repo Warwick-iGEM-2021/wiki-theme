@@ -37,7 +37,7 @@
                 <!-- Write the summary section -->
                 {{ with .Params.Summary }}
                     <div class="content-page">
-                        <h1 class="subtitle">Summary</h1>
+                        <h2 id="summary">Summary</h2>
                         {{ . | markdownify }}
                     </div>
                 {{ end }}

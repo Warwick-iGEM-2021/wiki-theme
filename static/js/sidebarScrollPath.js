@@ -1,15 +1,26 @@
-
-
-
 // https://codepen.io/hakimel/pen/BpKNPg
+
+
 var toc = document.querySelector('#TableOfContents');
 var tocPath = document.querySelector('.toc-marker path');
 var tocItems;
+
+
+
+// Insert the link the the summary section if present
+var summarySection = document.getElementById("summary");
+var tocList = document.getElementById("TableOfContents").getElementsByTagName('ul')[0];
+if(summarySection && tocList) {
+    tocList.insertAdjacentHTML('afterbegin', '<li><a href="#summary">Summary</a></li>');
+}
+
+
 
 // Factor of screen size that the element must cross
 // before it's considered visible
 var TOP_MARGIN = 0.1,
     BOTTOM_MARGIN = 0.2;
+var begunPath = false;
 var pathLength;
 var lastPathStart,
     lastPathEnd;
@@ -47,8 +58,7 @@ function drawPath() {
         if (i === 0) {
             path.push('M', x, y, 'L', x, y + height);
             item.pathStart = 0;
-        }
-        else {
+        } else {
             // Draw an additional line when there's a change in
             // indent levels
             if (pathIndent !== x) path.push('L', pathIndent, y);
@@ -81,8 +91,7 @@ function sync() {
             pathEnd = Math.max(item.pathEnd, pathEnd);
             visibleItems += 1;
             item.listItem.classList.add('visible');
-        }
-        else {
+        } else {
             item.listItem.classList.remove('visible');
         }
     });
@@ -95,8 +104,8 @@ function sync() {
             tocPath.setAttribute('stroke-dasharray', '1, ' + pathStart + ', ' + (pathEnd - pathStart) + ', ' + pathLength);
             tocPath.setAttribute('opacity', 1);
         }
-    }
-    else {
+        begunPath = true;
+    } else if (!begunPath) {
         tocPath.setAttribute('opacity', 0);
     }
 

@@ -1,13 +1,7 @@
-/* Footer section */
-
-#footer-info {
-  padding: 25px;
-}
 
 /* Sponsors */
 
 #sponsor-logos {
-  padding-bottom: 25px;
   text-align: center;
 }
 
@@ -21,11 +15,10 @@
     - https://codepen.io/minimalmonkey/pen/Ecpla
 */
 
-@media only screen and (max-width: 600px) {
-    #contact-info {
-      text-align: center;
-    }
-  }
+#contact-info {
+    margin-top: -25px;
+    padding-bottom: 50px;
+}
 
 .icon-button {
   background-color: white !important;

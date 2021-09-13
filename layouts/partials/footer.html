@@ -1,59 +1,35 @@
 <footer id="footer" role="contentinfo">
-    <!-- class="tertiary-background-gradient" -->
+
+    <!-- Sponsors -->
+    <div id="sponsor-logos-wrapper">
+        <div id="sponsor-logos" class="container">
+            {{ range .Site.Data.sponsors.sponsors.item }}
+                <img src="{{ .img }}" alt="{{ .name }}">
+            {{ end }}
+        </div>
+    </div>
+
     <div class="container">
 
-        <!-- Contact information and sponsors -->
-        <div id="footer-info">
-
-            <!-- Sponsors -->
-            <div id="sponsor-logos">
-                <img src="/assets/images/sponsors.png" alt="Sponsors">
-            </div>
-
-
-            <!-- Contact information-->
-            <div id="contact-info" class="text-center">
-                <a href="{{ .Site.Params.footer.twitter_url }}" class="icon-button twitter">
-                    <i class="fab fa-twitter"></i><span></span>
-                </a>
-                <a href="{{ .Site.Params.footer.instagram_url }}" class="icon-button instagram">
-                    <i class="fab fa-instagram"></i><span></span>
-                </a>
-                <a href="{{ .Site.Params.footer.facebook_url }}" class="icon-button facebook">
-                    <i class="fab fa-facebook"></i><span></span>
-                </a>
-                <a href="{{ .Site.Params.footer.email_address }}" class="icon-button email">
-                    <i class="fa fa-envelope"></i><span></span>
-                </a>
-                <a href="{{ .Site.Params.footer.home_url }}" class="icon-button home">
-                    <i class="fa fa-home"></i><span></span>
-                </a>
-            </div>
-
-
+        <!-- Contact information-->
+        <div id="contact-info" class="text-center">
+            <a href="{{ .Site.Params.footer.twitter_url }}" class="icon-button twitter">
+                <i class="fab fa-twitter"></i><span></span>
+            </a>
+            <a href="{{ .Site.Params.footer.instagram_url }}" class="icon-button instagram">
+                <i class="fab fa-instagram"></i><span></span>
+            </a>
+            <a href="{{ .Site.Params.footer.facebook_url }}" class="icon-button facebook">
+                <i class="fab fa-facebook"></i><span></span>
+            </a>
+            <a href="{{ .Site.Params.footer.email_address }}" class="icon-button email">
+                <i class="fa fa-envelope"></i><span></span>
+            </a>
+            <a href="{{ .Site.Params.footer.home_url }}" class="icon-button home">
+                <i class="fa fa-home"></i><span></span>
+            </a>
         </div>
 
-        <div id="footer-navigation">
-            <div class="row">
-
-                <!-- TODO: Make items in vertical list on iGEM site -->
-
-                {{ range .Site.Menus.main }}
-                <div class="col">
-                    <h3><a href="{{ .URL }}"></a>{{ .Name | upper }}</a></h3>
-                    {{ if .HasChildren }}
-                    <!-- If the cell has make a list of them below it -->
-                    <ul>
-                        {{ range .Children }}
-                        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
-                        {{ end }}
-                    </ul>
-                    {{ end }}
-                </div>
-                {{ end }}
-
-            </div>
-        </div>
 
         <!-- Licensing information for the website-->
         <div id="licensing">

@@ -22,9 +22,9 @@
             <!-- Add the sidebar as a column -->
             <section id="sidebar" class="col-auto">
                 <div class="toc-wrapper content-page">
-                    <h3>
-                        {{ with .Title }}{{ . | markdownify }}{{ end }}
-                    </h3>
+                    {{ with .Title }}
+                        <h3><a href="#">{{ . | markdownify }}</a></h3>
+                    {{ end }}
                     {{ .TableOfContents }}
                     <svg class="toc-marker" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
                         <path stroke="#444" stroke-width="3" fill="transparent" stroke-dasharray="0, 0, 0, 1000"

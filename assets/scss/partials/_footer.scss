@@ -1,41 +1,22 @@
-
 /* Sponsors */
-
-#sponsor-logos-wrapper {
-    margin: 50px 5px 75px 5px;
-}
 
 #sponsor-logos {
   text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  padding: 50px;
-
-  box-shadow: 0 0 10px $text-color-neon, $text-color-neon 0 0 10px inset;
-  border-radius: 10px;
 }
 
 #sponsor-logos img {
-  height: 50px;
   max-width: 100%;
-  margin: 15px;
+  max-height: 100%;
   object-fit: contain;
 }
-
-
-
-
-
 
 /* Social media icons
     - https://codepen.io/minimalmonkey/pen/Ecpla
 */
 
 #contact-info {
-    margin-top: -25px;
-    padding-bottom: 50px;
+  margin-top: -25px;
+  padding-bottom: 50px;
 }
 
 .icon-button {

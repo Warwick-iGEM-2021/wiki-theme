@@ -1,15 +1,10 @@
 <footer id="footer" role="contentinfo">
-
-    <!-- Sponsors -->
-    <div id="sponsor-logos-wrapper">
-        <div id="sponsor-logos" class="container">
-            {{ range .Site.Data.sponsors.sponsors.item }}
-                <img src="{{ .img }}" alt="{{ .name }}">
-            {{ end }}
-        </div>
-    </div>
-
     <div class="container">
+
+        <!-- Sponsors -->
+        <div id="sponsor-logos">
+            <img src="/assets/images/sponsors.png" alt="Sponsors">
+        </div>
 
         <!-- Contact information-->
         <div id="contact-info" class="text-center">

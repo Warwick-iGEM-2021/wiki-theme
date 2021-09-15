@@ -4,26 +4,19 @@
   @media only screen and (max-width: 1000px) {
     display: none;
   }
-  margin-right: -20px;
 }
 
 .toc-wrapper {
   position: sticky;
   top: 6rem;
   align-self: start;
-  margin-left: 20px;
   padding-top: 30px;
   font-size: larger !important;
   overflow-y: auto;
-  background-color: $background-color; // $background-color-green;
-  box-shadow: 0 0 10px $shadow-color-light;
+  margin-right: 0;
 }
 
 // If there is a sidebar, we make a custom container-y thing
-.row > #hugo-content {
-  margin-left: 20px;
-  margin-right: 20px;
-}
 
 #TableOfContents li.active > a {
   color: $link-color;

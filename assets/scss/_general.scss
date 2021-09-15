@@ -54,6 +54,15 @@ h6 {
   font-family: "Bahnschrift", sans-serif !important;
 }
 
+#hugo-content-wrapper h1,
+#hugo-content-wrapper h2,
+#hugo-content-wrapper h3,
+#hugo-content-wrapper h4,
+#hugo-content-wrapper h5,
+#hugo-content-wrapper h6 {
+  color: $text-color-contrast !important;
+}
+
 h2::before,
 h3::before,
 h4::before,
@@ -124,8 +133,8 @@ a:active {
 
 .content-page {
   background-color: $background-color;
-  box-shadow: 5px 5px 5px $shadow-color;
+  box-shadow: 0 0 10px $shadow-color-light;
   border-radius: 3px;
   padding: 20px;
-  margin-bottom: 2em;
+  margin: 0 8em 2em 5em;
 }

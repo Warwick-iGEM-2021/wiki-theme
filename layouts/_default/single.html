@@ -13,11 +13,13 @@
         - https://github.com/hakimel/css/tree/master/progress-nav
     -->
 
+	<script src="/js/sidebarScrollPath.js" defer></script>
 
     <!-- Make a sidebar with the table of contents in-->
     {{ $has_headers := ge (findRE "<h[1-6].*?>(.|\n])+?</h[1-6]>" .Content | len) 2 }}
     {{ $toc_toggled := or (not (isset .Params "toc")) (eq .Params.toc true) }}
     {{ if and $has_headers $toc_toggled }}
+        <!-- Include the script for sidebar scrolling -->
         <div class="row">
             <!-- Add the sidebar as a column -->
             <section id="sidebar" class="col-auto">

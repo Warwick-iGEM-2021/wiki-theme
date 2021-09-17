@@ -48,7 +48,7 @@ https://codepen.io/shamir/pen/YGbbNX
 // Loading message
 #loadingMessage {
   padding-top: 25px;
-  color: #fff !important;
+  color: $text-color-light !important;
   position: absolute;
   top: calc(45% + 60px);
   margin: auto;
@@ -67,11 +67,12 @@ https://codepen.io/shamir/pen/YGbbNX
 .moon {
   width: 100px;
   height: 100px;
-  border: 2px solid #ffffff;
+  border: 2px solid $text-color-neon;
+  box-shadow: 0 0 10px $text-color-neon;
   border-radius: 50%;
   overflow: hidden;
   position: relative;
-  background-color: #fff;
+  background-color: $text-color-neon;
   transform: translateZ(0);
 
   &::before {
@@ -80,10 +81,10 @@ https://codepen.io/shamir/pen/YGbbNX
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #222;
+    background-color: $background-color-dark-contrast;
     width: 50%;
     height: 100%;
-    animation: flip 4s 2s steps(2) infinite alternate;
+    animation: flip 8s 4s steps(2) infinite alternate;
   }
 }
 
@@ -91,7 +92,7 @@ https://codepen.io/shamir/pen/YGbbNX
   transform-style: preserve-3d;
   width: 100%;
   height: 100%;
-  animation: rotate 8s linear infinite;
+  animation: rotate 16s linear infinite;
 
   &::before,
   &::after {
@@ -101,15 +102,16 @@ https://codepen.io/shamir/pen/YGbbNX
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    transition: transform 4s;
+    transition: transform 8s;
     position: absolute;
     backface-visibility: hidden;
   }
   &::before {
-    background-color: #222;
+    background-color: $background-color-dark-contrast;
   }
   &::after {
-    background-color: #fff;
+    //box-shadow: 0 0 10px $text-color-neon;
+    background-color: $text-color-neon;
     transform: rotateY(180deg);
   }
 }
@@ -320,7 +322,7 @@ https://codepen.io/shamir/pen/YGbbNX
     591px 1743px #fff, 652px 1925px #fff, 107px 1939px #fff, 1110px 1708px #fff,
     797px 1480px #fff, 1516px 684px #fff, 559px 1733px #fff, 1265px 718px #fff,
     1263px 54px #fff, 693px 113px #fff, 1456px 1459px #fff, 1527px 1324px #fff;
-  animation: animStar 50s linear infinite;
+  animation: animStar 75s linear infinite;
 }
 .stars-small:after {
   content: " ";

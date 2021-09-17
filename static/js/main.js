@@ -4,46 +4,10 @@ $(document).ready(function () { // Require all js to load
     // (this should be the big one for most page loading tbh)
     Promise.all(Array.from(document.images).filter(img => !img.complete).map(img => new Promise(resolve => { img.onload = img.onerror = resolve; }))).then(() => {
         setTimeout(function(){
-            $('body').addClass('loaded');
+            //$('body').addClass('loaded');
         }, 500); //TODO: Work out what works for this delay on the actual site
     });
 });
-
-
-
-/*
-var max = 4;
-function goToNext() {
-    var hash = String(document.location.hash);
-    if (hash && hash.indexOf(/box/)) {
-        var newh = Number(hash.replace("#box", ""));
-        (newh > max - 1) ? newh = 0 : void (null);
-        document.location.hash = "#box" + String(newh + 1);
-    } else {
-        document.location.hash = "box1";
-    }
-}
-*/
-
-
-
-/*
-// Autopause video when scrolled out of view
-
-let video = document.querySelector('video');
-let isPaused = false; // Flag for auto-paused video
-let observer = new IntersectionObserver((entries, observer) => { 
-  entries.forEach(entry => {
-    if(entry.intersectionRatio!=1  && !video.paused){
-      video.pause(); isPaused = true;
-    }
-    else if(isPaused) {video.play(); isPaused=false}
-  });
-}, {threshold: 1});
-observer.observe(video);
-*/
-
-
 
 
 $(function () {

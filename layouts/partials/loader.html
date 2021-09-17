@@ -14,7 +14,7 @@
         </div>
 
         <!-- Loading message -->
-        <p id="loadingMessage"></p>
+        <p id="loadingMessage" style="display: none;"></p>
         <script>
             var messages = [
                 "Generating witty dialog...",
@@ -76,8 +76,10 @@
                 "We're working very Hard .... Really",
                 "You are number 2843684714 in the queue"
             ];
+            // Randomly select a message, then show it
             var message = messages[Math.floor(Math.random() * messages.length)];
             document.getElementById("loadingMessage").innerHTML = message;
+            document.getElementById("loadingMessage").style = "display: block;"
         </script>
     </div>
 </div>

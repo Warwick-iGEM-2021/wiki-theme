@@ -4,7 +4,7 @@ $(document).ready(function () { // Require all js to load
     // (this should be the big one for most page loading tbh)
     Promise.all(Array.from(document.images).filter(img => !img.complete).map(img => new Promise(resolve => { img.onload = img.onerror = resolve; }))).then(() => {
         setTimeout(function(){
-            //$('body').addClass('loaded');
+            $('body').addClass('loaded');
         }, 500); //TODO: Work out what works for this delay on the actual site
     });
 });

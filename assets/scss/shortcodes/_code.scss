@@ -1,0 +1,16 @@
+// Add a bit of space to the bottom of any code blocks
+.highlight {
+    margin-bottom: 10px;
+}
+
+// Round corners and pad top for aesthetics
+.highlight div,
+.highlight table {
+    border-radius: 5px;
+    padding-top: 10px;
+}
+
+// Shift line numbers inwards
+.highlight code > span {
+    margin-left: 0.4em;
+}

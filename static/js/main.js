@@ -9,6 +9,12 @@ $(document).ready(function () { // Require all js to load
     });
 });
 
+// Expand the read more section on click
+$('.read_more').find('a[href="#"]').on('click', function (e) {
+    e.preventDefault();
+    $(this).closest('.read_more').find('.read_more_small').toggleClass('read_more_small read_more_big');
+});
+
 
 $(function () {
     var siteSticky = function () {

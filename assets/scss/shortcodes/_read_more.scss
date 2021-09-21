@@ -1,16 +1,20 @@
 .read_more_small {
-    height: 4em;
-    overflow: hidden !important;
+  height: 4.5em;
+  overflow: hidden !important;
+  // https://stackoverflow.com/questions/11837606/fading-out-text-at-bottom-of-a-section-with-transparent-div-but-height-stays-un/58740440
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
 }
 
+
 .read_more_big {
-    height: auto;
+  height: auto;
 }
 
 .read_more a {
-    float: right;
+  float: right;
 }
 
 .read_more {
-    margin-bottom: 2em;
+  margin-bottom: 2em;
 }

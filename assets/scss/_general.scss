@@ -1,5 +1,12 @@
 /* General section*/
 
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   display: flex;
   flex-direction: column;

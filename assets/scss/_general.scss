@@ -102,6 +102,11 @@ a:active {
   text-decoration: none !important;
 }
 
+img {
+    max-width:100%;
+    height: auto;
+}
+
 .subtitle {
   display: block;
   margin-bottom: 20px;
@@ -144,9 +149,13 @@ a:active {
   background-color: $background-color;
   box-shadow: 0 0 10px $shadow-color-light;
   border-radius: 3px;
-  padding: 20px;
+  padding: 45px;
   margin: 0 128px 2em 80px;
+  @media only screen and (max-width: 1500px) and (min-width: 1000px){
+    margin: 0 15% 2em 15%;
+  }
   @media only screen and (max-width: 1000px) {
     margin: 0 30px 2em 30px;
+    padding: 20px;
   }
 }

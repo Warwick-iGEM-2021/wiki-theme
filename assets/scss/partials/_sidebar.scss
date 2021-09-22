@@ -4,17 +4,21 @@
   @media only screen and (max-width: 1500px) {
     display: none;
   }
+  max-width: 25%;
 }
 
 .toc-wrapper {
   position: sticky;
   // Center the div on scroll, not stick it to just below navbar (6rem)
-  top: calc(50% - 8rem);
+  top: 6rem; //calc(50% - 8rem);
+  // transform: translateY(50%);
+  overflow-y: auto;
+  max-height: calc(100vh - 8rem);
   align-self: start;
   padding-top: 30px;
   font-size: larger !important;
-  overflow-y: auto;
   margin-right: 0;
+  word-wrap: break-word;
 }
 
 // If there is a sidebar, we make a custom container-y thing

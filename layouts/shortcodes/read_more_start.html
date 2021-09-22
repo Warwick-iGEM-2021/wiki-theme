@@ -1,2 +1,7 @@
 <div class="read_more">
-    <div class="read_more_small">
+    {{ $height := .Get "height" }}
+    {{ with $height }}
+        <div class="read_more_small" style="height: {{ . | safeHTML }}">
+    {{ else }}
+        <div class="read_more_small" style="height: 4.5em;">
+    {{ end }}

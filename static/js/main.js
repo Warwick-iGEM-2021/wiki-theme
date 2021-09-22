@@ -5,7 +5,7 @@ $(document).ready(function () { // Require all js to load
     Promise.all(Array.from(document.images).filter(img => !img.complete).map(img => new Promise(resolve => { img.onload = img.onerror = resolve; }))).then(() => {
         setTimeout(function(){
             $('body').addClass('loaded');
-        }, 500); //TODO: Work out what works for this delay on the actual site
+        }, 1500); //TODO: Work out what works for this delay on the actual site
     });
 });
 

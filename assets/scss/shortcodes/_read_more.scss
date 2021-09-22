@@ -6,13 +6,17 @@
   mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
 }
 
-
 .read_more_big {
   height: auto;
+  margin-bottom: -1em;
 }
 
 .read_more a {
   float: right;
+  transform: translateX(-75px);
+  // Push it in front of things, i.e. the margins on the timeline headers
+  position: relative;
+  z-index: 1000;
 }
 
 .read_more {

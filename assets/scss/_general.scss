@@ -1,6 +1,5 @@
 /* General section*/
 
-
 *,
 *::before,
 *::after {
@@ -49,7 +48,6 @@ body.offcanvas-menu:before {
   opacity: 1;
   visibility: visible;
 }
-
 
 // TODO: Fix this on the iGEM site
 h1,
@@ -122,13 +120,10 @@ a:active {
   background: $selection-color;
 }
 
-
-
-
 .content-wrapper {
-    flex: 1;
-    padding-bottom: 2em;
-  }
+  flex: 1;
+  padding-bottom: 2em;
+}
 
 .parallax-window {
   min-height: 70vh;
@@ -136,10 +131,16 @@ a:active {
   padding: 30px;
 }
 
-
+.content-page-no-margin {
+  overflow-wrap: break-word;
+  background-color: $background-color;
+  box-shadow: 0 0 10px $shadow-color-light;
+  border-radius: 3px;
+  padding: 20px;
+}
 
 .content-page {
-    overflow-wrap: break-word; 
+  overflow-wrap: break-word;
   background-color: $background-color;
   box-shadow: 0 0 10px $shadow-color-light;
   border-radius: 3px;

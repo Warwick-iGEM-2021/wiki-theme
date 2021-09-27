@@ -23,7 +23,7 @@ https://codepen.io/shamir/pen/YGbbNX
   height: 100%;
   z-index: 10000;
 
-  background: $background-color-dark-contrast;
+  background: $background-colour-very-dark;
 }
 .loaded #loader {
   opacity: 0;
@@ -81,7 +81,7 @@ https://codepen.io/shamir/pen/YGbbNX
     position: absolute;
     top: 0;
     left: 0;
-    background-color: $background-color-dark-contrast;
+    background-color: $background-colour-very-dark;
     width: 50%;
     height: 100%;
     animation: flip 4s 2s steps(2) infinite alternate;
@@ -107,7 +107,7 @@ https://codepen.io/shamir/pen/YGbbNX
     backface-visibility: hidden;
   }
   &::before {
-    background-color: $background-color-dark-contrast;
+    background-color: $background-colour-very-dark;
   }
   &::after {
     //box-shadow: 0 0 10px $text-color-neon;

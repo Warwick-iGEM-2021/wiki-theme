@@ -19,6 +19,13 @@
   font-size: larger !important;
   margin-right: 0;
   word-wrap: break-word;
+  text-transform: uppercase;
+  font-family: "Bahnschrift", sans-serif !important;
+  //font-size: 20px !important;
+}
+
+.toc-wrapper > h3 {
+    font-family: "Bahnschrift", sans-serif !important;
 }
 
 // If there is a sidebar, we make a custom container-y thing

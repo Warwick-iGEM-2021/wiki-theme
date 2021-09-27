@@ -22,7 +22,7 @@ body {
   line-height: 1.5;
   color: $text-color-dark;
   // background-image: url('/assets/images/paper-background-brown.jpg');
-  background-color: $background-colour-black;
+  background-color: $background-colour-very-dark;
   background-size: cover;
   position: relative;
   display: flex;
@@ -59,14 +59,14 @@ h6 {
   font-family: "Bahnschrift", sans-serif !important;
 }
 
-#hugo-content-wrapper h1,
+/* #hugo-content-wrapper h1,
 #hugo-content-wrapper h2,
 #hugo-content-wrapper h3,
 #hugo-content-wrapper h4,
 #hugo-content-wrapper h5,
 #hugo-content-wrapper h6 {
   color: $text-color-contrast !important;
-}
+} */
 
 h2::before,
 h3::before,
@@ -158,4 +158,15 @@ img {
     margin: 0 30px 2em 30px;
     padding: 20px;
   }
+}
+
+
+
+.content-page h1,
+.content-page h2,
+.content-page h3,
+.content-page h4,
+.content-page h5,
+.content-page h6 {
+  font-family: "Helvetica Neue Bold", sans-serif !important;
 }

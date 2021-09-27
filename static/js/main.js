@@ -15,8 +15,11 @@ $('.read_more').find('a[href="#"]').on('click', function (e) {
     e.preventDefault();
     // Show the read more
     $(this).closest('.read_more').find('.read_more_small').toggleClass('read_more_small read_more_big');
+    // Adjust the height that was set inline on the read more small, and not
+    // deleted on toggle
+    $(this).closest('.read_more').find(".read_more_big").css("height", "auto");
     // Hide the read more message
-    $(this).css("display", "none")
+    $(this).css("display", "none");
 });
 
 

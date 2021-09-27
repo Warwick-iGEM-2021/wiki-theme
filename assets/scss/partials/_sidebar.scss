@@ -11,7 +11,6 @@
   position: sticky;
   // Center the div on scroll, not stick it to just below navbar (6rem)
   top: 6rem; //calc(50% - 8rem);
-  // transform: translateY(50%);
   overflow-y: auto;
   max-height: calc(100vh - 8rem);
   align-self: start;
@@ -19,13 +18,24 @@
   font-size: larger !important;
   margin-right: 0;
   word-wrap: break-word;
-  text-transform: uppercase;
   font-family: "Bahnschrift", sans-serif !important;
-  //font-size: 20px !important;
+  font-size: 20px !important;
+
+  // Some kind of padding to override content-page
+  //padding: 0px 0px 0px 0px !important;
+
+  // This breaks the side scroll bar
+  //text-transform: uppercase;
+  // This breaks for different numbers of headings
+  // transform: translateY(50%);
 }
 
 .toc-wrapper > h3 {
     font-family: "Bahnschrift", sans-serif !important;
+}
+
+.toc-wrapper > h3 > a {
+    color: $text-color-dark;
 }
 
 // If there is a sidebar, we make a custom container-y thing

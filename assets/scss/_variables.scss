@@ -15,22 +15,12 @@ $shadow-color: rgba(0, 0, 0, 0.1);
 $shadow-color-light: rgba(255, 255, 255, 0.7);
 
 $background-color: #fff;
-$background-color-contrast: #eaeaea; // Remove this from timeline
+$background-color-contrast: #eaeaea;
 $background-colour-black: #000;
+$background-colour-very-dark: #111;
 $background-color-green: #ebffdd;
 $background-color-green-contrast: #c1ff9b; //For timeline
 
-$background-colour-very-dark: #000; //#111;
-
-$background-color-dark: #535353;
-$background-color-dark-contrast: #171717;
-.tertiary-background-gradient {
-    background-color: $background-color-dark;
-    background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0, $background-color-dark), color-stop(1, $background-color-dark-contrast));
-    background-image: -webkit-linear-gradient(top left, $background-color-dark 0%, $background-color-dark-contrast 100%);
-    background-image: linear-gradient(to bottom right, $background-color-dark 0%, $background-color-dark-contrast 100%);
-    background-image: -ms-linear-gradient(top left, $background-color-dark 0%, $background-color-dark-contrast 100%);
-}
 
 
 

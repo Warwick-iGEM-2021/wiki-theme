@@ -65,7 +65,40 @@ ul {
   border-left-width: 0 !important;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   border: 0px !important;
   overflow: visible;
+}
+
+/* My special additions for some hugo presets */
+
+/* Syntax highlighting of code gets covered in #ebeea9 overlay, and has border
+   wrapped around it */
+
+#hugo-content .highlight {
+  -webkit-transition-property: none;
+  -moz-transition-property: none;
+  -o-transition-property: none;
+  transition-property: none;
+  -webkit-transition-duration: 0s;
+  -moz-transition-duration: 0s;
+  -o-transition-duration: 0s;
+  transition-duration: 0s;
+}
+#hugo-content .highlight:hover {
+  background-color: none;
+  cursor: auto;
+}
+
+#hugo-content pre {
+    padding: 0;
+    border: none;
+    color: inherit;
+    background-color: none;
+    line-height: normal;
 }

@@ -1,24 +1,18 @@
 {{ define "main" }}
 <section id="hugo-content-wrapper">
 
-    <!--
-        - https://disaev.me/p/blog-engines-and-static-site-generators/#table-of-contents
-        - https://ma.ttias.be/adding-a-sticky-table-of-contents-in-hugo-to-posts/
-        - https://www.bram.us/2020/01/10/smooth-scrolling-sticky-scrollspy-navigation/
-        - https://github.com/gohugoio/hugo/issues/1778#issuecomment-313895910
-        - https://css-tricks.com/sticky-table-of-contents-with-scrolling-active-states/
-        - https://www.cssscript.com/highly-customizable-table-contents-generator-tocbot/
-        - https://www.jqueryscript.net/menu/fixed-table-contents-scrollspy.html
-
-        - https://github.com/hakimel/css/tree/master/progress-nav
-    -->
-
-	<script src="/js/sidebarScrollPath.js" defer></script>
 
     <!-- Make a sidebar with the table of contents in-->
     {{ $has_headers := ge (findRE "<h[1-6].*?>(.|\n])+?</h[1-6]>" .Content | len) 2 }}
     {{ $toc_toggled := or (not (isset .Params "toc")) (eq .Params.toc true) }}
-    {{ if and $has_headers $toc_toggled }}
+    {{ $blank := and (isset .Params "blank") (eq .Params.blank true) }}
+    {{ if $blank }}
+        <!-- Show a blank page without even a content box -->
+        <section id="hugo-content">
+            {{ .Content }}
+        </section>
+    {{ else if and $has_headers $toc_toggled }}
+        <script src="/js/sidebarScrollPath.js" defer></script>
         <!-- Include the script for sidebar scrolling -->
         <div class="row">
             <!-- Add the sidebar as a column -->

@@ -175,3 +175,15 @@ img {
 #hugo-content ul {
     padding-left: 50px;
 }
+
+
+table,
+th,
+td {
+    border: 1px solid black;
+    padding: 0 10px;
+}
+
+tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}

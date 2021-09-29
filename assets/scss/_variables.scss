@@ -17,9 +17,9 @@ $shadow-color-light: rgba(255, 255, 255, 0.7);
 $background-color: #fff;
 $background-color-contrast: #eaeaea;
 $background-colour-black: #000;
-$background-colour-very-dark: #111;
+$background-colour-very-dark: #000; // #111; - lighter colour for stars loader? Less granular shadows?
 $background-color-green: #ebffdd;
-$background-color-green-contrast: #c1ff9b; //For timeline
+$background-color-green-contrast: #c1ff9b;
 
 
 
@@ -28,6 +28,7 @@ $background-color-green-contrast: #c1ff9b; //For timeline
 
 $homepage-splash-overflow-height: 90vh;
 $homepage-splash-overflow-width: 1000px;
+$hero-height: 70vh;
 
 
 /*

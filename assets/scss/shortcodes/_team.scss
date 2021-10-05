@@ -1,5 +1,48 @@
 /* About section */
 
+.person-wrapper {
+  position: relative;
+}
+
+.person-wrapper::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.person-photo {
+  float: left;
+  max-width: 150px;
+}
+
+.person-photo img {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.person-description {
+  float: right;
+  width: calc(100% - 150px);
+  padding-left: 25px;
+}
+
+.person-description .person-position {
+  color: $text-color-mid-light;
+  display: block;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 750px) {
+  .person-description {
+    float: left !important;
+    width: 100%;
+    padding-left: 0;
+  }
+}
+
+/*
 .about-person {
     outline: 2px solid $text-color-mid-light;
     outline-offset: -10px;
@@ -39,3 +82,4 @@
 	display: block;
 	margin-bottom: 20px;
 }
+*/

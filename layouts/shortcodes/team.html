@@ -1,3 +1,24 @@
+<div class="container">
+{{ range .Site.Data.team.team_members.item }}
+<div class="content-page">
+    <div class="person-wrapper">
+    <div class="person-photo">
+        <img src="{{ .img }}" alt="{{ .alt }}">
+    </div>
+
+    <div class="person-description">
+        <h3>{{ .name | markdownify }}</h3>
+        <span class="person-position">{{ .position | markdownify }}</span>
+        <p>{{ .description | markdownify }}</p>
+    </div>
+    </div>
+</div>
+{{ end }}
+</div>
+
+<!-- TODO: Get people to fill in their information-->
+
+<!--
 <section id="about">
     <h2 class="subtitle">{{ .Site.Data.team.team_members.heading }}</h2>
     <p class="text-center">{{ .Site.Data.team.team_members.subtext }}</p>
@@ -29,6 +50,5 @@
             </div>
         {{ end }}
     </div>
-
-
 </section>
+-->

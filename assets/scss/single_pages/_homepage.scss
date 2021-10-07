@@ -51,41 +51,31 @@
   color: $text-color-light !important;
 }
 
-
-
-
-
-
-
-/* .homepage-video {
-  max-height: 70vh;
-} */
-
-@media only screen and (min-width: 750px) {
-  .content-page-float-left {
-    max-width: 40vw;
-    float: left;
-    margin: 100px 5vw 0 100px;
-  }
-  .content-page-float-right {
-    max-width: 40vw;
-    float: right;
-    margin: 100px 5vw 0 100px;
-  }
+.homepage-parallax-window {
+  background: transparent;
+  height: auto;
+  padding: 30px;
 }
 
+.homepage-content {
+  overflow-wrap: break-word;
+  background-color: $background-color;
+  box-shadow: 0 0 10px $shadow-color-light;
+  border-radius: 3px;
+  padding: 20px;
+}
 
+.homepage-content ul {
+  padding-left: 50px;
+}
 
-
-
-.content-page-no-margin {
-    overflow-wrap: break-word;
-    background-color: $background-color;
-    box-shadow: 0 0 10px $shadow-color-light;
-    border-radius: 3px;
-    padding: 20px;
+@media only screen and (min-width: 750px) {
+  .homepage-content-left {
+    max-width: 35vw;
+    margin: 100px auto 100px 5vw !important;
+}
+.homepage-content-right {
+    max-width: 35vw;
+    margin: 100px 5vw 100px auto !important;
   }
-  
-.content-page-no-margin ul {
-    padding-left: 50px;
 }

@@ -73,6 +73,7 @@ h4::before,
 h5::before,
 h6::before {
   // https://css-tricks.com/hash-tag-links-padding/
+  // Offset navigation anchors so header doesn't run on top of them
   display: block;
   content: " ";
   // TODO: Make this match with the heading height
@@ -102,33 +103,20 @@ a:active {
 }
 
 img {
-    max-width:100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 // Zebra stripe tables
 table,
 th,
 td {
-    border: 1px solid black;
-    padding: 0 10px;
+  border: 1px solid black;
+  padding: 0 10px;
 }
 
 tr:nth-child(odd) {
-    background-color: #f2f2f2;
-}
-
-
-.subtitle {
-  display: block;
-  margin-bottom: 20px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: $text-color-mid-dark;
-  padding-left: 10%;
-  padding-right: 10%;
-  text-align: center;
+  background-color: #f2f2f2;
 }
 
 ::-webkit-selection,
@@ -142,14 +130,6 @@ tr:nth-child(odd) {
   padding-bottom: 2em;
 }
 
-.parallax-window {
-  min-height: 50vh;
-  height: auto;
-
-  background: transparent;
-  padding: 30px;
-}
-
 .content-page {
   overflow-wrap: break-word;
   background-color: $background-color;
@@ -157,7 +137,7 @@ tr:nth-child(odd) {
   border-radius: 3px;
   padding: 45px;
   margin: 0 128px 2em 80px;
-  @media only screen and (max-width: 1500px) and (min-width: 1000px){
+  @media only screen and (max-width: 1500px) and (min-width: 1000px) {
     margin: 0 15% 2em 15%;
   }
   @media only screen and (max-width: 1000px) {
@@ -176,5 +156,17 @@ tr:nth-child(odd) {
 }
 
 .content-page ul {
-    padding-left: 50px;
+  padding-left: 50px;
+}
+
+.subtitle {
+  display: block;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: $text-color-mid-dark;
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: center;
 }

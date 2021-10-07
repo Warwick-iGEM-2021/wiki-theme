@@ -21,7 +21,6 @@ body {
   font-size: 18px;
   line-height: 1.5;
   color: $text-color-dark;
-  // background-image: url('/assets/images/paper-background-brown.jpg');
   background-color: $background-colour-very-dark;
   background-size: cover;
   position: relative;
@@ -107,6 +106,19 @@ img {
     height: auto;
 }
 
+// Zebra stripe tables
+table,
+th,
+td {
+    border: 1px solid black;
+    padding: 0 10px;
+}
+
+tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+
 .subtitle {
   display: block;
   margin-bottom: 20px;
@@ -131,17 +143,11 @@ img {
 }
 
 .parallax-window {
-  min-height: 70vh;
+  min-height: 50vh;
+  height: auto;
+
   background: transparent;
   padding: 30px;
-}
-
-.content-page-no-margin {
-  overflow-wrap: break-word;
-  background-color: $background-color;
-  box-shadow: 0 0 10px $shadow-color-light;
-  border-radius: 3px;
-  padding: 20px;
 }
 
 .content-page {
@@ -160,8 +166,6 @@ img {
   }
 }
 
-
-
 .content-page h1,
 .content-page h2,
 .content-page h3,
@@ -171,19 +175,6 @@ img {
   font-family: "Helvetica Neue Bold", sans-serif !important;
 }
 
-
-#hugo-content ul {
+.content-page ul {
     padding-left: 50px;
-}
-
-
-table,
-th,
-td {
-    border: 1px solid black;
-    padding: 0 10px;
-}
-
-tr:nth-child(odd) {
-    background-color: #f2f2f2;
 }

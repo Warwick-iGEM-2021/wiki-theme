@@ -1,8 +1,11 @@
-<!-- <section id="hero" style="background-image: url('{{ .Params.Hero_img | safeURL }}');">
-</section> -->
 
-
-<section id="hero" class="parallax-window" data-parallax="scroll" data-speed="0.4"
-    data-image-src="{{ .Params.Hero_img_back | safeURL }}">
-    <div id="hero_fore" style="background-image: url('{{ .Params.Hero_img_fore | safeURL }}');"></div>
-</section>
+{{ $blank := and (isset .Params "blank") (eq .Params.blank true) }}
+{{ if (not $blank) }}
+    <section id="hero" class="parallax-window" data-parallax="scroll" data-speed="0.4"
+        data-image-src="{{ .Params.Hero_img_back | safeURL }}">
+        <div id="hero_fore" style="background-image: url('{{ .Params.Hero_img_fore | safeURL }}');"></div>
+    </section>
+{{ else }}
+    <!-- Offset top to not run into navbar -->
+    <div style="padding-top: 100px;"></div>
+{{ end }}

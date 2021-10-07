@@ -23,8 +23,12 @@
 #homepage-hero-text {
   padding-left: 10vw;
   color: $text-color-light;
+
+  // TODO: Fix this animation happening underneath loader
+
   animation: fadeInLeft;
   animation-duration: 2s;
+
   @media screen and (max-width: $homepage-splash-overflow-width),
     screen and (max-height: $homepage-splash-overflow-height) {
     display: none;
@@ -32,9 +36,9 @@
 }
 
 #homepage-hero-text h3 {
-    color: $text-color-neon;
-    font-weight: 1000;
-    font-size: 1.4vw;
+  color: $text-color-neon;
+  font-weight: 1000;
+  font-size: 1.4vw;
 }
 
 #homepage-hero-text h1 {
@@ -48,6 +52,40 @@
 }
 
 
-.homepage-video {
+
+
+
+
+
+/* .homepage-video {
   max-height: 70vh;
+} */
+
+@media only screen and (min-width: 750px) {
+  .content-page-float-left {
+    max-width: 40vw;
+    float: left;
+    margin: 100px 5vw 0 100px;
+  }
+  .content-page-float-right {
+    max-width: 40vw;
+    float: right;
+    margin: 100px 5vw 0 100px;
+  }
+}
+
+
+
+
+
+.content-page-no-margin {
+    overflow-wrap: break-word;
+    background-color: $background-color;
+    box-shadow: 0 0 10px $shadow-color-light;
+    border-radius: 3px;
+    padding: 20px;
+  }
+  
+.content-page-no-margin ul {
+    padding-left: 50px;
 }

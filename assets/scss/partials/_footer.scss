@@ -11,11 +11,11 @@
   max-height: 100%;
   object-fit: contain;
 
-  // Only needed if $background-colour-very-dark is not black
+  // Only needed if $background-color-very-dark is not black
   // TODO: round image edges and make shadow less granular
-  -webkit-box-shadow: 0 0 10vh $background-colour-black;
-  -webkit-box-shadow: 0 0 10vh $background-colour-black;
-  box-shadow: 0 0 10vh $background-colour-black;
+  -webkit-box-shadow: 0 0 10vh $background-color-black;
+  -webkit-box-shadow: 0 0 10vh $background-color-black;
+  box-shadow: 0 0 10vh $background-color-black;
 }
 
 /* Social media icons

@@ -1,5 +1,9 @@
 /* Homepage custom styles */
 
+#homepage {
+    padding-bottom: 0 !important;
+}
+
 #homepage-hero {
   height: 100vh;
   //cut off some (~170px) from the right, so the start of the logo is closer to
@@ -28,11 +32,7 @@
 #homepage-hero-text {
   padding-left: 10vw;
   color: $text-color-light;
-
-  // TODO: Fix this animation happening underneath loader
-
-  animation: fadeInLeft;
-  animation-duration: 2s;
+  animation-delay: 0.75s;
 
   @media screen and (max-width: $homepage-splash-overflow-width),
     screen and (max-height: $homepage-splash-overflow-height) {

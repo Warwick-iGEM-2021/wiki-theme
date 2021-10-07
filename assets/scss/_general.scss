@@ -170,3 +170,7 @@ tr:nth-child(odd) {
   padding-right: 10%;
   text-align: center;
 }
+
+.waiting-animation {
+    animation-play-state: paused;
+}

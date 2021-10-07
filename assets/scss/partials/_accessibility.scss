@@ -62,7 +62,7 @@ $shadow-strong-color: rgba(34, 34, 34, 0.75);
   background-color: $accessibility-eye-catch;
   width: 2.5rem;
   height: 2.5rem;
-  padding: 0;
+  margin: 0 10px 10px 0;
   border-radius: 50%;
   border: none;
   position: absolute;
@@ -151,97 +151,4 @@ body.accessibility_readingLine #readingLine {
   left: 0;
   z-index: 9999;
   transform: translateY(0.5rem);
-}
-body.contrast {
-  color: $accessibility-contrast-text !important;
-  background-image: none !important;
-  background: $accessibility-contrast-background !important;
-}
-body.contrast nav,
-body.contrast li,
-body.contrast ol,
-body.contrast header,
-body.contrast footer,
-body.contrast section,
-body.contrast main,
-body.contrast aside,
-body.contrast article {
-  background-image: none !important;
-  background: $accessibility-contrast-background !important;
-  color: $accessibility-contrast-text !important;
-}
-body.contrast h1,
-body.contrast h2,
-body.contrast h3,
-body.contrast h4,
-body.contrast h5,
-body.contrast h6,
-body.contrast p,
-body.contrast label,
-body.contrast strong,
-body.contrast em,
-body.contrast cite,
-body.contrast q,
-body.contrast i,
-body.contrast b,
-body.contrast u,
-body.contrast span {
-  color: $accessibility-contrast-text !important;
-}
-body.contrast a {
-  color: $accessibility-contrast-link !important;
-}
-body.contrast a * {
-  color: $accessibility-contrast-link !important;
-}
-body.contrast button,
-body.contrast input[type="button"],
-body.contrast input[type="reset"],
-body.contrast input[type="submit"] {
-  background: $accessibility-contrast-link !important;
-  background-image: none !important;
-  color: $accessibility-contrast-background !important;
-  font-weight: bold;
-  border: none !important;
-}
-body.contrast img {
-  // TODO: Is this helpful ???
-  filter: grayscale(100%) contrast(120%);
-}
-body.contrast input[type="text"],
-body.contrast input[type="password"],
-body.contrast input[type="url"],
-body.contrast input[type="search"],
-body.contrast input[type="email"],
-body.contrast input[type="tel"],
-body.contrast input[type="date"],
-body.contrast input[type="month"],
-body.contrast input[type="week"],
-body.contrast input[type="datetime"],
-body.contrast input[type="datetime-local"],
-body.contrast textarea,
-body.contrast input[type="number"] {
-  background-image: none !important;
-  background: $accessibility-contrast-background !important;
-  border: 1px solid $accessibility-contrast-text !important;
-  color: $accessibility-contrast-text !important;
-}
-body.contrast #accessibilityBar * {
-  background-image: none !important;
-  background-color: $accessibility-contrast-background !important;
-  color: $accessibility-contrast-link !important;
-}
-body.contrast #accessibilityBar .setAccessibility {
-  border: 1px solid !important;
-}
-body.contrast
-  #accessibilityBar
-  .setAccessibility[data-accessibility="contrast"] {
-  background-color: $accessibility-contrast-link !important;
-  background-image: none !important;
-  color: $accessibility-contrast-background !important;
-}
-
-body.contrast .torn-page {
-  background-image: none !important;
 }

@@ -11,14 +11,6 @@
 
     // Button definitions
     const btns = {
-        btnHighContrast: {
-            active: true,
-            dataAccessibility: "contrast",
-            class: "setAccessibility",
-            icon: "FontAwesome",
-            iconClass: ["fas", "fa-adjust"],
-            text: "High contrast",
-        },
         btnIncFont: {
             active: true,
             dataAccessibility: "incFont",
@@ -171,9 +163,6 @@
 
     function toggleAccessibilities(action) {
         switch (action) {
-            case "contrast":
-                window.toggleContrast();
-                break;
             case "incFont":
                 window.toggleFontSize(action);
                 break;
@@ -264,7 +253,7 @@
                     body.classList.remove(this.cssClass + this.currentState);
                     this.setState(parseFloat(this.currentState) + 20);
                 } else {
-                    alert("Limite atingido!");
+                    alert("Font size limit reached!");
                 }
                 break;
             case "oriFont":
@@ -276,60 +265,12 @@
                     body.classList.remove(this.cssClass + this.currentState);
                     this.setState(parseFloat(this.currentState) - 20);
                 } else {
-                    alert("Limite atingido!");
+                    alert("Font size limit reached!");
                 }
                 break;
             default:
                 break;
         }
-    }
-
-    /*
-  === === === === === === === === === === === === === === === === === ===
-  === === === === === ===  HighConstrast  === === === === === === === ===
-  === === === === === === === === === === === === === === === === === ===
-  */
-    let Contrast = {
-        storage: "contrastState",
-        cssClass: "contrast",
-        currentState: null,
-        check: checkContrast,
-        getState: getContrastState,
-        setState: setContrastState,
-        toggle: toggleContrast,
-        updateView: updateViewContrast
-    };
-
-    window.toggleContrast = function () {
-        Contrast.toggle();
-    };
-
-    Contrast.check();
-
-    function checkContrast() {
-        this.updateView();
-    }
-
-    function getContrastState() {
-        return sessionStorage.getItem(this.storage) === "true";
-    }
-
-    function setContrastState(state) {
-        sessionStorage.setItem(this.storage, "" + state);
-        this.currentState = state;
-        this.updateView();
-    }
-
-    function updateViewContrast() {
-        if (this.currentState === null) this.currentState = this.getState();
-
-        this.currentState
-            ? body.classList.add(this.cssClass)
-            : body.classList.remove(this.cssClass);
-    }
-
-    function toggleContrast() {
-        this.setState(!this.currentState);
     }
 
 })();

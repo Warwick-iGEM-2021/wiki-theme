@@ -2,14 +2,19 @@
 
 #homepage-hero {
   height: 100vh;
+  //cut off some (~170px) from the right, so the start of the logo is closer to
+  //the right edge
   background-image: url("/assets/images/homepage_splash_background.gif");
+
   // Make sure the logo stays on screen when scaled
-  background-position: center left;
+  background-position: right center;
   background-size: cover;
   background-repeat: no-repeat;
 
   @media screen and (max-width: $homepage-splash-overflow-width),
     screen and (max-height: $homepage-splash-overflow-height) {
+    // Make this taller, but keeping the same width, so it will just have extra
+    // bits (200+ pxs) at the top and bottom continuing on from the image
     background-image: url("/assets/images/homepage_splash_background_cropped.gif");
     background-position: center center;
   }

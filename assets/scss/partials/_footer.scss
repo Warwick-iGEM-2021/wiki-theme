@@ -1,5 +1,11 @@
 /* Footer section */
 
+#footer {
+  -moz-box-shadow: 0 -4vh 2vh 2vh $background-color-black;
+  -webkit-box-shadow: 0 -4vh 2vh 2vh $background-color-black;
+  box-shadow: 0 -4vh 2vh 2vh $background-color-black;
+}
+
 /* Sponsors */
 
 #sponsor-logos {
@@ -173,28 +179,6 @@
   color: white !important;
   background: initial;
   -webkit-text-fill-color: white !important;
-}
-
-/* Footer navigation */
-
-#footer-navigation h3 {
-  color: $text-color-light;
-  font-size: 1.15em;
-  padding-bottom: 0.25em;
-}
-
-#footer-navigation li {
-  list-style: none;
-  text-decoration: none;
-}
-
-#footer-navigation a {
-  color: $text-color-mid-light;
-  font-size: 0.75em;
-}
-
-#footer-navigation .col {
-  margin-bottom: 20px;
 }
 
 /* Licensing */

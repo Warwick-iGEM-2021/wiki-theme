@@ -32,6 +32,10 @@
 
 .toc-wrapper > h3 {
     font-family: "Bahnschrift", sans-serif !important;
+    // Preserve font size for the sidebar on rescaling
+    //TODO: Look at fixing this to be less sketchy
+    font-size: 31.5px !important;
+
 }
 
 .toc-wrapper > h3 > a {

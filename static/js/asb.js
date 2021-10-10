@@ -164,13 +164,10 @@
     function toggleAccessibilities(action) {
         switch (action) {
             case "incFont":
-                window.toggleFontSize(action);
-                break;
             case "oriFont":
-                window.toggleFontSize(action);
-                break;
             case "decFont":
                 window.toggleFontSize(action);
+                drawPath();
                 break;
             case "readingLine":
                 body.classList.toggle("accessibility_readingLine");

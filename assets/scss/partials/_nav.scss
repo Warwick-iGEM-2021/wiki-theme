@@ -197,6 +197,9 @@ https://codepen.io/albizan/pen/mMWdWZ
   margin-top: 0px;
   visibility: visible;
   opacity: 1;
+  // Push the dropdown to the very top of the stack, to prevent case where
+  // header is two rows, and dropdown renderes behind main text
+  z-index: 10000;
 }
 
 .site-mobile-menu {

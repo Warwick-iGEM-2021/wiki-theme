@@ -13,12 +13,12 @@ html {
   scroll-behavior: smooth;
   overflow-x: hidden;
   overflow-y: scroll;
+  font-size: 18px;
 }
 
 body {
   font-family: "Helvetica Neue", sans-serif !important;
   font-weight: 300;
-  font-size: 18px;
   line-height: 1.5;
   color: $text-color-dark;
   background-color: $background-color-very-dark;
@@ -87,7 +87,6 @@ p {
   font-family: "Helvetica Neue", sans-serif !important;
   color: $text-color-dark !important;
   font-weight: 300 !important;
-  font-size: 18px !important;
 }
 
 // TODO: https://css-irl.info/animating-underlines/ (in specific cases)

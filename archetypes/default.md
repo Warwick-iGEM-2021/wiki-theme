@@ -1,6 +1,7 @@
 ---
 title: "{{ replace .Name "-" " " | humanize | title }}"
-hero_img: "https://picsum.photos/1920/360"
+hero_img_fore: "/assets/content/{{ replace .Name "-" "_" | lower }}/splash_fore.png"
+hero_img_back: "/assets/content/{{ replace .Name "-" "_" | lower }}/splash_back.png"
 summary: "A brief summary of the content of the page"
 date: {{ .Date }}
 draft: false

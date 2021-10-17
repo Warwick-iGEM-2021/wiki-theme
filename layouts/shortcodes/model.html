@@ -174,10 +174,39 @@
 
 
 <!-- Load Chart.js to draw graphs -->
-<!-- https://2021.igem.org/Template:Warwick/js/model/modelJS?action=raw&amp;ctype=text/javascript -->
 <script type="text/javascript" src="/js/chart.min.js"></script>
+
+
+
 <!-- Load the python translated to js via transcrypt -->
-<script type="module">import * as model from '/js/model.js'; window.model = model;</script>
+<script type="text/javascript">
+    //
+    /*
+    This is a frankly stupid workaround.
+
+    The iGEM site escapes the ampersand character in js scripts, but the way to
+    access js files on the site requires an ampersand in the url. This means
+    that the ampersand is always escaped, and it doesn't work. Hence, we have
+    to use and encoding with no ampersand (base64 is used here), and then use
+    dynamic imports (since normal ones can't take strings as the URL) and import
+    the file from there.
+
+    I wasted too many hours debugging this. FML.
+    */
+
+    //Unencoded value = https://2021.igem.org/Template:Warwick/js/model/modelJS?action=raw&ctype=text/javascript
+    var url = atob("aHR0cHM6Ly8yMDIxLmlnZW0ub3JnL1RlbXBsYXRlOldhcndpY2svanMvbW9kZWxKUz9hY3Rpb249cmF3JmN0eXBlPXRleHQvamF2YXNjcmlwdA==");
+    import(url).then((model) => {
+        window.model = model;
+    })
+</script>
+<!-- <script type="module"> import * as model from '/js/model.js'; window.model = model;</script> -->
+
+
+
+
+
+
 <!-- Draw a graph with the relevant data -->
 <script>
     // Make a new chart

@@ -1,3 +1,4 @@
+/*
 // Show a loading screen until all assets are loaded
 $(document).ready(function () { // Require all js to load
     // Require all images to load
@@ -9,6 +10,17 @@ $(document).ready(function () { // Require all js to load
             $('#homepage-hero-text').addClass('animate__animated animate__fadeInLeft');
         }, 1500); //TODO: Work out what works for this delay on the actual site
     });
+});
+*/
+
+// Show a loading screen until all assets are loaded
+// Require all js and images to load
+$(window).on("load", function () {
+    // Include some padding lag so you don't just flash the loading screen
+    setTimeout(function () {
+        $('body').addClass('loaded');
+        $('#homepage-hero-text').addClass('animate__animated animate__fadeInLeft');
+    }, 1500);
 });
 
 // Expand the read more section on click

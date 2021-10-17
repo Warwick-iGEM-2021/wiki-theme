@@ -110,6 +110,6 @@ h6 {
     background-color: initial;
 }
 
-highlight tr:nth-child(2n+1) {
+.highlight tr:nth-child(2n+1) {
     background-color: #272822;
 }

@@ -6,7 +6,7 @@
 }
 .timeline::after {
   // The vertical ruler on the timeline
-  content: '';
+  content: "";
   position: absolute;
   width: 6px;
   background-color: $text-color-contrast;
@@ -19,7 +19,7 @@
 
 .timeline-bookend-top::after {
   // The circles on the timeline
-  content: '';
+  content: "";
   position: absolute;
   width: 16px;
   height: 16px;
@@ -33,7 +33,7 @@
 
 .timeline-bookend-bottom::after {
   // The circles on the timeline
-  content: '';
+  content: "";
   position: absolute;
   width: 16px;
   height: 16px;
@@ -43,7 +43,7 @@
   border-radius: 50%;
   z-index: 1;
   left: 19px;
-  transform: translate(0%,-120%);
+  transform: translate(0%, -120%);
 }
 
 .timeline-container {
@@ -56,7 +56,7 @@
 }
 .timeline-container::after {
   // The circles on the timeline
-  content: '';
+  content: "";
   position: absolute;
   width: 30px;
   height: 30px;
@@ -77,14 +77,12 @@
   border-radius: 6px;
 }
 
-
 .timeline-title > h2 {
-    margin-bottom: -1rem;
+  margin-bottom: -0.1rem;
 }
 
 .timeline-title > p {
-  margin-top: .5rem;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .timeline-content {

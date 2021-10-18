@@ -1,14 +1,10 @@
 
 {{ $blank := and (isset .Params "blank") (eq .Params.blank true) }}
 {{ if (not $blank) }}
-    <section id="hero" class="hero-parallax-window" data-parallax="scroll" data-speed="0.4"
+    <section id="hero" class="hero-parallax-section" data-parallax="scroll" data-speed="0.4"
         data-image-src="{{ .Params.Hero_img_back | safeURL }}">
         <div id="hero_fore" style="background-image: url('{{ .Params.Hero_img_fore | safeURL }}');"></div>
     </section>
-
-    <!-- include the same image to force wiki upload it to make it a thing -->
-    <img src="{{ .Params.Hero_img_back | safeURL }}" alt="wiki uploader" style="display: none;">
-    <img src="{{ .Params.Hero_img_fore | safeURL }}" alt="wiki uploader" style="display: none;">
 {{ else }}
     <!-- Offset top to not run into navbar -->
     <div style="padding-top: 100px;"></div>

@@ -47,6 +47,14 @@
     {{ else }}
         <!-- Don't add a table of contents - just do the normal container-->
         <section id="hugo-content" class="container">
+            <!-- Write the summary section -->
+            {{ with .Params.Summary }}
+            <div class="content-page">
+                <h2 id="summary">Summary</h2>
+                {{ . | markdownify }}
+            </div>
+            {{ end }}
+
             <div class="content-page">
                 {{ .Content }}
             </div>

@@ -2298,7 +2298,7 @@ seed ();
 
 // Model.js - Transcrypt'ed from Python, 2021-10-17 01:47:47
 var __name__ = '__main__';
-export var DRUG_NAMES = ['Penicillin', 'Carbapenemase', 'Colistin'];
+export var DRUG_NAMES = ['Amoxicillin+', 'Meropenem', 'Colistin'];
 export var Params =  __class__ ('Params', [object], {
 	__module__: __name__,
 	NUM_TIMESTEPS: 100,
@@ -2310,7 +2310,7 @@ export var Params =  __class__ ('Params', [object], {
 	ISOLATION_THRESHOLD: DRUG_NAMES.index ('Colistin'),
 	PRODUCT_IN_USE: true,
 	PROBABILIY_PRODUCT_DETECT: 1,
-	PRODUCT_DETECTION_LEVEL: DRUG_NAMES.index ('Carbapenemase'),
+	PRODUCT_DETECTION_LEVEL: DRUG_NAMES.index ('Meropenem'),
 	PROBABILITY_GENERAL_RECOVERY: 0,
 	PROBABILITY_TREATMENT_RECOVERY: 0.3,
 	PROBABILITY_MUTATION: 0.25,
@@ -2322,14 +2322,14 @@ export var Params =  __class__ ('Params', [object], {
 	NUM_SPREAD_TO: 1,
 	get reset_granular_parameters () {return function () {
 		Params.DRUG_PROPERTIES = dict ({});
-		Params.DRUG_PROPERTIES ['Penicillin'] = tuple ([Params.PROBABILITY_TREATMENT_RECOVERY]);
-		Params.DRUG_PROPERTIES ['Carbapenemase'] = tuple ([Params.PROBABILITY_TREATMENT_RECOVERY]);
+		Params.DRUG_PROPERTIES ['Amoxicillin+'] = tuple ([Params.PROBABILITY_TREATMENT_RECOVERY]);
+		Params.DRUG_PROPERTIES ['Meropenem'] = tuple ([Params.PROBABILITY_TREATMENT_RECOVERY]);
 		Params.DRUG_PROPERTIES ['Colistin'] = tuple ([Params.PROBABILITY_TREATMENT_RECOVERY]);
 		Params.NUM_RESISTANCES = len (Params.DRUG_NAMES);
 		Params.RESISTANCE_PROPERTIES = dict ({});
 		Params.RESISTANCE_PROPERTIES ['None'] = tuple ([Params.PROBABILITY_GENERAL_RECOVERY, Params.PROBABILITY_MUTATION, Params.PROBABILITY_SPREAD, Params.NUM_SPREAD_TO, Params.PROBABILITY_DEATH, Params.DEATH_FUNCTION]);
-		Params.RESISTANCE_PROPERTIES ['Penicillin'] = tuple ([Params.PROBABILITY_GENERAL_RECOVERY, Params.PROBABILITY_MUTATION, Params.PROBABILITY_SPREAD, Params.NUM_SPREAD_TO, Params.PROBABILITY_DEATH, Params.DEATH_FUNCTION]);
-		Params.RESISTANCE_PROPERTIES ['Carbapenemase'] = tuple ([Params.PROBABILITY_GENERAL_RECOVERY, Params.PROBABILITY_MUTATION, Params.PROBABILITY_SPREAD, Params.NUM_SPREAD_TO, Params.PROBABILITY_DEATH, Params.DEATH_FUNCTION]);
+		Params.RESISTANCE_PROPERTIES ['Amoxicillin+'] = tuple ([Params.PROBABILITY_GENERAL_RECOVERY, Params.PROBABILITY_MUTATION, Params.PROBABILITY_SPREAD, Params.NUM_SPREAD_TO, Params.PROBABILITY_DEATH, Params.DEATH_FUNCTION]);
+		Params.RESISTANCE_PROPERTIES ['Meropenem'] = tuple ([Params.PROBABILITY_GENERAL_RECOVERY, Params.PROBABILITY_MUTATION, Params.PROBABILITY_SPREAD, Params.NUM_SPREAD_TO, Params.PROBABILITY_DEATH, Params.DEATH_FUNCTION]);
 		Params.RESISTANCE_PROPERTIES ['Colistin'] = tuple ([Params.PROBABILITY_GENERAL_RECOVERY, Params.PROBABILITY_MUTATION, Params.PROBABILITY_SPREAD, Params.NUM_SPREAD_TO, Params.PROBABILITY_DEATH, Params.DEATH_FUNCTION]);
 	};}
 });

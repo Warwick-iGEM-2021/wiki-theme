@@ -16,7 +16,7 @@
         <!-- Include the script for sidebar scrolling -->
         <div class="row">
             <!-- Add the sidebar as a column -->
-            <section id="sidebar" class="col-auto">
+            <section id="sidebar" class="col-3"> <!-- class="col-auto" -->
                 <div class="toc-wrapper content-page">
                     {{ with .Title }}
                         <h3><a href="#">{{ . | markdownify }}</a></h3>
@@ -29,7 +29,7 @@
                 </div>
             </section>
             <!-- Add the content as a column -->
-            <section id="hugo-content" class="col">
+            <section id="hugo-content" class="col-9">
                 <!-- Write the summary section -->
                 {{ with .Params.Summary }}
                     <div class="content-page">

@@ -114,6 +114,16 @@ td {
   padding: 0 10px;
 }
 
+table {
+  margin: auto;
+  width: 90% !important;
+}
+
+.highlight table {
+  margin: initial;
+  width: initial;
+}
+
 tr:nth-child(odd) {
   background-color: #f2f2f2;
 }
@@ -171,5 +181,5 @@ tr:nth-child(odd) {
 }
 
 .waiting-animation {
-    animation-play-state: paused;
+  animation-play-state: paused;
 }

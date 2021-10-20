@@ -90,7 +90,13 @@
                 </tr>
                 <tr>
                     <td>
-                        <p>This option has been removed</p>
+                        <input class="sliderInput" id="initially_infected_slider" type="range" min="0" max="50" step="1"
+                            value="10" oninput="initially_infected_text.value=initially_infected_slider.value" />
+                        <input class="textInput" id="initially_infected_text" type="number" value="10" min="0" max="50"
+                            oninput="initially_infected_slider.value=initially_infected_text.value" />
+                        <br><button
+                            onclick="model.Params.INITIALLY_INFECTED = parseInt(document.getElementById('initially_infected_slider').value)">
+                            Set the number of people initially infected</button>
                     </td>
                     <td>
                         <input class="sliderInput" id="probability_mutation_slider" type="range" min="0" max="1" value="0.25"

@@ -35,7 +35,7 @@
                         {{ $split_slide := split $slide ", " }}
                         {{ $image_src := index $split_slide 0 }}
                         {{ $image_alt := index $split_slide 1 }}
-                        <div class="carousel-item {{ if eq $index 1 }} active {{ end }}" style="max-height: 60vh;">
+                        <div class="carousel-item {{ if eq $index 1 }} active {{ end }}">
                             <img class="d-block w-100" src="{{ $image_src }}" alt="{{ $image_alt }}">
                         </div>
 

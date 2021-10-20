@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="content-page">
+        <h2 id="summary">Summary</h2>
+        {{ .Site.Data.medals.medal_items.summary | markdownify }}
+    </div>
+</div>
+
+<div class="container">
+    {{ range .Site.Data.medals.medal_items.item }}
+    <div class="content-page">
+        <div class="person-wrapper">
+            <div class="person-photo">
+                <img src="{{ .img }}" alt="{{ .alt }}" style="height: 10vh;">
+            </div>
+
+            <div class="person-description">
+                <h3>{{ .name | markdownify }}</h3>
+                <p>{{ .description | markdownify }}</p>
+            </div>
+        </div>
+    </div>
+    {{ end }}
+</div>

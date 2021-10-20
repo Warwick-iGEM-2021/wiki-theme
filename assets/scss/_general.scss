@@ -81,7 +81,7 @@ h6::before {
   height: 80px;
   visibility: hidden;
   pointer-events: none;
-}
+}   
 
 p {
   font-family: "Helvetica Neue", sans-serif !important;
@@ -92,6 +92,7 @@ p {
 // TODO: https://css-irl.info/animating-underlines/ (in specific cases)
 a,
 a:hover,
+a:visited,
 a:active {
   color: $link-color;
   -webkit-transition: 0.3s all ease;

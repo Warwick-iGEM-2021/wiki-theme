@@ -1,6 +1,7 @@
 
 {{ $blank := and (isset .Params "blank") (eq .Params.blank true) }}
-{{ if (not $blank) }}
+{{ $hero := and (isset .Params "hero") (eq .Params.hero true) }}
+{{ if or (not $blank) $hero }}
     <section id="hero" data-parallax="scroll" data-speed="0.4"
         data-image-src="{{ .Params.Hero_img_back | safeURL }}">
         <div id="hero_fore" style="background-image: url('{{ .Params.Hero_img_fore | safeURL }}');"></div>

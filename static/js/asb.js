@@ -146,9 +146,6 @@
 
     html.addEventListener("mousemove", function (e) { moveReadingLine(e); });
 
-    // TODO: Fix this to also move around on scroll???
-    //html.addEventListener("onscroll", function (e) { moveReadingLine(e);});
-
 
     /*
   === === === === === === === === === === === === === === === === === ===

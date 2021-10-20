@@ -48,7 +48,6 @@ body.offcanvas-menu:before {
   visibility: visible;
 }
 
-// TODO: Fix this on the iGEM site
 h1,
 h2,
 h3,
@@ -76,7 +75,6 @@ h6::before {
   // Offset navigation anchors so header doesn't run on top of them
   display: block;
   content: " ";
-  // TODO: Make this match with the heading height
   margin-top: -80px;
   height: 80px;
   visibility: hidden;
@@ -89,7 +87,6 @@ p {
   font-weight: 300 !important;
 }
 
-// TODO: https://css-irl.info/animating-underlines/ (in specific cases)
 a,
 a:hover,
 a:visited,

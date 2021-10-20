@@ -18,7 +18,6 @@
   object-fit: contain;
 
   // Only needed if $background-color-very-dark is not black
-  // TODO: round image edges and make shadow less granular
   -webkit-box-shadow: 0 0 10vh $background-color-black;
   -webkit-box-shadow: 0 0 10vh $background-color-black;
   box-shadow: 0 0 10vh $background-color-black;
@@ -189,7 +188,6 @@
   padding-top: 2em;
   padding-bottom: 1em;
   color: $text-color-mid-light !important;
-  /* TODO: Fix centering*/
   text-align: center;
 }
 

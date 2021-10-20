@@ -1,0 +1,8 @@
+<div class="text-center">
+    {{ $src := .Get "src" }}
+    <embed src="{{ $src }}" type="application/pdf" style="width: 90%;" height="750">
+    {{ $caption := .Get "caption" }}
+    {{ with $caption }}
+        <p class="hugo-figure-caption">{{ . | markdownify }}</p>
+    {{ end }}
+</div>
